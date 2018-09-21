@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: db6e62f46c7ed4ac08a4af1e0323d905
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ambientNight: {fileID: 8300000, guid: d28fd48aba64c425699c6f1a81f09040, type: 3}
+  - ambientMorning: {instanceID: 0}
+  - dayToSunset: {instanceID: 0}
+  - sunsetToNight: {instanceID: 0}
+  - nightToSunrise: {instanceID: 0}
+  - sunriseToDay: {instanceID: 0}
+  - sunLight: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

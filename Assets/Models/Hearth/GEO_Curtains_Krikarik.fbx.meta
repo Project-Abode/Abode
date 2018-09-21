@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 31369c32d68ca494c95e91c6d8edaa71
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Curtain_Railing
+    100002: //RootNode
+    100004: Plane001
+    100006: Plane003
+    100008: Shape001
+    100010: Shape002
+    400000: Curtain_Railing
+    400002: //RootNode
+    400004: Plane001
+    400006: Plane003
+    400008: Shape001
+    400010: Shape002
+    2100000: aiStandardSurface1
+    2100002: wire_227153156
+    2100004: lambert52
+    2100006: wire_088144227
+    2300000: Curtain_Railing
+    2300002: Plane001
+    2300004: Plane003
+    2300006: Shape001
+    2300008: Shape002
+    3300000: Curtain_Railing
+    3300002: Plane001
+    3300004: Plane003
+    3300006: Shape001
+    3300008: Shape002
+    4300000: Curtain_Railing
+    4300002: Shape002
+    4300004: Plane003
+    4300006: Shape001
+    4300008: Plane001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface1
+    second: {fileID: 2100000, guid: e40a95db7d672c44c8dbdc21b0b1f6b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert52
+    second: {fileID: 2100000, guid: 672fbe40eabb37e4a96998fd26c78311, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_088144227
+    second: {fileID: 2100000, guid: 796a63067ef36c04e8010693aae2c7b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_227153156
+    second: {fileID: 2100000, guid: 677a9830a6a513f4693d4f01803fc5a4, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cloth03
+    second: {fileID: 2800000, guid: 813eeee00a34f2d46b8aa3d8ad429ced, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: color003
+    second: {fileID: 2800000, guid: 434d8ecb069612542a66c3c52afd12a5, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

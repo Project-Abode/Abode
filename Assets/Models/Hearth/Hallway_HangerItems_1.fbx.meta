@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 559fab712cfa60349979f3d0884e04f0
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: GEO_AgentHat
+    100002: GEO_CoatHanger
+    100004: GEO_CoatHanger1
+    100006: GEO_Entryway_WallHanger
+    100008: GEO_LongSleeve
+    100010: //RootNode
+    400000: GEO_AgentHat
+    400002: GEO_CoatHanger
+    400004: GEO_CoatHanger1
+    400006: GEO_Entryway_WallHanger
+    400008: GEO_LongSleeve
+    400010: //RootNode
+    2100000: lambert70
+    2100002: lambert57
+    2100004: Material__186
+    2100006: lambert69
+    2300000: GEO_AgentHat
+    2300002: GEO_CoatHanger
+    2300004: GEO_CoatHanger1
+    2300006: GEO_Entryway_WallHanger
+    2300008: GEO_LongSleeve
+    3300000: GEO_AgentHat
+    3300002: GEO_CoatHanger
+    3300004: GEO_CoatHanger1
+    3300006: GEO_Entryway_WallHanger
+    3300008: GEO_LongSleeve
+    4300000: GEO_LongSleeve
+    4300002: GEO_Entryway_WallHanger
+    4300004: GEO_AgentHat
+    4300006: GEO_CoatHanger
+    4300008: GEO_CoatHanger1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__186
+    second: {fileID: 2100000, guid: a5ee945e763154b44af1b75151a38a42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert57
+    second: {fileID: 2100000, guid: d8e13749f48628b4a8b24f4f467d978a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert69
+    second: {fileID: 2100000, guid: 7e0b15f707ec3d74197e5b798ed13f33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert70
+    second: {fileID: 2100000, guid: e86617d2a8b44f944a4a3ae907b39de0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AgentHat_D
+    second: {fileID: 2800000, guid: fc4fa41c8490e72489eec3d07fea3a88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AgentHat_N
+    second: {fileID: 2800000, guid: 31e791484c43a94429b36fce4cca5e83, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hearth_Entryway_CoatHanger_Texture
+    second: {fileID: 2800000, guid: 7ce27fac9e7ccbc49900e560e054112f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hearth_Entryway_Hanger_Texture
+    second: {fileID: 2800000, guid: 0a00edac9abe53547881da23a6145c95, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LongSleeve_Bump
+    second: {fileID: 2800000, guid: f7d268794957bd549bcd3d53b6c77612, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: b4c9216752463417eb230569c2fcb57b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: HearthDoor_Corridor:GEO_HearthDoor
+    100004: HearthDoor_Corridor:GEO_HearthDoor_Bit1
+    100006: HearthDoor_Corridor:GEO_HearthDoor_BitBot
+    100008: HearthDoor_Corridor:GEO_HearthDoor_BitMid
+    100010: HearthDoor_Corridor:GEO_HearthDoor_BitTop
+    100012: HearthDoor_Corridor:GEO_HearthDoor_Frame
+    100014: HearthDoor_Corridor:GEO_HearthDoor_Handle
+    100016: HearthDoor_Corridor:GEO_HearthDoor_Handle1
+    100018: HearthDoor_Corridor:GEO_HearthDoor_Lock2
+    100020: HearthDoor_Corridor:Hearth_Entry
+    100022: HearthDoor_Corridor:HearthDoor
+    100024: HearthDoor_Corridor:HearthDoor 1
+    100026: HearthDoor_Corridor:HearthDoor 2
+    100028: HearthDoor_Corridor:HearthDoor_Frame
+    400000: //RootNode
+    400002: HearthDoor_Corridor:GEO_HearthDoor
+    400004: HearthDoor_Corridor:GEO_HearthDoor_Bit1
+    400006: HearthDoor_Corridor:GEO_HearthDoor_BitBot
+    400008: HearthDoor_Corridor:GEO_HearthDoor_BitMid
+    400010: HearthDoor_Corridor:GEO_HearthDoor_BitTop
+    400012: HearthDoor_Corridor:GEO_HearthDoor_Frame
+    400014: HearthDoor_Corridor:GEO_HearthDoor_Handle
+    400016: HearthDoor_Corridor:GEO_HearthDoor_Handle1
+    400018: HearthDoor_Corridor:GEO_HearthDoor_Lock2
+    400020: HearthDoor_Corridor:Hearth_Entry
+    400022: HearthDoor_Corridor:HearthDoor
+    400024: HearthDoor_Corridor:HearthDoor 1
+    400026: HearthDoor_Corridor:HearthDoor 2
+    400028: HearthDoor_Corridor:HearthDoor_Frame
+    2100000: HearthDoor_Corridor_aiStandardSurface1
+    2100002: lambert17
+    2100004: blinn2
+    2100006: HearthDoor_Corridor_lambert11
+    2300000: HearthDoor_Corridor:GEO_HearthDoor
+    2300002: HearthDoor_Corridor:GEO_HearthDoor_Bit1
+    2300004: HearthDoor_Corridor:GEO_HearthDoor_BitBot
+    2300006: HearthDoor_Corridor:GEO_HearthDoor_BitMid
+    2300008: HearthDoor_Corridor:GEO_HearthDoor_BitTop
+    2300010: HearthDoor_Corridor:GEO_HearthDoor_Frame
+    2300012: HearthDoor_Corridor:GEO_HearthDoor_Handle
+    2300014: HearthDoor_Corridor:GEO_HearthDoor_Handle1
+    2300016: HearthDoor_Corridor:GEO_HearthDoor_Lock2
+    3300000: HearthDoor_Corridor:GEO_HearthDoor
+    3300002: HearthDoor_Corridor:GEO_HearthDoor_Bit1
+    3300004: HearthDoor_Corridor:GEO_HearthDoor_BitBot
+    3300006: HearthDoor_Corridor:GEO_HearthDoor_BitMid
+    3300008: HearthDoor_Corridor:GEO_HearthDoor_BitTop
+    3300010: HearthDoor_Corridor:GEO_HearthDoor_Frame
+    3300012: HearthDoor_Corridor:GEO_HearthDoor_Handle
+    3300014: HearthDoor_Corridor:GEO_HearthDoor_Handle1
+    3300016: HearthDoor_Corridor:GEO_HearthDoor_Lock2
+    4300000: HearthDoor_Corridor:GEO_HearthDoor_Bit1
+    4300002: HearthDoor_Corridor:GEO_HearthDoor_Frame
+    4300004: HearthDoor_Corridor:GEO_HearthDoor_BitBot
+    4300006: HearthDoor_Corridor:GEO_HearthDoor_BitTop
+    4300008: HearthDoor_Corridor:GEO_HearthDoor_BitMid
+    4300010: HearthDoor_Corridor:GEO_HearthDoor_Lock2
+    4300012: HearthDoor_Corridor:GEO_HearthDoor
+    4300014: HearthDoor_Corridor:GEO_HearthDoor_Handle
+    4300016: HearthDoor_Corridor:GEO_HearthDoor_Handle1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HearthDoor_Corridor_aiStandardSurface1
+    second: {fileID: 2100000, guid: 1fafc5568a6dba642bd461c61095bfb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HearthDoor_Corridor_lambert11
+    second: {fileID: 2100000, guid: e0eb9d1537392a4478154d81abefd5cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn2
+    second: {fileID: 2100000, guid: 2f4e8f532f9401743a815ee27ab7c559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert17
+    second: {fileID: 2100000, guid: de5688f9c51aed74ca6e2f1578d0c187, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

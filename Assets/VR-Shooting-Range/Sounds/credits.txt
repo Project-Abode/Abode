@@ -1,0 +1,16 @@
+Sound Effect Credits:
+
+Shotgun 
+Created by Michel Baradari
+Link: http://opengameart.org/content/rumbleexplosion
+License: CC-BY 3.0
+
+Target Hit
+Created by TinyWorlds
+Link: http://opengameart.org/content/break-pumpkin
+License: CC0
+
+Bad Target
+Created by pauliuw
+Link: http://opengameart.org/content/attack-miss-or-hit-sounds2
+License: CC0
