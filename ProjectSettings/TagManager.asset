@@ -6,6 +6,8 @@ TagManager:
   tags:
   - EndMatchButton
   - LogoutButton
+  - String
+  - Hand
   layers:
   - Default
   - TransparentFX

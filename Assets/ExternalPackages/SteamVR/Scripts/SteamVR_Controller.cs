@@ -141,6 +141,9 @@ public class SteamVR_Controller
 
 	public static Device Input(int deviceIndex)
 	{
+        //Miao: 
+        
+
 		if (devices == null)
 		{
 			devices = new Device[OpenVR.k_unMaxTrackedDeviceCount];
@@ -148,7 +151,7 @@ public class SteamVR_Controller
 				devices[i] = new Device(i);
 		}
 
-		return devices[deviceIndex];
+        return devices[deviceIndex];
 	}
 
 	public static void Update()
