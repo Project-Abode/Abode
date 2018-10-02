@@ -73,7 +73,7 @@ namespace ExitGames.SportShooting
             myID = id;
             toID = myID;
             LoadToGoScene();
-            
+
             _connection.Init();
             _connection.Connect();
         }
@@ -131,9 +131,9 @@ namespace ExitGames.SportShooting
                         OnSomePlayerConnected((PhotonPlayer)stateData);
                     }
                     
-                    if(PhotonNetwork.isMasterClient) {
-                        PhotonNetwork.LoadLevel(myID);
-                    }
+                    // if(PhotonNetwork.isMasterClient) {
+                    //     PhotonNetwork.LoadLevel(myID);
+                    // }
                     
                     ChangeNetworkState(NetworkState.PLAYING);
                     break;
