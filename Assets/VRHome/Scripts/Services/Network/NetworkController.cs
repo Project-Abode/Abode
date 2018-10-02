@@ -2,6 +2,8 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 namespace ExitGames.SportShooting
 {
@@ -17,6 +19,9 @@ namespace ExitGames.SportShooting
     }
 
     public class NetworkController : MonoBehaviour {
+
+        public static string myID;
+        public static string toID;
 
         public const string NETCODE_VERSION = "1.0";
         public const int MAX_PLAYERS = 5;
@@ -39,7 +44,19 @@ namespace ExitGames.SportShooting
         {
             Instance = this;
             _connection = GetComponent<Connection>();
+
+             SceneManager.sceneLoaded += OnSceneLoaded;
         }
+
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            Debug.Log("OnSceneLoaded: " + scene.name);
+
+            if(scene.name.Equals("Lobby")) return;
+
+            _connection.JoinRoom(toID);
+        }
+
 
         void OnEnable()
         {
@@ -51,15 +68,29 @@ namespace ExitGames.SportShooting
             PhotonNetwork.OnEventCall -= this.ProcessNetworkEvent;
         }
 
-        public void StartMultiplayerGame()
+        public void StartMultiplayerGame(string id)
         {
+            myID = id;
+            toID = myID;
+            LoadToGoScene();
+            
             _connection.Init();
             _connection.Connect();
+        }
+
+        public void JoinRoom(string id)
+        {
+            toID = id;   
+            _connection.LeaveRoom();
         }
 
         public void EndMultiplayerGame()
         {
             _connection.Disconnect();
+        }
+
+        public void LoadToGoScene() {
+            SceneManager.LoadScene(toID, LoadSceneMode.Single);
         }
 
         public void ChangeNetworkState(NetworkState newState, object stateData = null)
@@ -74,28 +105,40 @@ namespace ExitGames.SportShooting
             switch (ActiveState)
             {
                 case NetworkState.ROOM_CREATED:
-                    if (OnGameConnected != null)
-                    {
-                        OnGameConnected();
-                    }
-                    ChangeNetworkState(NetworkState.PLAYING);
+                    Debug.Log("[Network] Room Created");
+                    //if (OnGameConnected != null)
+                    //{
+                        //SceneManager.LoadScene(myID, LoadSceneMode.Single);
+                        //OnGameConnected();
+                    //}
+
+                    //ChangeNetworkState(NetworkState.PLAYING);
                     break;
                 case NetworkState.ROOM_JOINED:
+                    Debug.Log("[Network] Room Joined");
                     if (OnGameConnected != null)
                     {
+                        
                         OnGameConnected();
                     }
-                    NotifyToUpdateScore();
+
                     ChangeNetworkState(NetworkState.PLAYING);
                     break;
                 case NetworkState.SOME_PLAYER_CONNECTED:
+                    Debug.Log("[Network] Some Player Joined");
                     if(OnSomePlayerConnected != null)
                     {
                         OnSomePlayerConnected((PhotonPlayer)stateData);
                     }
+                    
+                    if(PhotonNetwork.isMasterClient) {
+                        PhotonNetwork.LoadLevel(myID);
+                    }
+                    
                     ChangeNetworkState(NetworkState.PLAYING);
                     break;
                 case NetworkState.SOME_PLAYER_DISCONNECTED:
+                    Debug.Log("[Network] Room Joined");
                     if (OnSomePlayerDisconnected != null)
                     {
                         OnSomePlayerDisconnected((PhotonPlayer)stateData);

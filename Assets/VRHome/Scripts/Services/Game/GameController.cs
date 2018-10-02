@@ -14,20 +14,39 @@ namespace ExitGames.SportShooting
 
         void Start()
         {
-            InitMainMenu();
+            //InitMainMenu();
         }
 
         public void InitMainMenu()
         {
-            GameModel.Instance.ChangeGameState(new MainMenuGameState());
-            GameView.Instance.ShowMainMenuPanel();
+            //GameModel.Instance.ChangeGameState(new MainMenuGameState());
+            //GameView.Instance.ShowMainMenuPanel();
         }
 
         public void StartMultiplayerGame()
         {
+            //GameModel.Instance.ChangeGameState(new ConnectingGameState());
+            //GameView.Instance.ShowNetworkPanel();
+            //NetworkController.Instance.StartMultiplayerGame();
+        }
+
+
+        public void StartGame(string id)
+        {
             GameModel.Instance.ChangeGameState(new ConnectingGameState());
             GameView.Instance.ShowNetworkPanel();
-            NetworkController.Instance.StartMultiplayerGame();
+            NetworkController.Instance.StartMultiplayerGame(id);
         }
+
+
+        public void JoinRoom(string id)
+        {
+            GameModel.Instance.ChangeGameState(new ConnectingGameState());
+            GameView.Instance.ShowNetworkPanel();
+            NetworkController.Instance.JoinRoom(id);
+        }
+
+
+
     }
 }

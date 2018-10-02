@@ -20,7 +20,7 @@ namespace ExitGames.SportShooting
             NetworkController.OnGameConnected -= InitGame;
         }
 
-        void InitGame()
+        void InitGame() // INIT: guest or host
         {
             SetPlayerData();
             GameModel.Instance.ChangeGameState(new InitializingGameState());
@@ -28,49 +28,61 @@ namespace ExitGames.SportShooting
 
         void SetPlayerData()
         {
-            List<int> freePositions = new List<int>();
-            for(int pos = 0; pos < NetworkController.MAX_PLAYERS; pos++)
-            {
-                freePositions.Add(pos);
-            }
 
+            //
+            // Position: 0 - host, 1 - guest
+
+            // List<int> freePositions = new List<int>();
+            // for(int pos = 0; pos < NetworkController.MAX_PLAYERS; pos++)
+            // {
+            //     freePositions.Add(pos); //[0,1,2,3,4]
+            // } // all position
+
+            Debug.Log("Print Players in network");
             foreach (PhotonPlayer player in PhotonNetwork.playerList)
             {
-                if(player.CustomProperties["position"] != null)
-                {
-                    freePositions.Remove((int)player.CustomProperties["position"]);
-                }
-            }
+                // if(player.CustomProperties["position"] != null)
+                // {
+                //     freePositions.Remove((int)player.CustomProperties["position"]);
+                // }
 
-            string playerName = string.Empty;
+                Debug.Log(player.ID);
 
-            switch (freePositions[0])
-            {
-                case 0:
-                    playerName = "Player RED";
-                    break;
-                case 1:
-                    playerName = "Player BLUE";
-                    break;
-                case 2:
-                    playerName = "Player YELLOW";
-                    break;
-                case 3:
-                    playerName = "Player GREEN";
-                    break;
-                case 4:
-                    playerName = "Player BLACK";
-                    break;
-            }
+            } // remove already taken position
+            Debug.Log("Print Players in network - end");
+
+            // string playerName = string.Empty;
+
+            // switch (freePositions[0])
+            // {
+            //     case 0:
+            //         playerName = "Player RED";
+            //         break;
+            //     case 1:
+            //         playerName = "Player BLUE";
+            //         break;
+            //     case 2:
+            //         playerName = "Player YELLOW";
+            //         break;
+            //     case 3:
+            //         playerName = "Player GREEN";
+            //         break;
+            //     case 4:
+            //         playerName = "Player BLACK";
+            //         break;
+            // }
+
+            int spawn_pos = PhotonNetwork.playerList.Length > 1 ? 1 : 0;
 
             Hashtable playerInfo = new Hashtable();
-            playerInfo.Add("position", freePositions[0]);
+            playerInfo.Add("position", spawn_pos);
             playerInfo.Add("roundScore", 0);
-            playerInfo.Add("name", playerName);
+            //playerInfo.Add("name", playerName);
+            playerInfo.Add("name", "NULL");
             PhotonNetwork.player.SetCustomProperties(playerInfo);
 
-            Debug.Log(PhotonNetwork.player.CustomProperties["position"]);
-            Debug.Log(PhotonNetwork.player.ID);
+            Debug.Log("Spawn Point:" + PhotonNetwork.player.CustomProperties["position"]);
+            Debug.Log("ID:"+ PhotonNetwork.player.ID);
         }
     }
 }

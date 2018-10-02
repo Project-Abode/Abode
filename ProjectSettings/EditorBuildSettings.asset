@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/VR-Shooting-Range/Scenes/DemoVrShootingRange-Scene.unity
+    path: Assets/VRHome/Scenes/DemoVrShootingRange-Scene.unity
     guid: 0b9dcf73de5a38745bc83e5f34ab4c36
   - enabled: 1
-    path: Assets/Scenes/VRHome/VRHome.unity
+    path: Assets/VRHome/Scenes/VRHome/Lobby.unity
+    guid: 6280e6ecccc53e240afefc5d4fd280b9
+  - enabled: 1
+    path: Assets/VRHome/Scenes/VRHome/001.unity
     guid: 0befc89ae5bb1384e80537ee0e535f99
+  - enabled: 1
+    path: Assets/VRHome/Scenes/VRHome/002.unity
+    guid: ba2398fde5d1e7042a4f769d41aef6ea

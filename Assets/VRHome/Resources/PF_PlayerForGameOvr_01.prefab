@@ -2575,7 +2575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _holderTarget: {fileID: 4000013493429574}
-  _headModel: {fileID: 1453238170934516}
+  _headModel: {fileID: 1224797638431670}
 --- !u!120 &120000010175106654
 LineRenderer:
   m_ObjectHideFlags: 1
