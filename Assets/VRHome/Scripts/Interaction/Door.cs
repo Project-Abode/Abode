@@ -146,11 +146,4 @@ public class Door : MonoBehaviour {
         _knockSound = GetComponent<AudioSource>();
     }
 
-	
-	// Update is called once per frame
-	void Update () {
-
-
-		
-	}
 }

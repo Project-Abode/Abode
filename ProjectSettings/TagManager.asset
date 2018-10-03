@@ -8,6 +8,9 @@ TagManager:
   - LogoutButton
   - String
   - Hand
+  - projectile
+  - FxTemporaire
+  - interactable
   layers:
   - Default
   - TransparentFX
