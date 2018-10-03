@@ -72,6 +72,7 @@ namespace ExitGames.SportShooting
         {
             myID = id;
             toID = myID;
+            
             LoadToGoScene();
 
             _connection.Init();

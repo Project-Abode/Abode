@@ -523,7 +523,8 @@ GameObject:
   - component: {fileID: 4997205546110194}
   - component: {fileID: 20498188431974534}
   - component: {fileID: 124446124595290668}
-  - component: {fileID: 114651983301352296}
+  - component: {fileID: 114595795775170004}
+  - component: {fileID: 114946862462590926}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -2665,7 +2666,7 @@ MonoBehaviour:
   - {x: -1.65, y: 0.01, z: -1.275}
   - {x: -1.65, y: 0.01, z: 1.275}
   - {x: 1.65, y: 0.01, z: 1.275}
---- !u!114 &114651983301352296
+--- !u!114 &114595795775170004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2673,12 +2674,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708018231833396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 4067705972853970}
-  _ears: {fileID: 4152049466040418}
-  wireframe: 0
+  profile: {fileID: 11400000, guid: c183d1c27f02bea4c936c5502ffb2eac, type: 2}
 --- !u!114 &114717422529173496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3021,6 +3020,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedObj: {fileID: 114185735990709710}
+--- !u!114 &114946862462590926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1708018231833396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 4067705972853970}
+  _ears: {fileID: 4152049466040418}
+  wireframe: 0
 --- !u!114 &114991419383987822
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -55,9 +55,6 @@ namespace ExitGames.SportShooting
 
             // Here we only create our own room
             CreateAndJoinMyRoom();
-            // Debug.Log("[Connection]Create Room:" + NetworkController.myID);
-            // PhotonNetwork.CreateRoom(NetworkController.myID , new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
-
 
             //Reference:
             //NetworkController.Instance.ChangeNetworkState(NetworkState.JOINING_ROOM);

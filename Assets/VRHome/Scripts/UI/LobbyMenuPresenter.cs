@@ -19,6 +19,11 @@ namespace ExitGames.SportShooting
                 StartPlayer("002");
             }
 
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                StartPlayer("debug");
+            }
+
             if (Input.GetKeyDown(KeyCode.A))
             {
                 JoinRoom("001");
@@ -29,6 +34,7 @@ namespace ExitGames.SportShooting
                 JoinRoom("002");
             }
 
+            
 
         }
 
