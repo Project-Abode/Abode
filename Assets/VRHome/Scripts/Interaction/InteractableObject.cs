@@ -17,8 +17,10 @@ public class InteractableObject : MonoBehaviour {
 	void Awake() {
 
 		var rb = GetComponent<Rigidbody>();
-		if(!PhotonNetwork.isMasterClient) {
-			Destroy(rb);
+		if(PhotonNetwork.isMasterClient) {
+            //Destroy(rb);
+            rb.isKinematic = false;
+            rb.useGravity = true;
 		}
 
 	}

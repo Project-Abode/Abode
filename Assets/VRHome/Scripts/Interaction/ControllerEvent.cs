@@ -22,11 +22,13 @@ public class ControllerEvent : MonoBehaviour {
 	void Update () {
 		
 		if (Controller.GetHairTriggerDown ()) {
+            Debug.Log("Trigger Down");
             grab.ControllerTriggerDown();
 		}
 
 		if (Controller.GetHairTriggerUp ()) {
-         	grab.ControllerTriggerUp();
+            Debug.Log("Trigger UP");
+            grab.ControllerTriggerUp();
 		}
 	}
 
