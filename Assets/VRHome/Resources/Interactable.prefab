@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: 0
-  _photonView: {fileID: 114977000973430768}
 --- !u!114 &114529405460905530
 MonoBehaviour:
   m_ObjectHideFlags: 1

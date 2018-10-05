@@ -10,8 +10,18 @@ public class InteractableObject : MonoBehaviour {
 
 	public bool locked = false;
 
-	[SerializeField]
-    PhotonView _photonView;
+	// [SerializeField]
+    // PhotonView _photonView;
+
+
+	void Awake() {
+
+		var rb = GetComponent<Rigidbody>();
+		if(!PhotonNetwork.isMasterClient) {
+			Destroy(rb);
+		}
+
+	}
 
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.UpArrow)) {
@@ -29,26 +39,27 @@ public class InteractableObject : MonoBehaviour {
 
 	public void HoldObject() {
 
-		_photonView.RPC("Holded", PhotonTargets.All);
-
+		//_photonView.RPC("Holded", PhotonTargets.All);
+		locked = true;
 	}
 
 	public void ReleaseObject() {
-		_photonView.RPC("Released", PhotonTargets.All);
+		//_photonView.RPC("Released", PhotonTargets.All);
+		locked = false;
 	}
 
-	[PunRPC]
-    public void Holded()
-    {
-       locked = true;
-    }
+	// [PunRPC]
+    // public void Holded()
+    // {
+    //    locked = true;
+    // }
 
 	
-	[PunRPC]
-    public void Released()
-    {
-       locked = false;
-    }
+	// [PunRPC]
+    // public void Released()
+    // {
+    //    locked = false;
+    // }
 
 
 }

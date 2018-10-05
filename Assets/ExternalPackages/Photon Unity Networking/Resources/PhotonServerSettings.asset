@@ -43,4 +43,6 @@ MonoBehaviour:
   - PlayKnockSound
   - Holded
   - Released
+  - TryGrab
+  - TryRelease
   DisableAutoOpenWizard: 1
