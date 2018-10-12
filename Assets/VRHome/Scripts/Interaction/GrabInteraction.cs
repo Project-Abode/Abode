@@ -6,18 +6,20 @@ using ExitGames.SportShooting;
 public class GrabInteraction : MonoBehaviour {
 
 	public GameObject collidingObject;
+	public GameObject remoteController;
     public GameObject objectInHand;
 
 	public PhotonView _photonView;
 
-	public void ControllerTriggerDown() {
+	public void ControllerTriggerDown(SteamVR_TrackedController controller) {
 		_photonView.RPC("TryGrab", PhotonTargets.MasterClient);
 	}
 
 
-	public void ControllerTriggerUp() {
+	public void ControllerTriggerUp(SteamVR_TrackedController controller) {
 		_photonView.RPC("TryRelease", PhotonTargets.MasterClient);
 	}
+
 
 
 	[PunRPC]
@@ -52,19 +54,23 @@ public class GrabInteraction : MonoBehaviour {
 
 		collidingObject = col.gameObject;
 	}
+
+	private void SetRemoteController(Collider other) {
+		remoteController = other.gameObject;
+	}
 	
 
 	public void OnTriggerEnter(Collider other)
 	{
-
 		SetCollidingObject (other);
 	}
 
 	public void OnTriggerStay(Collider other)
 	{
-
         SetCollidingObject (other);
 	}
+
+	
 
 	public void OnTriggerExit(Collider other)
 	{

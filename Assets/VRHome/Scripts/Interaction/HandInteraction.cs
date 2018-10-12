@@ -4,23 +4,31 @@ using UnityEngine;
 using Valve.VR;
 
 public class HandInteraction : MonoBehaviour {
-
+//Haptic Feedback
     private SteamVR_Controller.Device device;
-    public SteamVR_TrackedObject trackedObj;
+    //public SteamVR_TrackedObject trackedObj;
 
-    bool activated = false;
+    //bool activated = false;
 
-    private void Update()
-    {
-        if (!activated)
-        {
-            if(trackedObj.transform.parent.gameObject.activeSelf)
-            {
-                Debug.Log("Controller activated");
-                activated = true;
-                device = SteamVR_Controller.Input((int)trackedObj.index);
-            }
-        }
+    // private void Update()
+    // {
+    //     if (!activated)
+    //     {
+    //         if(trackedObj.transform.parent.gameObject.activeSelf)
+    //         {
+    //             Debug.Log("Controller activated");
+    //             activated = true;
+    //             device = SteamVR_Controller.Input((int)trackedObj.index);
+    //         }
+    //     }
+    // }
+
+    public void SetUpDevice(SteamVR_TrackedObject trackedObj) {
+        device = SteamVR_Controller.Input((int)trackedObj.index);
+    }
+
+    public void RemoveDevice() {
+        device = null;
     }
 
     float pulseDuration = 0.1f;
@@ -29,7 +37,7 @@ public class HandInteraction : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger haptic pulse");
+//        Debug.Log("Trigger haptic pulse");
         if(device!=null)
         {
             Debug.Log("device not null");

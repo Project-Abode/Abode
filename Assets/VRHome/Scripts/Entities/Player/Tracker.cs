@@ -33,5 +33,13 @@ namespace ExitGames.SportShooting
                 transform.rotation = _target.rotation;
             }
         }
+
+        public void SetTarget(Transform target) {
+            _target = target;
+        }
+
+        public void RemoveTarget() {
+            _target = null;
+        }
     }
 }

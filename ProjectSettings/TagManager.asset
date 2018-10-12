@@ -11,6 +11,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - interactable
+  - RemoteController
   layers:
   - Default
   - TransparentFX
