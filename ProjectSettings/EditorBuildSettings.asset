@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/VRHome/Scenes/VRHome/debug.unity
     guid: 33054a752caaf0744bd57b59c18c753e
   - enabled: 1
-    path: Assets/VRHome/Scenes/Meditation Room Go/002.unity
+    path: Assets/VRHome/Scenes/VRHome/002.unity
     guid: 30606eb83cef4cc4eaac041639dc3703
+  - enabled: 1
+    path: Assets/VRHome/Scenes/VRHome/SinglePlayerDebug.unity
+    guid: b27980d6664049e4d8148dee92d07e65
   m_configObjects: {}

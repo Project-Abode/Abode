@@ -22,7 +22,7 @@ public class ControllerEvent : MonoBehaviour {
 	{
 		Debug.Log("ControllerEvent Awake");
 		trackedObj = GetComponent<SteamVR_TrackedObject> ();
-		handHaptic.SetUpDevice(trackedObj);
+		//handHaptic.SetUpDevice(trackedObj);
 
 		controller = GetComponent<SteamVR_TrackedController>();
 		
@@ -33,18 +33,20 @@ public class ControllerEvent : MonoBehaviour {
 
 	void OnEnable() {
 		if(trackedObj) {
-			handHaptic.SetUpDevice(trackedObj);
+			//handHaptic.SetUpDevice(trackedObj);
 		}
 		
 	}
 
 	void OnDisable() {
-		handHaptic.RemoveDevice();
+		//handHaptic.RemoveDevice();
 	}
 
 	void MenuButtonPressed(object sender, ClickedEventArgs e) {
 		Debug.Log("Menu Pressed");
-		remote.SetActive(remote.activeSelf);
+		remote.SetActive(!remote.activeSelf);
+		
+		
 	}
 
 	void TriggerDown(object sender, ClickedEventArgs e) {

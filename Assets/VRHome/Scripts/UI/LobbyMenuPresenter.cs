@@ -21,7 +21,8 @@ namespace ExitGames.SportShooting
 
             if (Input.GetKeyDown(KeyCode.D))
             {
-                StartPlayer("debug");
+                //StartPlayer("debug");
+                StartPlayer("SinglePlayerDebug");
             }
 
             if (Input.GetKeyDown(KeyCode.A))
