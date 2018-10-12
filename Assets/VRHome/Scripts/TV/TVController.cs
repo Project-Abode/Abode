@@ -9,6 +9,8 @@ public class TVController : MonoBehaviour {
 	//public GameObject InviteBtn;
 	public Text msgtxt;
 
+	public GameObject portal;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -38,7 +40,12 @@ public class TVController : MonoBehaviour {
 
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
-		SetMsg("Your portal to home is here. Have a great day!");
+		portal.SetActive(!portal.activeSelf);
+		if(portal.activeSelf) {
+			SetMsg("Your portal to home is next to the door.");
+		}else {
+			SetMsg("");
+		}
 	}
 
 	//TODO: cancel buttons

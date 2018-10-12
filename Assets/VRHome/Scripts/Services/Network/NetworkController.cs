@@ -57,7 +57,7 @@ namespace ExitGames.SportShooting
             if(scene.name == myID) {
                 _connection.CreateAndJoinMyRoom();
             }else {
-                 _connection.JoinRoom(toID);
+                _connection.JoinRoom(toID);
             }
            
         }
@@ -84,7 +84,8 @@ namespace ExitGames.SportShooting
 
         public void JoinRoom(string id)
         {
-            toID = id;   
+            //SceneManager.UnloadScene(toID);
+            toID = id;  
             _connection.LeaveRoom();
         }
 

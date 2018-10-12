@@ -20996,6 +20996,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 2008374812}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_IsPrefabAsset: 0
@@ -26484,7 +26489,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4591585853064100, guid: 0204d61de486eff47a023c5578cff608, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.678
+      value: -1.376
       objectReference: {fileID: 0}
     - target: {fileID: 4591585853064100, guid: 0204d61de486eff47a023c5578cff608, type: 2}
       propertyPath: m_LocalPosition.y
@@ -26492,7 +26497,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4591585853064100, guid: 0204d61de486eff47a023c5578cff608, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.739
+      value: 0.712
       objectReference: {fileID: 0}
     - target: {fileID: 4591585853064100, guid: 0204d61de486eff47a023c5578cff608, type: 2}
       propertyPath: m_LocalRotation.x
@@ -26514,14 +26519,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114673823240287900, guid: 0204d61de486eff47a023c5578cff608,
-        type: 2}
-      propertyPath: roomID
-      value: 002
+    - target: {fileID: 1790317961462452, guid: 0204d61de486eff47a023c5578cff608, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0204d61de486eff47a023c5578cff608, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2008374812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1790317961462452, guid: 0204d61de486eff47a023c5578cff608,
+    type: 2}
+  m_PrefabInternal: {fileID: 2008374811}
 --- !u!1 &2012748034
 GameObject:
   m_ObjectHideFlags: 0
