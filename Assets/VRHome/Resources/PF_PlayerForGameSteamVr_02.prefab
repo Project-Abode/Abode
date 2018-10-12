@@ -581,7 +581,8 @@ GameObject:
   - component: {fileID: 20498188431974534}
   - component: {fileID: 124446124595290668}
   - component: {fileID: 114595795775170004}
-  - component: {fileID: 114946862462590926}
+  - component: {fileID: 65022275019037820}
+  - component: {fileID: 114643702572781376}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -2193,6 +2194,18 @@ BoxCollider:
   m_GameObject: {fileID: 1151610869466142}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.44987047, y: 0.34735405, z: 0.4673639}
+  m_Center: {x: -0.0100675225, y: 0.07070321, z: -0.06336495}
+--- !u!65 &65022275019037820
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1708018231833396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.44987047, y: 0.34735405, z: 0.4673639}
@@ -3176,6 +3189,20 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114643702572781376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1708018231833396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 4067705972853970}
+  _ears: {fileID: 4152049466040418}
+  wireframe: 0
 --- !u!114 &114717422529173496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3596,20 +3623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640d7a42a2ca0e42a5f3facbe296407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114946862462590926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1708018231833396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _head: {fileID: 4067705972853970}
-  _ears: {fileID: 4152049466040418}
-  wireframe: 0
 --- !u!114 &114991419383987822
 MonoBehaviour:
   m_ObjectHideFlags: 1

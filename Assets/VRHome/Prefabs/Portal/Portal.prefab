@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4264453972661488}
   - component: {fileID: 33147234389380728}
   - component: {fileID: 23210090977210206}
-  - component: {fileID: 65482700350472852}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -41,6 +40,7 @@ GameObject:
   - component: {fileID: 23644517496046832}
   - component: {fileID: 65570994554160314}
   - component: {fileID: 114673823240287900}
+  - component: {fileID: 54515427767124412}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790317961462452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.881, y: 0, z: -0.884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4264453972661488}
@@ -159,18 +159,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790317961462452}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65482700350472852
-BoxCollider:
+--- !u!54 &54515427767124412
+Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1593277516851032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_GameObject: {fileID: 1790317961462452}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65570994554160314
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -194,4 +197,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522e684e2bd0cef4fb70e326f3b5c905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomID: 
+  roomID: 001
