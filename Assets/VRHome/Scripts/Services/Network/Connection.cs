@@ -54,7 +54,9 @@ namespace ExitGames.SportShooting
         {
 
             // Here we only create our own room
-            CreateAndJoinMyRoom();
+            //CreateAndJoinMyRoom();
+
+            NetworkController.Instance.LoadToGoScene();
 
             //Reference:
             //NetworkController.Instance.ChangeNetworkState(NetworkState.JOINING_ROOM);
@@ -80,14 +82,13 @@ namespace ExitGames.SportShooting
             //NetworkController.Instance.ChangeNetworkState(NetworkState.CREATING_ROOM);
             //PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
 
+            //When some one goes back to their home: there is no room and need to be created
             Debug.Log("[Connection]Failed to join room");
             Debug.Log(codeAndMsg[1]);
             
             //Faile to join a room, GO back to my home
             NetworkController.toID = NetworkController.myID;
             NetworkController.Instance.LoadToGoScene();
-            CreateAndJoinMyRoom();
-
         }
 
         public override void OnJoinedRoom()
@@ -99,6 +100,7 @@ namespace ExitGames.SportShooting
         public override void OnLeftRoom() {
             Debug.Log("[Connection]Left room Successful");
             NetworkController.Instance.LoadToGoScene();
+
         }
 
         public override void OnJoinedLobby() {

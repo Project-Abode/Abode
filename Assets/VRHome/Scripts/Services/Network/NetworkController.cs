@@ -54,7 +54,12 @@ namespace ExitGames.SportShooting
 
             if(scene.name.Equals("Lobby")) return;
 
-            _connection.JoinRoom(toID);
+            if(scene.name == myID) {
+                _connection.CreateAndJoinMyRoom();
+            }else {
+                 _connection.JoinRoom(toID);
+            }
+           
         }
 
 
@@ -73,8 +78,6 @@ namespace ExitGames.SportShooting
             myID = id;
             toID = myID;
             
-            LoadToGoScene();
-
             _connection.Init();
             _connection.Connect();
         }

@@ -46,6 +46,11 @@ namespace ExitGames.SportShooting
             NetworkController.Instance.JoinRoom(id);
         }
 
+        public void GoBackToHome() {
+            GameModel.Instance.ChangeGameState(new ConnectingGameState());
+            //NetworkController.Instance.JoinRoom(id);
+        }
+
 
 
     }
