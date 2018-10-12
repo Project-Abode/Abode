@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: eda2e5dd1d3194b25ad038951862b73f
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base
+    100002: ControllerBox1
+    100004: //RootNode
+    100006: polySurface10
+    100008: polySurface11
+    100010: polySurface12
+    100012: polySurface13
+    100014: polySurface14
+    100016: polySurface15
+    100018: polySurface16
+    100020: polySurface17
+    100022: polySurface18
+    100024: polySurface19
+    100026: polySurface20
+    100028: polySurface21
+    100030: polySurface22
+    100032: polySurface23
+    100034: polySurface24
+    100036: polySurface25
+    100038: polySurface26
+    100040: polySurface27
+    100042: polySurface28
+    100044: polySurface29
+    100046: polySurface30
+    100048: polySurface31
+    100050: polySurface32
+    100052: polySurface33
+    100054: polySurface34
+    100056: polySurface35
+    100058: polySurface36
+    100060: polySurface37
+    100062: polySurface38
+    100064: polySurface39
+    100066: polySurface40
+    100068: polySurface41
+    100070: polySurface42
+    100072: polySurface43
+    100074: polySurface44
+    100076: polySurface45
+    100078: polySurface46
+    100080: polySurface5
+    100082: polySurface6
+    100084: polySurface7
+    100086: polySurface8
+    100088: polySurface9
+    100090: Sand
+    100092: Slider
+    100094: Slider_Back
+    100096: transform1
+    100098: transform10
+    100100: transform11
+    100102: transform12
+    100104: transform13
+    100106: transform14
+    100108: transform15
+    100110: transform16
+    100112: transform17
+    100114: transform18
+    100116: transform19
+    100118: transform2
+    100120: transform20
+    100122: transform21
+    100124: transform22
+    100126: transform23
+    100128: transform24
+    100130: transform25
+    100132: transform26
+    100134: transform27
+    100136: transform28
+    100138: transform29
+    100140: transform3
+    100142: transform30
+    100144: transform31
+    100146: transform32
+    100148: transform33
+    100150: transform34
+    100152: transform35
+    100154: transform36
+    100156: transform37
+    100158: transform38
+    100160: transform39
+    100162: transform4
+    100164: transform40
+    100166: transform41
+    100168: transform42
+    100170: transform43
+    100172: transform5
+    100174: transform6
+    100176: transform7
+    100178: transform8
+    100180: transform9
+    400000: Base
+    400002: ControllerBox1
+    400004: //RootNode
+    400006: polySurface10
+    400008: polySurface11
+    400010: polySurface12
+    400012: polySurface13
+    400014: polySurface14
+    400016: polySurface15
+    400018: polySurface16
+    400020: polySurface17
+    400022: polySurface18
+    400024: polySurface19
+    400026: polySurface20
+    400028: polySurface21
+    400030: polySurface22
+    400032: polySurface23
+    400034: polySurface24
+    400036: polySurface25
+    400038: polySurface26
+    400040: polySurface27
+    400042: polySurface28
+    400044: polySurface29
+    400046: polySurface30
+    400048: polySurface31
+    400050: polySurface32
+    400052: polySurface33
+    400054: polySurface34
+    400056: polySurface35
+    400058: polySurface36
+    400060: polySurface37
+    400062: polySurface38
+    400064: polySurface39
+    400066: polySurface40
+    400068: polySurface41
+    400070: polySurface42
+    400072: polySurface43
+    400074: polySurface44
+    400076: polySurface45
+    400078: polySurface46
+    400080: polySurface5
+    400082: polySurface6
+    400084: polySurface7
+    400086: polySurface8
+    400088: polySurface9
+    400090: Sand
+    400092: Slider
+    400094: Slider_Back
+    400096: transform1
+    400098: transform10
+    400100: transform11
+    400102: transform12
+    400104: transform13
+    400106: transform14
+    400108: transform15
+    400110: transform16
+    400112: transform17
+    400114: transform18
+    400116: transform19
+    400118: transform2
+    400120: transform20
+    400122: transform21
+    400124: transform22
+    400126: transform23
+    400128: transform24
+    400130: transform25
+    400132: transform26
+    400134: transform27
+    400136: transform28
+    400138: transform29
+    400140: transform3
+    400142: transform30
+    400144: transform31
+    400146: transform32
+    400148: transform33
+    400150: transform34
+    400152: transform35
+    400154: transform36
+    400156: transform37
+    400158: transform38
+    400160: transform39
+    400162: transform4
+    400164: transform40
+    400166: transform41
+    400168: transform42
+    400170: transform43
+    400172: transform5
+    400174: transform6
+    400176: transform7
+    400178: transform8
+    400180: transform9
+    2100000: lambert50
+    2100002: lambert46
+    2100004: lambert55
+    2100006: lambert53
+    2100008: lambert54
+    2300000: Base
+    2300002: Sand
+    2300004: Slider
+    2300006: Slider_Back
+    3300000: Base
+    3300002: Sand
+    3300004: Slider
+    3300006: Slider_Back
+    4300000: Slider
+    4300002: Sand
+    4300004: Base
+    4300006: Slider_Back
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert46
+    second: {fileID: 2100000, guid: d96bc32e3014d4d4ebdbeafcc9de01b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert50
+    second: {fileID: 2100000, guid: 82dd0946bb3e74d3d9f8138af56b7817, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert53
+    second: {fileID: 2100000, guid: 256424d80370841ae9bd9296388fcf77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert54
+    second: {fileID: 2100000, guid: 5e4d0a3d62e9b47ed850a7761110c38d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert55
+    second: {fileID: 2100000, guid: ffc370b9203174ab1938ff7d8a9c20a2, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CB_Sand_Texture
+    second: {fileID: 2800000, guid: 09f31837664e44a10a870e12ff0d91c1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CB_SliderBox_Texture
+    second: {fileID: 2800000, guid: c023cd8c8022c46d88ffe1865b6e5d6b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CB_Slider_UV
+    second: {fileID: 2800000, guid: 7ab24cb3024e44e959e0a356094fb6e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ControllerBox_Base
+    second: {fileID: 2800000, guid: b21810631345f435084883e7672e066e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ControllerBox_UV1
+    second: {fileID: 2800000, guid: fd3ac78c919ad4640b4d54b29476b058, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
