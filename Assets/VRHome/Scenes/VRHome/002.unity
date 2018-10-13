@@ -973,6 +973,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114673823240287900, guid: 0204d61de486eff47a023c5578cff608,
+        type: 2}
+      propertyPath: roomID
+      value: 001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0204d61de486eff47a023c5578cff608, type: 2}
   m_IsPrefabAsset: 0
