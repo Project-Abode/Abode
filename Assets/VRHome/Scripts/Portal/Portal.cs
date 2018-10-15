@@ -23,7 +23,7 @@ public class Portal : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if(col.tag == "MainCamera" && !PhotonNetwork.isMasterClient) {
+		if(col.tag == "MainCamera") {
 			if(!roomID.Equals(""))
 				GameController.Instance.JoinRoom(roomID);
 		}
