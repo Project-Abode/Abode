@@ -53345,7 +53345,7 @@ Prefab:
         type: 2}
       propertyPath: portal
       value: 
-      objectReference: {fileID: 2008374812}
+      objectReference: {fileID: 2008374815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_IsPrefabAsset: 0

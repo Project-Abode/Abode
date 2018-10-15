@@ -43,7 +43,7 @@ public class TVController : MonoBehaviour {
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
 
-		if(portal.visible) {
+		if(!portal.visible) {
 			portal.ShowEntity();
 			SetMsg("Your portal to home is next to the door.");
 		}else {
