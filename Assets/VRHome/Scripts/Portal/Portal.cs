@@ -41,7 +41,14 @@ public class Portal : MonoBehaviour {
 	void SetActiveByRPC(bool active) {
 		Debug.Log("Set active to " + active);
 		entity.SetActive(active);
-		col.enabled = active;
+
+		if(PhotonNetwork.isMasterClient) {
+			col.enabled = false;
+		}else{
+			col.enabled = active;
+		}
+
+
 		visible = entity.activeSelf;
 	}
 
