@@ -9,7 +9,9 @@ public class TVController : MonoBehaviour {
 	//public GameObject InviteBtn;
 	public Text msgtxt;
 
-	public GameObject portal;
+	public Portal portal;
+
+	
 
 	// Use this for initialization
 	void Start () {
@@ -40,12 +42,15 @@ public class TVController : MonoBehaviour {
 
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
-		portal.SetActive(!portal.activeSelf);
-		if(portal.activeSelf) {
+
+		if(portal.visible) {
+			portal.ShowEntity();
 			SetMsg("Your portal to home is next to the door.");
 		}else {
+			portal.DisappearEntity();
 			SetMsg("");
 		}
+
 	}
 
 	//TODO: cancel buttons
