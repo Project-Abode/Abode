@@ -53346,7 +53346,11 @@ Prefab:
       propertyPath: portal
       value: 
       objectReference: {fileID: 2008374815}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
+    - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
+    - {fileID: 114685644127770940, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
+    - {fileID: 114189074247103370, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1514591251
