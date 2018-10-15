@@ -46,4 +46,5 @@ MonoBehaviour:
   - TryGrab
   - TryRelease
   - SetActiveByRPC
+  - Chime
   DisableAutoOpenWizard: 1
