@@ -10,7 +10,7 @@ public class TVController : MonoBehaviour {
 	public Text msgtxt;
 
 	public Portal portal;
-
+	public GameObject portalBtn;
 	
 
 	// Use this for initialization
@@ -27,6 +27,14 @@ public class TVController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.P)) {
 			OnPortalClicked();
 		}
+
+		//HACK: need to add to event listener to guest join in
+		if(PhotonNetwork.playerList.Length >= 2) {
+			portalBtn.SetActive(true);
+		}else {
+			portalBtn.SetActive(false);
+		}
+
 	}
 
 	//Buttons:

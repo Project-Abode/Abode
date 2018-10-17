@@ -18,12 +18,19 @@ public class PositionSwitcher : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.RightArrow)) {
-			if(index >= N)
-				index = 0;
+		if(Input.GetKeyDown(KeyCode.Keypad9)) {
+			// if(index >= N)
+			// 	index = 0;
 
-			transform.position = targets[index].position;
-			index ++;
+			// transform.position = targets[index].position;
+			// index ++;
+			transform.position = targets[0].position;
+
+		}
+
+		if(Input.GetKeyDown(KeyCode.Keypad8)) {
+			
+			transform.position = targets[1].position;
 
 		}
 	}
