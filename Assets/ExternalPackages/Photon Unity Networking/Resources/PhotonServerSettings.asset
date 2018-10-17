@@ -47,4 +47,5 @@ MonoBehaviour:
   - TryRelease
   - SetActiveByRPC
   - Chime
+  - PlayGoEffect
   DisableAutoOpenWizard: 1

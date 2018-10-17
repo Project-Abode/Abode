@@ -22,11 +22,23 @@ public class Portal : MonoBehaviour {
 		roomID = id;
 	}
 
+	public float leaveDuration = 5f;
 	void OnTriggerEnter(Collider col) {
 		if(col.tag == "MainCamera") {
-			if(!roomID.Equals(""))
-				GameController.Instance.JoinRoom(roomID);
+			if(!roomID.Equals("")) {
+
+				//TODO: Count down and VFX change and sound
+				PlayGoEffect();
+				StartCoroutine(LeaveAfterSeconds(leaveDuration));
+			}
+				
 		}
+	}
+	
+	IEnumerator LeaveAfterSeconds(float duration) {
+		yield return new WaitForSeconds(duration);
+		GameController.Instance.JoinRoom(roomID);
+		yield return null;
 	}
 
 	public void ShowEntity() {
@@ -36,6 +48,19 @@ public class Portal : MonoBehaviour {
 	public void DisappearEntity() {
 		photonView.RPC("SetActiveByRPC", PhotonTargets.All, false);
 	}
+
+	public PortalEffectController _portalEffectController;
+
+	[PunRPC]
+	void PlayGoEffect() {
+		var _audio =GetComponent<AudioSource>();
+		if(_audio)
+			_audio.Play();
+		if(_portalEffectController) {
+			_portalEffectController.PlayGoEffect(leaveDuration);
+		}
+	}
+
 
 	[PunRPC]
 	void SetActiveByRPC(bool active) {
@@ -50,6 +75,13 @@ public class Portal : MonoBehaviour {
 
 
 		visible = entity.activeSelf;
+	}
+
+	//Debug
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Q)) {
+			PlayGoEffect();
+		}
 	}
 
 
