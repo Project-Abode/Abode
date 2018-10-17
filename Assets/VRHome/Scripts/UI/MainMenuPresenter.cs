@@ -15,11 +15,18 @@ namespace ExitGames.SportShooting
         public void OnGoButtonClick() {
 
             if(!portal.visible) {
+                //Hack
+                var col = portal.gameObject.GetComponent<BoxCollider>();
+                col.enabled = true;
+
+                //Hack end
                 portal.ShowEntity();
             }else {
+                var col = portal.gameObject.GetComponent<BoxCollider>();
+                col.enabled = false;
                 portal.DisappearEntity();
             }
-            //portal.SetActive(true);
+            
         }
     }
 }

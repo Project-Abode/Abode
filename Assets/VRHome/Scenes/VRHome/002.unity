@@ -1025,6 +1025,11 @@ Prefab:
       propertyPath: m_Name
       value: Portal-old
       objectReference: {fileID: 0}
+    - target: {fileID: 65570994554160314, guid: 0204d61de486eff47a023c5578cff608,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0204d61de486eff47a023c5578cff608, type: 2}
   m_IsPrefabAsset: 0
@@ -6561,7 +6566,7 @@ Prefab:
     - target: {fileID: 65804337082487270, guid: 46475de8fae3b4f4eb204ade956e8553,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46475de8fae3b4f4eb204ade956e8553, type: 2}
