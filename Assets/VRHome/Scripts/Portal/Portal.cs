@@ -68,7 +68,7 @@ public class Portal : MonoBehaviour {
 		entity.SetActive(active);
 
 		if(PhotonNetwork.isMasterClient) {
-			col.enabled = false;
+			//col.enabled = false;
 		}else{
 			col.enabled = active;
 		}
