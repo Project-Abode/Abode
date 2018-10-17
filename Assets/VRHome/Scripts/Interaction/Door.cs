@@ -7,6 +7,7 @@ public class Door : MonoBehaviour {
 
 
     bool opened = false;
+    public bool isMainDoor = false;
 
     [SerializeField]
     PhotonView _photonView;
@@ -74,12 +75,12 @@ public class Door : MonoBehaviour {
             return;
         }
 
-
-        Debug.Log("Collide");
+        //Debug.Log("Collide");
 
         if (col.gameObject.tag == "Hand")
         {
-            if (PhotonNetwork.isMasterClient) //Host
+
+            if (PhotonNetwork.isMasterClient || isMainDoor) //Host
             {
                 Debug.Log("Host hand collide");
                 if (col.gameObject.tag == "Hand")
