@@ -30172,7 +30172,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4021217785274248, guid: f323aab24e956c948a6f06597ee033b8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.076
+      value: 1.7648083
       objectReference: {fileID: 0}
     - target: {fileID: 4021217785274248, guid: f323aab24e956c948a6f06597ee033b8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -30223,6 +30223,11 @@ Prefab:
     - target: {fileID: 4021217785274248, guid: f323aab24e956c948a6f06597ee033b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114378310868607226, guid: f323aab24e956c948a6f06597ee033b8,
+        type: 2}
+      propertyPath: isMainDoor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65090798468801680, guid: f323aab24e956c948a6f06597ee033b8, type: 2}
@@ -45893,7 +45898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 559fab712cfa60349979f3d0884e04f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.35
+      value: 0.7340001
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 559fab712cfa60349979f3d0884e04f0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -59889,7 +59894,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1635122897}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0254, y: 0.0561, z: -0.0025608565}
+  m_LocalPosition: {x: 0.0254, y: 0.0561, z: 0.0132}
   m_LocalScale: {x: 1, y: 1, z: 1.7454191}
   m_Children: []
   m_Father: {fileID: 774012310}
@@ -61389,7 +61394,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1712017602}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.73, y: 0.55, z: 0}
+  m_LocalPosition: {x: 3.041, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1667074377}
@@ -74049,7 +74054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &2012748035
 Light:
   m_ObjectHideFlags: 0
@@ -80605,7 +80610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 698af7db5150fcc409ab9ceb218bacc3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3
+      value: 0.684
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 698af7db5150fcc409ab9ceb218bacc3, type: 3}
       propertyPath: m_LocalRotation.x
