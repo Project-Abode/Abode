@@ -27,8 +27,7 @@ public class Portal : MonoBehaviour {
 		if(col.tag == "MainCamera") {
 			if(!roomID.Equals("")) {
 
-				//TODO: Count down and VFX change and sound
-				PlayGoEffect();
+			    photonView.RPC("PlayGoEffect", PhotonTargets.All);
 				StartCoroutine(LeaveAfterSeconds(leaveDuration));
 			}
 				
@@ -74,7 +73,7 @@ public class Portal : MonoBehaviour {
 		}
 
 
-		visible = entity.activeSelf;
+		//visible = entity.activeSelf;
 	}
 
 	//Debug
@@ -82,6 +81,8 @@ public class Portal : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Q)) {
 			PlayGoEffect();
 		}
+
+		visible = entity.activeSelf;
 	}
 
 
