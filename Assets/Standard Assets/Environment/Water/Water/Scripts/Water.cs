@@ -14,7 +14,6 @@ namespace UnityStandardAssets.Water
             Refractive = 2,
         };
 
-        Renderer _renderer;
 
         public WaterMode waterMode = WaterMode.Refractive;
         public bool disablePixelLights = true;
@@ -22,24 +21,16 @@ namespace UnityStandardAssets.Water
         public float clipPlaneOffset = 0.07f;
         public LayerMask reflectLayers = -1;
         public LayerMask refractLayers = -1;
-		public bool runWhenNotPlaying = false;
 
 
         private Dictionary<Camera, Camera> m_ReflectionCameras = new Dictionary<Camera, Camera>(); // Camera -> Camera table
         private Dictionary<Camera, Camera> m_RefractionCameras = new Dictionary<Camera, Camera>(); // Camera -> Camera table
-        private RenderTexture m_ReflectionTexture0;
-        private RenderTexture m_ReflectionTexture1;
-        private RenderTexture m_RefractionTexture0;
-        private RenderTexture m_RefractionTexture1;
+        private RenderTexture m_ReflectionTexture;
+        private RenderTexture m_RefractionTexture;
         private WaterMode m_HardwareWaterSupport = WaterMode.Refractive;
         private int m_OldReflectionTextureSize;
         private int m_OldRefractionTextureSize;
         private static bool s_InsideWater;
-
-        private Material GetRendererMaterial()
-        {
-            return Application.isPlaying ? _renderer.material : _renderer.sharedMaterial;
-        }
 
 
         // This is called when it's known that the object will be rendered by some
@@ -48,14 +39,13 @@ namespace UnityStandardAssets.Water
         // camera will just work!
         public void OnWillRenderObject()
         {
-            _renderer = GetComponent<Renderer>();
-            if (!enabled || !_renderer || !_renderer.sharedMaterial ||
-                !_renderer.enabled || (!Application.isPlaying && !runWhenNotPlaying))
+            if (!enabled || !GetComponent<Renderer>() || !GetComponent<Renderer>().sharedMaterial ||
+                !GetComponent<Renderer>().enabled)
             {
                 return;
-			}
+            }
 
-			Camera cam = Camera.current;
+            Camera cam = Camera.current;
             if (!cam)
             {
                 return;
@@ -94,86 +84,56 @@ namespace UnityStandardAssets.Water
             // Render reflection if needed
             if (mode >= WaterMode.Reflective)
             {
-                if (cam.stereoEnabled)
-                {
-                    if (cam.stereoTargetEye == StereoTargetEyeMask.Both || cam.stereoTargetEye == StereoTargetEyeMask.Left)
-                    {
-                        Vector3 eyePos = cam.transform.TransformPoint(new Vector3(-0.5f * cam.stereoSeparation, 0, 0));
-                        Matrix4x4 projectionMatrix = cam.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left);
+                // Reflect camera around reflection plane
+                float d = -Vector3.Dot(normal, pos) - clipPlaneOffset;
+                Vector4 reflectionPlane = new Vector4(normal.x, normal.y, normal.z, d);
 
-                        RenderReflection(reflectionCamera, m_ReflectionTexture0, eyePos, cam.transform.rotation, projectionMatrix);
-                        GetRendererMaterial().SetTexture("_ReflectionTex0", m_ReflectionTexture0);
-                    }
+                Matrix4x4 reflection = Matrix4x4.zero;
+                CalculateReflectionMatrix(ref reflection, reflectionPlane);
+                Vector3 oldpos = cam.transform.position;
+                Vector3 newpos = reflection.MultiplyPoint(oldpos);
+                reflectionCamera.worldToCameraMatrix = cam.worldToCameraMatrix * reflection;
 
-                    if (cam.stereoTargetEye == StereoTargetEyeMask.Both || cam.stereoTargetEye == StereoTargetEyeMask.Right)
-                    {
-                        Vector3 eyePos = cam.transform.TransformPoint(new Vector3(0.5f * cam.stereoSeparation, 0, 0));
-                        Matrix4x4 projectionMatrix = cam.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
+                // Setup oblique projection matrix so that near plane is our reflection
+                // plane. This way we clip everything below/above it for free.
+                Vector4 clipPlane = CameraSpacePlane(reflectionCamera, pos, normal, 1.0f);
+                reflectionCamera.projectionMatrix = cam.CalculateObliqueMatrix(clipPlane);
 
-                        RenderReflection(reflectionCamera, m_ReflectionTexture1, eyePos, cam.transform.rotation, projectionMatrix);
-                        GetRendererMaterial().SetTexture("_ReflectionTex1", m_ReflectionTexture1);
-                    }
-                }
-                else
-                {
-                    RenderReflection(reflectionCamera, m_ReflectionTexture0, cam.transform.position, cam.transform.rotation, cam.projectionMatrix);
-                    GetRendererMaterial().SetTexture("_ReflectionTex0", m_ReflectionTexture0);
-                }
+				// Set custom culling matrix from the current camera
+				reflectionCamera.cullingMatrix = cam.projectionMatrix * cam.worldToCameraMatrix;
+
+				reflectionCamera.cullingMask = ~(1 << 4) & reflectLayers.value; // never render water layer
+                reflectionCamera.targetTexture = m_ReflectionTexture;
+                bool oldCulling = GL.invertCulling;
+                GL.invertCulling = !oldCulling;
+                reflectionCamera.transform.position = newpos;
+                Vector3 euler = cam.transform.eulerAngles;
+                reflectionCamera.transform.eulerAngles = new Vector3(-euler.x, euler.y, euler.z);
+                reflectionCamera.Render();
+                reflectionCamera.transform.position = oldpos;
+                GL.invertCulling = oldCulling;
+                GetComponent<Renderer>().sharedMaterial.SetTexture("_ReflectionTex", m_ReflectionTexture);
             }
 
             // Render refraction
             if (mode >= WaterMode.Refractive)
             {
-                if (cam.stereoEnabled) {
-                    if (cam.stereoTargetEye == StereoTargetEyeMask.Both || cam.stereoTargetEye == StereoTargetEyeMask.Left) {
-                        Vector3 eyePos = cam.transform.TransformPoint(new Vector3(-0.5f * cam.stereoSeparation, 0, 0));
-                        Matrix4x4 projectionMatrix = cam.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left);
-                        refractionCamera.worldToCameraMatrix = cam.worldToCameraMatrix;
-                        refractionCamera.transform.position = eyePos;
-                        refractionCamera.transform.rotation = cam.transform.rotation;
-                        cam.projectionMatrix = projectionMatrix;
-                        Vector4 clipPlane = CameraSpacePlane(refractionCamera, pos, normal, -1.0f);
-                        refractionCamera.projectionMatrix = cam.CalculateObliqueMatrix(clipPlane);
-                        refractionCamera.cullingMatrix = projectionMatrix * cam.worldToCameraMatrix;
-                        refractionCamera.cullingMask = ~(1 << 4) & refractLayers.value; // never render water layer
-                        refractionCamera.targetTexture = m_RefractionTexture0;
-                        refractionCamera.Render();
-                        GetRendererMaterial().SetTexture("_RefractionTex0", m_RefractionTexture0);
-                    }
+                refractionCamera.worldToCameraMatrix = cam.worldToCameraMatrix;
 
-                    if (cam.stereoTargetEye == StereoTargetEyeMask.Both || cam.stereoTargetEye == StereoTargetEyeMask.Right) {
-                        Vector3 eyePos = cam.transform.TransformPoint(new Vector3(0.5f * cam.stereoSeparation, 0, 0));
-                        Matrix4x4 projectionMatrix = cam.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
-                        refractionCamera.worldToCameraMatrix = cam.worldToCameraMatrix;
-                        refractionCamera.transform.position = eyePos;
-                        refractionCamera.transform.rotation = cam.transform.rotation;
-                        cam.projectionMatrix = projectionMatrix;
-                        Vector4 clipPlane = CameraSpacePlane(refractionCamera, pos, normal, -1.0f);
-                        refractionCamera.projectionMatrix = cam.CalculateObliqueMatrix(clipPlane);
-                        refractionCamera.cullingMatrix = projectionMatrix * cam.worldToCameraMatrix;
-                        refractionCamera.cullingMask = ~(1 << 4) & refractLayers.value; // never render water layer
-                        refractionCamera.targetTexture = m_RefractionTexture1;
-                        refractionCamera.Render();
-                        GetRendererMaterial().SetTexture("_RefractionTex1", m_RefractionTexture1);
-                    }
-                } else {
-                    refractionCamera.worldToCameraMatrix = cam.worldToCameraMatrix;
+                // Setup oblique projection matrix so that near plane is our reflection
+                // plane. This way we clip everything below/above it for free.
+                Vector4 clipPlane = CameraSpacePlane(refractionCamera, pos, normal, -1.0f);
+                refractionCamera.projectionMatrix = cam.CalculateObliqueMatrix(clipPlane);
 
-                    // Setup oblique projection matrix so that near plane is our reflection
-                    // plane. This way we clip everything below/above it for free.
-                    Vector4 clipPlane = CameraSpacePlane(refractionCamera, pos, normal, -1.0f);
-                    refractionCamera.projectionMatrix = cam.CalculateObliqueMatrix(clipPlane);
+				// Set custom culling matrix from the current camera
+				refractionCamera.cullingMatrix = cam.projectionMatrix * cam.worldToCameraMatrix;
 
-                    // Set custom culling matrix from the current camera
-                    refractionCamera.cullingMatrix = cam.projectionMatrix * cam.worldToCameraMatrix;
-
-                    refractionCamera.cullingMask = ~(1 << 4) & refractLayers.value; // never render water layer
-                    refractionCamera.targetTexture = m_RefractionTexture0;
-                    refractionCamera.transform.position = cam.transform.position;
-                    refractionCamera.transform.rotation = cam.transform.rotation;
-                    refractionCamera.Render();
-                    GetRendererMaterial().SetTexture("_RefractionTex0", m_RefractionTexture0);
-                }
+				refractionCamera.cullingMask = ~(1 << 4) & refractLayers.value; // never render water layer
+                refractionCamera.targetTexture = m_RefractionTexture;
+                refractionCamera.transform.position = cam.transform.position;
+                refractionCamera.transform.rotation = cam.transform.rotation;
+                refractionCamera.Render();
+                GetComponent<Renderer>().sharedMaterial.SetTexture("_RefractionTex", m_RefractionTexture);
             }
 
             // Restore pixel light count
@@ -204,72 +164,20 @@ namespace UnityStandardAssets.Water
 
             s_InsideWater = false;
         }
-        void RenderReflection(Camera reflectionCamera, RenderTexture targetTexture, Vector3 camPos, Quaternion camRot, Matrix4x4 camProjMatrix)
-        {
-            // Copy camera position/rotation/reflection into the reflectionCamera
-            reflectionCamera.ResetWorldToCameraMatrix();
-            reflectionCamera.transform.position = camPos;
-            reflectionCamera.transform.rotation = camRot;
-            reflectionCamera.projectionMatrix = camProjMatrix;
-            reflectionCamera.targetTexture = targetTexture;
-            reflectionCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
-
-            // Set custom culling matrix from the current camera
-            // reflectionCamera.cullingMatrix = camProjMatrix * reflectionCamera.worldToCameraMatrix;
-
-            // find out the reflection plane: position and normal in world space
-            Vector3 pos = transform.position;
-            Vector3 normal = transform.up;
-
-            // Reflect camera around reflection plane
-            float d = -Vector3.Dot(normal, pos) - clipPlaneOffset;
-            Vector4 reflectionPlane = new Vector4(normal.x, normal.y, normal.z, d);
-
-            Matrix4x4 reflection = Matrix4x4.zero;
-            CalculateReflectionMatrix(ref reflection, reflectionPlane);
-
-            reflectionCamera.worldToCameraMatrix *= reflection;
-
-            // Setup oblique projection matrix so that near plane is our reflection
-            // plane. This way we clip everything below/above it for free.
-            Vector4 clipPlane = CameraSpacePlane(reflectionCamera, pos, normal, 1.0f);
-            reflectionCamera.projectionMatrix = reflectionCamera.CalculateObliqueMatrix(clipPlane);
-
-            // Set camera position and rotation
-            reflectionCamera.transform.position = reflectionCamera.cameraToWorldMatrix.GetColumn(3);
-            reflectionCamera.transform.rotation = Quaternion.LookRotation(reflectionCamera.cameraToWorldMatrix.GetColumn(2), reflectionCamera.cameraToWorldMatrix.GetColumn(1));
-
-            // never render water layer
-            reflectionCamera.cullingMask = ~(1 << 4) & reflectLayers.value;
-
-            bool oldCulling = GL.invertCulling;
-            GL.invertCulling = !oldCulling;
-            reflectionCamera.Render();
-            GL.invertCulling = oldCulling;
-        }
 
 
         // Cleanup all the objects we possibly have created
         void OnDisable()
         {
-            if (m_ReflectionTexture0)
+            if (m_ReflectionTexture)
             {
-                DestroyImmediate(m_ReflectionTexture0);
-                m_ReflectionTexture0 = null;
+                DestroyImmediate(m_ReflectionTexture);
+                m_ReflectionTexture = null;
             }
-            if (m_ReflectionTexture1)
+            if (m_RefractionTexture)
             {
-                DestroyImmediate(m_ReflectionTexture1);
-                m_ReflectionTexture1 = null;
-            }
-            if (m_RefractionTexture0)
-            {
-                DestroyImmediate(m_RefractionTexture0);
-                m_RefractionTexture0 = null;
-            }
-            if (m_RefractionTexture1) {
-                DestroyImmediate(m_RefractionTexture1);
-                m_RefractionTexture1 = null;
+                DestroyImmediate(m_RefractionTexture);
+                m_RefractionTexture = null;
             }
             foreach (var kvp in m_ReflectionCameras)
             {
@@ -288,7 +196,7 @@ namespace UnityStandardAssets.Water
         // old cards to make water texture scroll.
         void Update()
         {
-            if (!GetComponent<Renderer>() || (!Application.isPlaying && !runWhenNotPlaying))
+            if (!GetComponent<Renderer>())
             {
                 return;
             }
@@ -344,8 +252,7 @@ namespace UnityStandardAssets.Water
             dest.farClipPlane = src.farClipPlane;
             dest.nearClipPlane = src.nearClipPlane;
             dest.orthographic = src.orthographic;
-            if (!UnityEngine.XR.XRDevice.isPresent)
-                dest.fieldOfView = src.fieldOfView;
+            dest.fieldOfView = src.fieldOfView;
             dest.aspect = src.aspect;
             dest.orthographicSize = src.orthographicSize;
         }
@@ -362,29 +269,18 @@ namespace UnityStandardAssets.Water
             if (mode >= WaterMode.Reflective)
             {
                 // Reflection render texture
-                if (!m_ReflectionTexture0 || m_OldReflectionTextureSize != textureSize)
+                if (!m_ReflectionTexture || m_OldReflectionTextureSize != textureSize)
                 {
-                    if (m_ReflectionTexture0)
+                    if (m_ReflectionTexture)
                     {
-                        DestroyImmediate(m_ReflectionTexture0);
+                        DestroyImmediate(m_ReflectionTexture);
                     }
-                    m_ReflectionTexture0 = new RenderTexture(textureSize, textureSize, 16);
-                    m_ReflectionTexture0.name = "__WaterReflection" + GetInstanceID();
-                    m_ReflectionTexture0.isPowerOfTwo = true;
-                    m_ReflectionTexture0.hideFlags = HideFlags.DontSave;
+                    m_ReflectionTexture = new RenderTexture(textureSize, textureSize, 16);
+                    m_ReflectionTexture.name = "__WaterReflection" + GetInstanceID();
+                    m_ReflectionTexture.isPowerOfTwo = true;
+                    m_ReflectionTexture.hideFlags = HideFlags.DontSave;
+                    m_OldReflectionTextureSize = textureSize;
                 }
-                if (currentCamera.stereoEnabled && (!m_ReflectionTexture1 || m_OldReflectionTextureSize != textureSize))
-                {
-                    if (m_ReflectionTexture1)
-                    {
-                        DestroyImmediate(m_ReflectionTexture1);
-                    }
-                    m_ReflectionTexture1 = new RenderTexture(textureSize, textureSize, 16);
-                    // m_ReflectionTexture1.name = "__WaterReflection1" + GetInstanceID();
-                    m_ReflectionTexture1.isPowerOfTwo = true;
-                    m_ReflectionTexture1.hideFlags = HideFlags.DontSave;
-                }
-                m_OldReflectionTextureSize = textureSize;
 
                 // Camera for reflection
                 m_ReflectionCameras.TryGetValue(currentCamera, out reflectionCamera);
@@ -404,25 +300,18 @@ namespace UnityStandardAssets.Water
             if (mode >= WaterMode.Refractive)
             {
                 // Refraction render texture
-                if (!m_RefractionTexture0 || m_OldRefractionTextureSize != textureSize) {
-                    if (m_RefractionTexture0) {
-                        DestroyImmediate(m_RefractionTexture0);
+                if (!m_RefractionTexture || m_OldRefractionTextureSize != textureSize)
+                {
+                    if (m_RefractionTexture)
+                    {
+                        DestroyImmediate(m_RefractionTexture);
                     }
-                    m_RefractionTexture0 = new RenderTexture(textureSize, textureSize, 16);
-                    m_RefractionTexture0.name = "__WaterRefraction" + GetInstanceID();
-                    m_RefractionTexture0.isPowerOfTwo = true;
-                    m_RefractionTexture0.hideFlags = HideFlags.DontSave;
+                    m_RefractionTexture = new RenderTexture(textureSize, textureSize, 16);
+                    m_RefractionTexture.name = "__WaterRefraction" + GetInstanceID();
+                    m_RefractionTexture.isPowerOfTwo = true;
+                    m_RefractionTexture.hideFlags = HideFlags.DontSave;
+                    m_OldRefractionTextureSize = textureSize;
                 }
-                if (currentCamera.stereoEnabled && (!m_RefractionTexture1 || m_OldRefractionTextureSize != textureSize)) {
-                    if (m_RefractionTexture1) {
-                        DestroyImmediate(m_RefractionTexture1);
-                    }
-                    m_RefractionTexture1 = new RenderTexture(textureSize, textureSize, 16);
-                    // m_RefractionTexture1.name = "__WaterReflection1" + GetInstanceID();
-                    m_RefractionTexture1.isPowerOfTwo = true;
-                    m_RefractionTexture1.hideFlags = HideFlags.DontSave;
-                }
-                m_OldRefractionTextureSize = textureSize;
 
                 // Camera for refraction
                 m_RefractionCameras.TryGetValue(currentCamera, out refractionCamera);

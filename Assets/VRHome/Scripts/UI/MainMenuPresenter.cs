@@ -21,11 +21,16 @@ namespace ExitGames.SportShooting
 
                 //Hack end
                 portal.ShowEntity();
-            }else {
-                var col = portal.gameObject.GetComponent<BoxCollider>();
-                col.enabled = false;
-                portal.DisappearEntity();
+
+                var socket = GameObject.Find("socket").GetComponent<SocketClient>();
+                socket.SendMyMessage("accept invitation");
+
             }
+            // else {
+            //     var col = portal.gameObject.GetComponent<BoxCollider>();
+            //     col.enabled = false;
+            //     portal.DisappearEntity();
+            // }
             
         }
     }
