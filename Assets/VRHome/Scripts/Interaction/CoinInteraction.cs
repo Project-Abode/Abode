@@ -9,23 +9,40 @@ public class CoinInteraction : MonoBehaviour {
 
 	private bool collidingWithCoinPack = false;
 
+	private Rigidbody hand_rb;
+	void Awake(){
+		hand_rb = GetComponent<Rigidbody>();
+	}
+
 	public void CreateCoin() {
 		
 		if(collidingWithCoinPack) {
 			coinInHand = PhotonNetwork.Instantiate("Coin", fingerEnd.position, fingerEnd.rotation, 0);
-			coinInHand.transform.parent = fingerEnd;
+			//coinInHand.transform.parent = fingerEnd;
 		}
 		
+	}
+
+	void Update() {
+		if(coinInHand) {
+			coinInHand.transform.position = fingerEnd.transform.position;
+			coinInHand.transform.rotation = fingerEnd.transform.rotation;
+		}
 	}
 
 	public void ReleaseCoin() {
 		if(!coinInHand) return;
 		
-		coinInHand.transform.parent = null;
+		//coinInHand.transform.parent = null;
 
 		var rb = coinInHand.GetComponent<Rigidbody>();
+		
 		rb.isKinematic = false;
 		rb.useGravity = true;
+
+		//velocity
+		rb.velocity = hand_rb.velocity;
+		rb.angularVelocity = hand_rb.angularVelocity;
 
 		coinInHand = null;
 	}
