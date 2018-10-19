@@ -15,7 +15,8 @@ public class PositionSwitcher : MonoBehaviour {
 	void Start () {
 		N = targets.Count;
 		index = 0;
-	}
+        transform.position = targets[0].position;
+    }
 	
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Keypad9)) {
