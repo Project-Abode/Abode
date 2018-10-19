@@ -19,6 +19,11 @@ namespace ExitGames.SportShooting
                 StartPlayer("002");
             }
 
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                StartPlayer("003");
+            }
+
             if (Input.GetKeyDown(KeyCode.D))
             {
                 //StartPlayer("debug");
