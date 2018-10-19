@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.13149671, g: 0.15914916, b: 0.19264746, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -53,29 +53,29 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
-    m_AO: 0
+    m_BakeResolution: 15
+    m_AtlasSize: 512
+    m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 0
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 256
     m_PVRBounces: 2
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
@@ -171,6 +171,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -304,6 +308,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -366,6 +374,34 @@ Prefab:
     - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
@@ -506,6 +542,34 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.99328053
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -527,7 +591,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!4 &144935740
 Transform:
@@ -606,6 +670,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -699,7 +767,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &173938790
 Transform:
@@ -728,7 +796,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!4 &185862706
 Transform:
@@ -802,6 +870,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -863,6 +959,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -930,6 +1030,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -1070,6 +1174,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -1134,6 +1242,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.008407442
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 32fb8237a74bf714b8b17d81a4d889a4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fb8237a74bf714b8b17d81a4d889a4, type: 3}
   m_IsPrefabAsset: 0
@@ -1191,6 +1303,34 @@ Prefab:
     - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
@@ -1444,6 +1584,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 39.749
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
   m_IsPrefabAsset: 0
@@ -1505,6 +1649,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -1568,6 +1716,22 @@ Prefab:
     - target: {fileID: 4033841299429842, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.38973653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1772063802183304, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347362713262180, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218634031202076, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570535877814982, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db3cfd9582ce5943ac05c7b12d6de27, type: 2}
@@ -1687,6 +1851,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -1745,6 +1937,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -1802,6 +2022,34 @@ Prefab:
     - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
@@ -2036,6 +2284,86 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.38973647
       objectReference: {fileID: 0}
+    - target: {fileID: 1729285686959626, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775733655105754, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167987836632704, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254547352385440, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186267502582484, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925479759107828, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597792712941636, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356808367403540, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081916022516272, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384342247282238, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827227783564656, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041997785316010, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638877860919794, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645855501685346, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395554188640118, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614364807312478, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652806124461180, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129866028834782, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071779902271158, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969082928767084, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16558cb3594423e4cb3599e22af22505, type: 2}
   m_IsPrefabAsset: 0
@@ -2054,7 +2382,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!95 &435481992
 Animator:
@@ -2147,6 +2475,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -2291,6 +2623,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -2363,6 +2723,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -2429,6 +2793,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -2569,6 +2937,34 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7043109
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 278282600c6c47e4cb2b53dc2757c7c3, type: 2}
   m_IsPrefabAsset: 0
@@ -2626,6 +3022,34 @@ Prefab:
     - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
@@ -2756,6 +3180,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -2817,6 +3245,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -2918,6 +3350,10 @@ Prefab:
       propertyPath: m_Name
       value: WaterProDaytime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabAsset: 0
@@ -2975,6 +3411,34 @@ Prefab:
     - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
@@ -3040,6 +3504,34 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0245612
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -3101,6 +3593,10 @@ Prefab:
     - target: {fileID: 100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
       propertyPath: m_Name
       value: pond_edge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
@@ -3198,7 +3694,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &771027337
 Transform:
@@ -3478,6 +3974,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -3545,6 +4045,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -3563,7 +4067,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!205 &817382516
 LODGroup:
@@ -3657,6 +4161,10 @@ Prefab:
     - target: {fileID: 400000, guid: fe8c39ef25f132641b64941307534031, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 41.294003
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
@@ -3781,7 +4289,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!111 &904090054
 Animation:
@@ -3871,6 +4379,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 541.317
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 244cc92abaff47546a6033d728627d9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244cc92abaff47546a6033d728627d9c, type: 3}
   m_IsPrefabAsset: 0
@@ -3937,6 +4449,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -4053,6 +4569,10 @@ Prefab:
     - target: {fileID: 400000, guid: 244cc92abaff47546a6033d728627d9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 244cc92abaff47546a6033d728627d9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244cc92abaff47546a6033d728627d9c, type: 3}
@@ -4188,6 +4708,86 @@ Prefab:
     - target: {fileID: 4070063333101798, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.38973647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077151796940126, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502857762706392, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350189875472378, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575853635538322, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490567041078524, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358361563328786, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878085255066808, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290835499435538, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994699627894742, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099293790741662, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102687528404668, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576642959750950, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952214584389342, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060989698306234, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778216754605322, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580137049399636, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244268100721892, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839396653228266, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163002671721974, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636951559229720, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00adc2986c2cedb49bd7f04e1462e376, type: 2}
@@ -4355,6 +4955,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.08800001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabAsset: 0
@@ -4428,6 +5032,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -4491,7 +5123,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131245071}
   m_LocalRotation: {x: -0.7071069, y: -0.000000007450581, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.843, y: 1.8900001, z: 2.08}
+  m_LocalPosition: {x: -1.843, y: 1.635, z: 2.06}
   m_LocalScale: {x: 5, y: 5, z: 0.7499996}
   m_Children:
   - {fileID: 481966390}
@@ -4528,7 +5160,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1143380642
 Transform:
@@ -4622,6 +5254,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -4685,6 +5321,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -4747,6 +5411,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -4763,7 +5431,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1174709690
 Transform:
@@ -4874,6 +5542,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -4941,6 +5613,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -4998,6 +5674,34 @@ Prefab:
     - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
@@ -5151,6 +5855,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -5212,6 +5920,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -5323,6 +6035,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -5385,6 +6125,34 @@ Prefab:
     - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
@@ -5452,6 +6220,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -5788,6 +6560,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -5850,6 +6626,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -5882,7 +6662,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1572721079
 Transform:
@@ -6104,6 +6884,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -6161,6 +6969,10 @@ Prefab:
     - target: {fileID: 400000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 181.37999
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -6300,6 +7112,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
   m_IsPrefabAsset: 0
@@ -6381,6 +7221,14 @@ Prefab:
     - target: {fileID: 400000, guid: 46cb5de954e1492459c745f0a539b642, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 1.8650001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 46cb5de954e1492459c745f0a539b642, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 46cb5de954e1492459c745f0a539b642, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46cb5de954e1492459c745f0a539b642, type: 3}
@@ -6515,6 +7363,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -6573,6 +7449,86 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.38973647
       objectReference: {fileID: 0}
+    - target: {fileID: 1967737734016114, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221717863920270, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823984998425262, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639446324681522, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762513681383598, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295760441655388, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099589124209510, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124267906013056, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230738040943484, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161045932889406, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967346669588370, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846338251909136, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605593900866216, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760541324219082, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063131306586544, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201483764398052, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600307670554382, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714826453446, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820349222254480, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984578132923632, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7340f89deaed4094a8a792100e58bf13, type: 2}
   m_IsPrefabAsset: 0
@@ -6630,6 +7586,34 @@ Prefab:
     - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
@@ -6693,6 +7677,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -6750,6 +7738,34 @@ Prefab:
     - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
@@ -6893,6 +7909,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -6924,7 +7944,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3e518fa43f588074da4fe65a0766231d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.3907014
+      value: 0.281
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3e518fa43f588074da4fe65a0766231d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6965,6 +7985,10 @@ Prefab:
     - target: {fileID: 400000, guid: 3e518fa43f588074da4fe65a0766231d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -105.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3e518fa43f588074da4fe65a0766231d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e518fa43f588074da4fe65a0766231d, type: 2}
@@ -7033,6 +8057,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -7096,6 +8124,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -7153,6 +8209,34 @@ Prefab:
     - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
       propertyPath: m_Name
       value: Furniture_foliageplant_10_lod_set (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6f314e6374b0f4d8c00e1cbd3c710d, type: 2}
@@ -7296,6 +8380,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -7363,6 +8451,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -7420,6 +8512,10 @@ Prefab:
     - target: {fileID: 400000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 181.37999
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -7492,6 +8588,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -7569,6 +8669,10 @@ Prefab:
     - target: {fileID: 100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
       propertyPath: m_Name
       value: pond_edge (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c39ef25f132641b64941307534031, type: 3}
@@ -7661,6 +8765,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -7679,7 +8787,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1953007925
 Transform:
@@ -7869,6 +8977,34 @@ Prefab:
       propertyPath: m_Name
       value: Furniture_foliageplant_08_lod_set (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064f774b5c38e6b40b541b3b479ae758, type: 2}
   m_IsPrefabAsset: 0
@@ -7930,6 +9066,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -7998,6 +9138,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -8032,7 +9176,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.953, b: 0.803, a: 1}
-  m_Intensity: 1.1
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 5
@@ -8066,7 +9210,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003931975}
   m_LocalRotation: {x: 0.40821788, y: -0.23456967, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -158.895, y: 3, z: -239.117}
+  m_LocalPosition: {x: 0, y: 7.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8130,6 +9274,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -8203,6 +9351,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -8269,6 +9421,10 @@ Prefab:
     - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
       propertyPath: m_Name
       value: fence (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
@@ -8342,6 +9498,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -8409,6 +9569,10 @@ Prefab:
       propertyPath: m_Name
       value: fence (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947efbaa35fd424481cd68bd550c914, type: 3}
   m_IsPrefabAsset: 0
@@ -8428,7 +9592,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2107242359
 Transform:
@@ -8438,7 +9602,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107242358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.077, y: -0.213, z: 0.326}
+  m_LocalPosition: {x: 0.077, y: -0.323, z: 0.326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1572721079}

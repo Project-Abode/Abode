@@ -22,8 +22,8 @@ namespace ExitGames.SportShooting
                 //Hack end
                 portal.ShowEntity();
 
-                var socket = GameObject.Find("socket").GetComponent<SocketClient>();
-                socket.SendMyMessage("accept invitation");
+                //var socket = GameObject.Find("socket").GetComponent<SocketClient>();
+                //socket.SendMyMessage("accept invitation");
 
             }
             // else {
