@@ -12,6 +12,7 @@ public class ControllerEvent : MonoBehaviour {
 	public GameObject remote;
 
 	public HandInteraction handHaptic;
+	public CoinInteraction coinInteractioin;
 
 	private SteamVR_Controller.Device Controller
 	{
@@ -53,11 +54,13 @@ public class ControllerEvent : MonoBehaviour {
 	void TriggerDown(object sender, ClickedEventArgs e) {
 		Debug.Log("Trigger Down");
 		grab.ControllerTriggerDown(controller);
+		coinInteractioin.CreateCoin();
 	}
 
 	void TriggerUp(object sender, ClickedEventArgs e) {
 		Debug.Log("Trigger Up");
 		grab.ControllerTriggerUp(controller);
+		coinInteractioin.ReleaseCoin();
 	}
 
 	// void Update () {

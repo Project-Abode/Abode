@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 114931235476282558}
   - component: {fileID: 114899965994111548}
   - component: {fileID: 114781727766860996}
+  - component: {fileID: 114548330072089782}
   m_Layer: 0
   m_Name: LeftHandModel (1)
   m_TagString: Hand
@@ -396,6 +397,7 @@ GameObject:
   - component: {fileID: 114852015125922798}
   - component: {fileID: 114580736888624594}
   - component: {fileID: 114612189377696154}
+  - component: {fileID: 114525081443732522}
   m_Layer: 0
   m_Name: RightHandModel (1)
   m_TagString: Hand
@@ -473,6 +475,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1512722761208376
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4235680494954798}
+  m_Layer: 0
+  m_Name: fingerEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1521124251579616
 GameObject:
   m_ObjectHideFlags: 1
@@ -504,6 +521,21 @@ GameObject:
   - component: {fileID: 114717422529173496}
   m_Layer: 0
   m_Name: LeftHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1560449769989838
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4766652067036670}
+  m_Layer: 0
+  m_Name: fingerEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,6 +1145,19 @@ Transform:
   m_Father: {fileID: 4412495528660698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4235680494954798
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512722761208376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.03165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4779140759980930}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4252638173742074
 Transform:
   m_ObjectHideFlags: 1
@@ -1153,6 +1198,7 @@ Transform:
   m_Children:
   - {fileID: 4800746296883964}
   - {fileID: 4197558064027914}
+  - {fileID: 4766652067036670}
   m_Father: {fileID: 4450055988397122}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1393,6 +1439,19 @@ Transform:
   m_Father: {fileID: 4268033019850552}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4766652067036670
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560449769989838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00044, y: 0.00434, z: 0.02718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4300220966721024}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4769089228712404
 Transform:
   m_ObjectHideFlags: 1
@@ -1417,6 +1476,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4451051781564540}
+  - {fileID: 4235680494954798}
   m_Father: {fileID: 4412495528660698}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3448,6 +3508,19 @@ MonoBehaviour:
   grab: {fileID: 114580736888624594}
   remote: {fileID: 1338044617182410}
   handHaptic: {fileID: 114852015125922798}
+  coinInteractioin: {fileID: 114525081443732522}
+--- !u!114 &114525081443732522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1449816990810104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcefee54921178478f31600d043f3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingerEnd: {fileID: 4766652067036670}
 --- !u!114 &114535063959123294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3499,6 +3572,18 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114548330072089782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414773250301996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcefee54921178478f31600d043f3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingerEnd: {fileID: 4235680494954798}
 --- !u!114 &114556031884389628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4092,6 +4177,7 @@ MonoBehaviour:
   grab: {fileID: 114899965994111548}
   remote: {fileID: 1027813137220300}
   handHaptic: {fileID: 114931235476282558}
+  coinInteractioin: {fileID: 114548330072089782}
 --- !u!120 &120242329778443452
 LineRenderer:
   m_ObjectHideFlags: 1
