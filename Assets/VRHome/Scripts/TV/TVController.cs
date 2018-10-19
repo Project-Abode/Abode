@@ -12,11 +12,11 @@ public class TVController : MonoBehaviour {
 	public Portal portal;
 	public GameObject portalBtn;
 	
-	private SocketClient socket; 
+	//private SocketClient socket; 
 
 	// Use this for initialization
 	void Awake () {
-		socket = GameObject.Find("socket").GetComponent<SocketClient>();
+		//socket = GameObject.Find("socket").GetComponent<SocketClient>();
 	}
 	
 	// Update is called once per frame
@@ -42,9 +42,9 @@ public class TVController : MonoBehaviour {
 	public void OnInviteClicked() {
 		Debug.Log("Invite Clicked");
 		SetMsg("Invitation sent. Awaiting for guest response...");
-		if(socket) {
-			socket.SendMyMessage("send invitation");
-		}
+		//if(socket) {
+		//	socket.SendMyMessage("send invitation");
+		//}
 		
 	}
 
