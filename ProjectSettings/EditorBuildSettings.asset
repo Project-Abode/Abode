@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VRHome/Scenes/VRHome/SinglePlayerDebug.unity
     guid: b27980d6664049e4d8148dee92d07e65
+  - enabled: 1
+    path: Assets/VRHome/Scenes/VRHome/003.unity
+    guid: dfaf747afc9b5314fafd76d324ca68ed
   m_configObjects: {}

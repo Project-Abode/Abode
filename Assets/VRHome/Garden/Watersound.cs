@@ -8,12 +8,13 @@ public class Watersound : MonoBehaviour {
 	void Start () {
 		
 	}
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        water.Play();
+        if(collision.gameObject.name == "Coin(Clone)")
+        {
+            water.Play();
+        }
+        
     }
-    // Update is called once per frame
-    void Update () {
-		
-	}
+
 }
