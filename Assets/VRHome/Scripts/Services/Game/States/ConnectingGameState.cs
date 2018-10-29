@@ -75,6 +75,7 @@ namespace ExitGames.SportShooting
             int spawn_pos = PhotonNetwork.playerList.Length > 1 ? 1 : 0;
 
             Hashtable playerInfo = new Hashtable();
+            playerInfo.Add("setting", Settings.instance.room);
             playerInfo.Add("position", spawn_pos);
             playerInfo.Add("roundScore", 0);
             //playerInfo.Add("name", playerName);
