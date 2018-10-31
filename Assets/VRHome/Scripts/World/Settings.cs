@@ -7,7 +7,7 @@ public class Settings : MonoBehaviour {
 	public static Settings instance = null;
 
 	public int room;
-
+	public int id;
 	//avatar
 	//exit
 	//entry
@@ -19,6 +19,16 @@ public class Settings : MonoBehaviour {
 			 instance = this;
 		 else if (instance != this)
              Destroy(gameObject); 
+	}
+
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Alpha0)) {
+			room = 0;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha1)) {
+			room = 1;
+		}
 	}
 
 }

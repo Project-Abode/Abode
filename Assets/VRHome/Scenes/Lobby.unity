@@ -364,12 +364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f1a6614d772d14ba2bbf0841edbdad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useNonVrPlayerInEditor: 1
+  useNonVrPlayerInEditor: 0
   _ovrPlayerPrefab: {fileID: 1000014024130432, guid: 79e6ebcd6e0e90645b76b44be9325372,
     type: 2}
   _googleVrPlayerPrefab: {fileID: 1000013183384390, guid: 5ac159709aa08b946b74351d632c6052,
     type: 2}
-  _steamVrPlayerPrefab: {fileID: 1796393146327812, guid: 9e08081242da3b84f9f3a980746f5c28,
+  _steamVrPlayerPrefab: {fileID: 1796393146327812, guid: 529864091e0a7c845a16297d906fe904,
     type: 2}
   _nonVrPlayerPrefab: {fileID: 1624300386951932, guid: d90f2fd8bd6e67b4790c265583c4ce52,
     type: 2}

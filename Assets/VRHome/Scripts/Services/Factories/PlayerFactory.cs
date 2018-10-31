@@ -82,7 +82,8 @@ namespace ExitGames.SportShooting
             int positionIndex = (int)PhotonNetwork.player.CustomProperties["position"];
             Vector3 spawnPoint = PlayerSpawnPoints.GetChild(positionIndex).position;
 
-            int index = (int)PhotonNetwork.player.CustomProperties["setting"];
+            //int index = (int)PhotonNetwork.player.CustomProperties["setting"];
+            int index = Settings.instance.room;
 
             var roomDescription = GameObject.Find("RoomSwitcher").GetComponent<RoomSwitcher>().GetCurrentDescriptionAt(index);
 
