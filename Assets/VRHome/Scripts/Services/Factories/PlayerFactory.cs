@@ -85,7 +85,10 @@ namespace ExitGames.SportShooting
             //int index = (int)PhotonNetwork.player.CustomProperties["setting"];
             int index = Settings.instance.room;
 
-            var roomDescription = GameObject.Find("RoomSwitcher").GetComponent<RoomSwitcher>().GetCurrentDescriptionAt(index);
+            var roomSwitcher = GameObject.Find("RoomSwitcher").GetComponent<RoomSwitcher>();
+            roomSwitcher.ChangeToRoomWithDescription(index);
+
+            var roomDescription = roomSwitcher.GetCurrentDescription();
 
             if(roomDescription != null) {
                 Debug.Log("has room description at: " + index);
@@ -110,6 +113,11 @@ namespace ExitGames.SportShooting
                 GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
                 GameView.Instance.SideUIRoot = GameModel.Instance.CurrentPlayer.SideUIRoot;
             }
+
+            //Set up entry and exit Player transform
+            EntryExitManager eemanager = GameObject.Find("EntryAndExitManager").GetComponent<EntryExitManager>();
+            eemanager.Init(go.transform);
+
         }
 
         public void BuildPlayerForMenu()

@@ -8,4 +8,5 @@ public class VRRoomDescription {
 	public GameObject Light;
 	public Transform origin;
 	public LayerMask layer;
+
 }

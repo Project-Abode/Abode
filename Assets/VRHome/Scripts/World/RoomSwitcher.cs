@@ -28,6 +28,9 @@ public class RoomSwitcher : MonoBehaviour {
 
 	int last_idx = -1;
 
+	public int GetCurrentRoomIndex() {
+		return last_idx;
+	}
 
 	public void ClearLastRoomSetting() {
 		if(last_idx >= 0) {
