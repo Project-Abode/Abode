@@ -45,9 +45,9 @@ public class ControllerEvent : MonoBehaviour {
 
 	void MenuButtonPressed(object sender, ClickedEventArgs e) {
 		Debug.Log("Menu Pressed");
-		if(PhotonNetwork.isMasterClient) {
+		//if(PhotonNetwork.isMasterClient) {
 			remote.SetActive(!remote.activeSelf);
-		}
+		//}
 		
 	}
 
