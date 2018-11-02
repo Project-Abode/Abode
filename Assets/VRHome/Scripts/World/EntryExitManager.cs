@@ -7,17 +7,25 @@ public class EntryExitManager : MonoBehaviour {
 	public RoomSwitcher roomSwitcher;
 	public Transform VRPlayer;
 
-	private EEMethod current_method;
+	//private EEMethod current_method;
+	private GameObject current_method;
 
 	public List<GameObject> EEMethodPrefabs;
+	public List<GameObject> EEMethodInstances;
+	
 
 	public static EntryExitManager instance = null;
+
+	PhotonView photonView;
 
 	void Awake() {
 		if (instance == null)
 			 instance = this;
 		 else if (instance != this)
              Destroy(gameObject); 
+
+		photonView = GetComponent<PhotonView>();
+
 	} 
 
 	public void Init(Transform player) {
@@ -25,33 +33,50 @@ public class EntryExitManager : MonoBehaviour {
 	}
 
 
-	public void SetUpMethod(int index, int from, int to, int for_player) {
+	[PunRPC]
+	public void SetUpMethod(int methodIndex, int from, int to, int for_player) {
+
+		// if(current_method) {
+		// 	CleanUpMethod();
+		// }
 
 		if(current_method) {
-			CleanUpMethod();
+			//need clean up?
+			current_method.SetActive(false);
 		}
 
-		current_method = Instantiate(EEMethodPrefabs[index]).GetComponent<EEMethod>();
-		if(current_method!=null) {
-			current_method.SetUpBasicInfo(from,to,for_player);
-			current_method.InitMethod();
-		}
+		//Should be network instantiate or scene photonview activate
+		// current_method = Instantiate(EEMethodPrefabs[methodIndex]).GetComponent<EEMethod>();
+		// if(current_method!=null) {
+		// 	current_method.SetUpBasicInfo(from,to,for_player);
+		// 	current_method.InitMethod();
+		// }
+
+		current_method = EEMethodInstances[methodIndex];
+		current_method.SetActive(true);
+
+		var eemethod = current_method.GetComponent<EEMethod>();
+		eemethod.CleanUpMethod();
+		eemethod.SetUpBasicInfo(from,to,for_player);
+		eemethod.InitMethod();
+
 	}
 
 	public void TeleportPlayerTo(int roomID, Vector3 position) {
 		
 		roomSwitcher.ChangeToRoomWithDescription(roomID);
+
 		if(VRPlayer!=null)
 			VRPlayer.position = position;
 
 	}
 
-	public void CleanUpMethod() {
-		if(current_method!=null)
-			current_method.CleanUpMethod();
+	// public void CleanUpMethod() {
+	// 	if(current_method!=null)
+	// 		current_method.CleanUpMethod();
 		
-		current_method = null;
-	}
+	// 	current_method = null;
+	// }
 
 
 	//Debug for invitation/exvitation 
@@ -60,7 +85,9 @@ public class EntryExitManager : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.S)) {
 			int cur_room = roomSwitcher.GetCurrentRoomIndex();
 			int to_room = cur_room == 1? 0:1;
-			SetUpMethod(0, cur_room, to_room , 0);
+
+			photonView.RPC("SetUpMethod", PhotonTargets.All, 0, cur_room, to_room , 1);
+			//SetUpMethod(0, cur_room, to_room , 0);
 		}
 
 	}

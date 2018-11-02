@@ -24,10 +24,12 @@ public class Settings : MonoBehaviour {
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Alpha0)) {
 			room = 0;
+			id = 0;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
 			room = 1;
+			id = 1;
 		}
 	}
 

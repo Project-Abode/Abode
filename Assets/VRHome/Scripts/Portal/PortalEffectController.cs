@@ -5,7 +5,12 @@ using UnityEngine;
 public class PortalEffectController : MonoBehaviour {
 
 
-	
+	void OnTriggerEnter(Collider col){
+
+
+	}
+
+
 	public void PlayGoEffect(float duration) {
 		StartCoroutine(Scale(duration));
 	}
@@ -22,9 +27,5 @@ public class PortalEffectController : MonoBehaviour {
 		this.gameObject.SetActive(false);
 
 	}
-
-
-
-
 
 }

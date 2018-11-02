@@ -4683,6 +4683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355842684}
   - component: {fileID: 355842685}
+  - component: {fileID: 355842686}
   m_Layer: 0
   m_Name: EntryAndExitManager
   m_TagString: Untagged
@@ -4718,6 +4719,34 @@ MonoBehaviour:
   VRPlayer: {fileID: 0}
   EEMethodPrefabs:
   - {fileID: 1248208793983056, guid: 05a2017b2b6e8584caa9dbf58405bdca, type: 2}
+  EEMethodInstances:
+  - {fileID: 895615552}
+--- !u!114 &355842686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355842683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 400
+  instantiationId: 400
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1001 &363426843
 Prefab:
   m_ObjectHideFlags: 0
@@ -10833,6 +10862,84 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c9d405d7440f54497e83da64d11c4c, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &895615552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895615554}
+  - component: {fileID: 895615553}
+  - component: {fileID: 895615555}
+  m_Layer: 0
+  m_Name: PortalEEMethod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &895615553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895615552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81c0398e40ae354b9cdec7b325e2f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  from: 0
+  to: 0
+  forPlayer: 0
+  portal_in_prefab: {fileID: 1519561154551428, guid: bd92795a12eed4d458a78265ee9de80a,
+    type: 2}
+  portal_out_prefab: {fileID: 1519561154551428, guid: bd92795a12eed4d458a78265ee9de80a,
+    type: 2}
+  teleTriggerPrefab: {fileID: 1518177322027354, guid: d8e0667dd48111e49a8d98a0193c03e3,
+    type: 2}
+  toGoPos: {x: 0, y: 0, z: 0}
+  nowPos: {x: 0, y: 0, z: 0}
+--- !u!4 &895615554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895615552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &895615555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895615552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 401
+  instantiationId: 401
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1001 &902107395
 Prefab:
   m_ObjectHideFlags: 0
@@ -11620,14 +11727,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f5f3758549834907b103ab0b1c39c75, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.154
+  m_Volume: 0.063
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 1.4
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -11664,7 +11771,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.868
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

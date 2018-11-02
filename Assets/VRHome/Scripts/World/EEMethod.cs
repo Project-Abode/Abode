@@ -9,13 +9,10 @@ public class EEMethod : MonoBehaviour {
 	public int to;
 	public int forPlayer;
 
-	//static entry exit manager ??
-
 	public void SetUpBasicInfo(int from_room, int to_room, int for_player) {
 		from = from_room;
 		to = to_room;
 		forPlayer = for_player;
-		//eeManager = eem;
 	}
 
 	virtual public void InitMethod() {
@@ -30,7 +27,6 @@ public class EEMethod : MonoBehaviour {
 
 	virtual public void TeleportTriggered() {
 		//Call EEManager to teleport player  to _
-
 	}
 
 	
