@@ -7050,6 +7050,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79931722165287d4a8f16f934a34ef8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invitationControllers:
+  - {fileID: 0}
+  - {fileID: 1969618667}
 --- !u!1001 &514116402
 Prefab:
   m_ObjectHideFlags: 0

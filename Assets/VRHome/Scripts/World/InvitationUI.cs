@@ -6,14 +6,26 @@ public class InvitationUI : MonoBehaviour {
 
 	public GameObject invitationPanel;
 
-	public void OnGoButtonClicked(){
-		EntryExitManager.instance.SetUpMethodTriggered(1,0,1);
-		
+	public int inv_from;
+	public int inv_to;
+	public string msg;
+
+	public void OnGoButtonClicked(){ //ACC
+		EntryExitManager.instance.SetUpMethodTriggered(inv_to, inv_from, inv_to);
 	}
 
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Space)) {
 			invitationPanel.SetActive(!invitationPanel.activeSelf);
 		}
+	}
+
+	public void ReceiveInvitation(int from_player, int to_player, string msg) {
+
+		inv_from = from_player;
+		inv_to = to_player;
+		this.msg = msg;
+
+		invitationPanel.SetActive(true);
 	}
 }

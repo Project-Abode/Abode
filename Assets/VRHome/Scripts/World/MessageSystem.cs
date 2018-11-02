@@ -7,8 +7,16 @@ public class MessageSystem : MonoBehaviour {
 
 	private PhotonView photonView;
 	
+	public List<InvitationUI> invitationControllers;
 
+
+	public static MessageSystem instance = null;
 	void Awake() {
+		if (instance == null)
+			 instance = this;
+		else if (instance != this)
+             Destroy(gameObject); 
+
 		photonView = GetComponent<PhotonView>();
 	}
 
@@ -32,6 +40,7 @@ public class MessageSystem : MonoBehaviour {
 	public void ReceiveInvitation(int from_player, int to_player, string msg) {
 		if(to_player!=Settings.instance.id) return;
 
+		invitationControllers[to_player].ReceiveInvitation(from_player, to_player, msg);
 
 	}
 

@@ -39,6 +39,8 @@ public class TVController : MonoBehaviour {
 		//if(socket) {
 		//	socket.SendMyMessage("send invitation");
 		//}
+
+		MessageSystem.instance.SendInvitation(1,"Hi");
 		
 	}
 
