@@ -83,6 +83,7 @@ public class PortalEEMethod : EEMethod {
 		}
 
 		EntryExitManager.instance.TeleportPlayerTo(to, toGoPos);
+		teleTrigger.DestroyThisTrigger();
 		
 		if(pv) {
 			pv.RPC("AfterTeleportEffect",PhotonTargets.All);

@@ -86,9 +86,15 @@ public class EntryExitManager : MonoBehaviour {
 			int cur_room = roomSwitcher.GetCurrentRoomIndex();
 			int to_room = cur_room == 1? 0:1;
 
-			photonView.RPC("SetUpMethod", PhotonTargets.All, 0, cur_room, to_room , 1);
-			//SetUpMethod(0, cur_room, to_room , 0);
+			SetUpMethodTriggered(cur_room, to_room, 1);
 		}
+
+	}
+
+	void SetUpMethodTriggered(int from, int to, int for_player) {
+		
+		int methodIndex = Settings.instance.method;
+		photonView.RPC("SetUpMethod", PhotonTargets.All, methodIndex, from, to, for_player);
 
 	}
 	

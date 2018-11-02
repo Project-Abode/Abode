@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour {
 
 	public int room;
 	public int id;
+	public int method;
 	//avatar
 	//exit
 	//entry
