@@ -51,4 +51,6 @@ MonoBehaviour:
   - SetUpMethod
   - AfterTeleportEffect
   - PreTeleportEffect
+  - ReceiveAC
+  - ReceiveInvitation
   DisableAutoOpenWizard: 1

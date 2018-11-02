@@ -4,22 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TVController : MonoBehaviour {
-
-
-	//public GameObject InviteBtn;
 	public Text msgtxt;
 
-	public Portal portal;
-	public GameObject portalBtn;
+	//public Portal portal;
+	//public GameObject portalBtn;
 	
-	//private SocketClient socket; 
-
-	// Use this for initialization
 	void Awake () {
-		//socket = GameObject.Find("socket").GetComponent<SocketClient>();
+		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.I)) {
 			OnInviteClicked();
@@ -29,12 +22,12 @@ public class TVController : MonoBehaviour {
 			OnPortalClicked();
 		}
 
-		//HACK: need to add to event listener to guest join in
-		if(PhotonNetwork.playerList.Length >= 2) {
-			portalBtn.SetActive(true);
-		}else {
-			portalBtn.SetActive(false);
-		}
+		// //HACK: need to add to event listener to guest join in
+		// if(PhotonNetwork.playerList.Length >= 2) {
+		// 	portalBtn.SetActive(true);
+		// }else {
+		// 	portalBtn.SetActive(false);
+		// }
 
 	}
 
@@ -42,6 +35,7 @@ public class TVController : MonoBehaviour {
 	public void OnInviteClicked() {
 		Debug.Log("Invite Clicked");
 		SetMsg("Invitation sent. Awaiting for guest response...");
+		
 		//if(socket) {
 		//	socket.SendMyMessage("send invitation");
 		//}
@@ -56,17 +50,18 @@ public class TVController : MonoBehaviour {
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
 
-		if(!portal.visible) {
-			portal.ShowEntity();
-			SetMsg("Your portal to home is next to the door.");
-		}else {
-			portal.DisappearEntity();
-			SetMsg("");
-		}
+		SetMsg("Your portal to home is next to the door.");
 
+		EntryExitManager.instance.SetUpMethodTriggered(0,1,1);
+
+		// if(!portal.visible) {
+		// 	portal.ShowEntity();
+		// 	SetMsg("Your portal to home is next to the door.");
+		// }else {
+		// 	portal.DisappearEntity();
+		// 	SetMsg("");
+		// }
 	}
-
-	//TODO: cancel buttons
 
 
 	//[RPC]

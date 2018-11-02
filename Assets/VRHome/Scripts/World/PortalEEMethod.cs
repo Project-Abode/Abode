@@ -75,8 +75,6 @@ public class PortalEEMethod : EEMethod {
 
 	}
 
-
-
 	override public void TeleportTriggered() {
 		if(pv) {
 			pv.RPC("PreTeleportEffect",PhotonTargets.All);
@@ -103,48 +101,11 @@ public class PortalEEMethod : EEMethod {
 	public void AfterTeleportEffect() {
 
 		Debug.Log("Player arrives destination");
+
+		if(portal_out) {
+			portal_out.SetActive(false);
+		}
 		
 	}
-
-
-	//override public void InitMethod() {
-		// //teleport trigger only generate on the one who really need to be teleported
-		// //if(forPlayer == Settings.instance.id) {
-		// 	teleTrigger = Instantiate(teleTriggerPrefab).GetComponent<PortalEETrigger>();
-		// 	if(teleTrigger != null)
-		// 		teleTrigger.Init(this);
-		// //}
-
-
-		// switch(to) {
-		// 	case 0:
-		// 		toGoPos = new Vector3(0,0,0);
-		// 		break;
-		// 	case 1:
-		// 		toGoPos = new Vector3(1000,1000,1000);
-		// 		break;
-		// 	default:
-		// 		toGoPos = new Vector3(0,0,0);
-		// 		break;
-		// }
-		
-		// switch(from) {
-		// 	case 0:
-		// 		nowPos = new Vector3(0,0,0);
-		// 		break;
-		// 	case 1:
-		// 		nowPos = new Vector3(1000,1000,1000);
-		// 		break;
-		// 	default:
-		// 		nowPos = new Vector3(0,0,0);
-		// 		break;
-		// }
-
-
-		// portal_in = Instantiate(portal_in_prefab, nowPos, Quaternion.identity);
-		// portal_out = Instantiate(portal_out_prefab, toGoPos, Quaternion.identity);
-		
-	//}
-
 
 }

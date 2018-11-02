@@ -91,7 +91,7 @@ public class EntryExitManager : MonoBehaviour {
 
 	}
 
-	void SetUpMethodTriggered(int from, int to, int for_player) {
+	public void SetUpMethodTriggered(int from, int to, int for_player) {
 		
 		int methodIndex = Settings.instance.method;
 		photonView.RPC("SetUpMethod", PhotonTargets.All, methodIndex, from, to, for_player);
