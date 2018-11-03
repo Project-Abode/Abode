@@ -21,28 +21,30 @@ public class PortalEEMethod : EEMethod {
 		pv = GetComponent<PhotonView>();
 	}
 
+
+	public Vector3 offset;
 	override public void InitMethod() {
 		//set up now pos and to go pos
 		switch(to) {
 			case 0:
-				toGoPos = new Vector3(0,0,0);
+				toGoPos = new Vector3(0,0,0) + offset;
 				break;
 			case 1:
-				toGoPos = new Vector3(1000,1000,1000);
+				toGoPos = new Vector3(1000,1000,1000) + offset;
 				break;
 			default:
-				toGoPos = new Vector3(0,0,0);
+				toGoPos = new Vector3(0,0,0) + offset;
 				break;
 		}
 		switch(from) {
 			case 0:
-				nowPos = new Vector3(0,0,0);
+				nowPos = new Vector3(0,0,0) + offset;
 				break;
 			case 1:
-				nowPos = new Vector3(1000,1000,1000);
+				nowPos = new Vector3(1000,1000,1000) + offset;
 				break;
 			default:
-				nowPos = new Vector3(0,0,0);
+				nowPos = new Vector3(0,0,0) + offset;
 				break;
 		}
 
