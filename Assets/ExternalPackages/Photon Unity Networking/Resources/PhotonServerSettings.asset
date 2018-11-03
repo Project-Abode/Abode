@@ -53,4 +53,6 @@ MonoBehaviour:
   - PreTeleportEffect
   - ReceiveAC
   - ReceiveInvitation
+  - PlayClockSound
+  - PlayRainEffect
   DisableAutoOpenWizard: 1
