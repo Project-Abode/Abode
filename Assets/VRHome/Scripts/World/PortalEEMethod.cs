@@ -100,7 +100,7 @@ public class PortalEEMethod : EEMethod {
 	IEnumerator TeleportCountDown(float seconds) {
 
 		yield return new WaitForSeconds(seconds);
-		EntryExitManager.instance.TeleportPlayerTo(to, toGoPos);
+		EntryExitManager.instance.TeleportPlayerTo(to, toGoPos-offset);
 		teleTrigger.DestroyThisTrigger();
 
 	}
