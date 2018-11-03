@@ -9,8 +9,8 @@ public class RoomSwitcher : MonoBehaviour {
 	public List<VRRoomDescription> roomDescriptions;
 
 	void Awake () {
-		
-		ChangeToRoomWithDescription(Settings.instance.room);
+		if(Settings.instance!=null)
+			ChangeToRoomWithDescription(Settings.instance.room);
 
 	}
 	
@@ -23,6 +23,12 @@ public class RoomSwitcher : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
 			ChangeToRoomWithDescription(1);
 		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha2)) {
+			ChangeToRoomWithDescription(2);
+		}
+
+		
 
 	}
 
