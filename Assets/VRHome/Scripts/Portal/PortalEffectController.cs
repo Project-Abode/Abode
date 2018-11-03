@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PortalEffectController : MonoBehaviour {
 
-
-	void OnTriggerEnter(Collider col){
-
-
+	private AudioSource audioSource;
+	public AudioClip goSound;
+	void Awake() {
+		audioSource = GetComponent<AudioSource>();
 	}
-
-
 	public void PlayGoEffect(float duration) {
+		if(audioSource) {
+			audioSource.Stop();
+			audioSource.PlayOneShot(goSound);
+		}
+			
 		StartCoroutine(Scale(duration));
 	}
+
 	IEnumerator Scale(float duration) 
 	{
 		transform.localScale = new Vector3(1, 0f, 1);
@@ -25,7 +29,12 @@ public class PortalEffectController : MonoBehaviour {
 		}
 
 		this.gameObject.SetActive(false);
-
 	}
+
+	// void Update() {
+	// 	if(Input.GetKeyDown(KeyCode.X)) {
+	// 		PlayGoEffect(3.0f);
+	// 	}
+	// }
 
 }

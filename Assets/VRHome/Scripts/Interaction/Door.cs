@@ -64,10 +64,13 @@ public class Door : MonoBehaviour {
         //or close the door
 
         //hack judge if this hand is remote hand
+        if(col.gameObject.tag != "Hand") return;
+
         var player_t = col.transform.parent.parent.parent;
         Debug.Log(player_t.name);
         //var player = col.transform.parent.parent.parent.GetComponent<Player>();
         var player = player_t.GetComponent<Player>();
+        //if(!player)
         var isThisPlayer = player.CameraRig.gameObject.activeSelf;
         //Debug
         if (!isThisPlayer)

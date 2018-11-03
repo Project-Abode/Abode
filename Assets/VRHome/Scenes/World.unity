@@ -11453,7 +11453,7 @@ MonoBehaviour:
   forPlayer: 0
   portal_in_prefab: {fileID: 1519561154551428, guid: bd92795a12eed4d458a78265ee9de80a,
     type: 2}
-  portal_out_prefab: {fileID: 1519561154551428, guid: bd92795a12eed4d458a78265ee9de80a,
+  portal_out_prefab: {fileID: 1519561154551428, guid: 0a9b817687f55d941a8ddbba499da0a2,
     type: 2}
   teleTriggerPrefab: {fileID: 1518177322027354, guid: d8e0667dd48111e49a8d98a0193c03e3,
     type: 2}

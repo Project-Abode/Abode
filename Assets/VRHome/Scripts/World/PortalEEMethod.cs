@@ -80,8 +80,7 @@ public class PortalEEMethod : EEMethod {
 			pv.RPC("PreTeleportEffect",PhotonTargets.All);
 		}
 
-		EntryExitManager.instance.TeleportPlayerTo(to, toGoPos);
-		teleTrigger.DestroyThisTrigger();
+		StartCoroutine(TeleportCountDown(3f));
 		
 		if(pv) {
 			pv.RPC("AfterTeleportEffect",PhotonTargets.All);
@@ -89,10 +88,22 @@ public class PortalEEMethod : EEMethod {
 
 	}
 
+
+	IEnumerator TeleportCountDown(float seconds) {
+
+		yield return new WaitForSeconds(seconds);
+		EntryExitManager.instance.TeleportPlayerTo(to, toGoPos);
+		teleTrigger.DestroyThisTrigger();
+
+	}
+
+
 	[PunRPC]
 	public void PreTeleportEffect() {
 		if(portal_in) {
-			portal_in.SetActive(false);
+			var effectController = portal_in.GetComponent<PortalEffectController>();
+			effectController.PlayGoEffect(3f);
+			//portal_in.SetActive(false);
 		}
 	}
 
