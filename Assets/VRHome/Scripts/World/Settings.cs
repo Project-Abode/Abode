@@ -32,6 +32,11 @@ public class Settings : MonoBehaviour {
 			room = 1;
 			id = 1;
 		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha2)) {
+			room = 2;
+			id = 2;
+		}
 	}
 
 }

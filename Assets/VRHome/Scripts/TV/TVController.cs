@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class TVController : MonoBehaviour {
 	public Text msgtxt;
-
+	public int forPlayer;
 	//public Portal portal;
 	//public GameObject portalBtn;
 	
 	void Awake () {
-		
+		if(Settings.instance.id != forPlayer) {
+			gameObject.SetActive(false);
+		}
 	}
 	
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.I)) {
 			OnInviteClicked();
 		}
+		
 
 		if(Input.GetKeyDown(KeyCode.P)) {
 			OnPortalClicked();
