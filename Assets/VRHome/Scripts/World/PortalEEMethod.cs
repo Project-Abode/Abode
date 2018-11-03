@@ -32,6 +32,9 @@ public class PortalEEMethod : EEMethod {
 			case 1:
 				toGoPos = new Vector3(1000,1000,1000) + offset;
 				break;
+			case 2:
+				toGoPos = new Vector3(-1000,1000,1000) + offset;
+				break;
 			default:
 				toGoPos = new Vector3(0,0,0) + offset;
 				break;
@@ -42,6 +45,9 @@ public class PortalEEMethod : EEMethod {
 				break;
 			case 1:
 				nowPos = new Vector3(1000,1000,1000) + offset;
+				break;
+			case 2:
+				nowPos = new Vector3(-1000,1000,1000) + offset;
 				break;
 			default:
 				nowPos = new Vector3(0,0,0) + offset;
