@@ -11,7 +11,7 @@ public class BaseEEMethod : EEMethod {
 
     public Vector3 toGoPos;
 
-    override public void InitMethod() {
+    override public void InitMethod(Transform VRPlayer = null) {
         trigger = Instantiate(triggerGO).GetComponent<EETrigger>();
         if(trigger!=null)
             trigger.Init(this);

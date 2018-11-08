@@ -8,6 +8,9 @@ namespace ExitGames.SportShooting
     /// </summary>
     public class Player : MonoBehaviour
     {
+
+        public int playerId;
+
         [SerializeField]
         private Transform _uiRoot;
         public Transform UIRoot

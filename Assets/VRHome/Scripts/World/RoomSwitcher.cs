@@ -8,7 +8,14 @@ public class RoomSwitcher : MonoBehaviour {
 
 	public List<VRRoomDescription> roomDescriptions;
 
+	public static RoomSwitcher instance = null;
+	
 	void Awake () {
+		if (instance == null)
+			 instance = this;
+		 else if (instance != this)
+             Destroy(gameObject); 
+
 		if(Settings.instance!=null)
 			ChangeToRoomWithDescription(Settings.instance.room);
 
@@ -27,9 +34,6 @@ public class RoomSwitcher : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Alpha2)) {
 			ChangeToRoomWithDescription(2);
 		}
-
-		
-
 	}
 
 	int last_idx = -1;
@@ -54,7 +58,7 @@ public class RoomSwitcher : MonoBehaviour {
 	}
 
 
-	public VRRoomDescription GetCurrentDescriptionAt(int index) {
+	public VRRoomDescription GetDescriptionAt(int index) {
 
 		if(index >= 0) {
 			return roomDescriptions[index];
@@ -69,5 +73,7 @@ public class RoomSwitcher : MonoBehaviour {
 		}
 		return null;
 	}
+
+	
 
 }

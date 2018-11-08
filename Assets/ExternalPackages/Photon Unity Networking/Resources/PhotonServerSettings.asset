@@ -55,4 +55,7 @@ MonoBehaviour:
   - ReceiveInvitation
   - PlayClockSound
   - PlayRainEffect
+  - CloseDoor
+  - KnockDoor
+  - OpenDoor
   DisableAutoOpenWizard: 1

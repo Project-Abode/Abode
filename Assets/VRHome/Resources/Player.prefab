@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 20652138486887520}
   - component: {fileID: 114464408040754016}
   - component: {fileID: 92915485645573918}
-  - component: {fileID: 65007290048503216}
   m_Layer: 0
   m_Name: Camera (head)
   m_TagString: MainCamera
@@ -2589,18 +2588,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65007290048503216
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1151610869466142}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.44987047, y: 0.34735405, z: 0.4673639}
-  m_Center: {x: -0.0100675225, y: 0.07070321, z: -0.06336495}
 --- !u!65 &65022275019037820
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3828,6 +3815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01f6793cfdc22146ab8d32c9b6f5198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerId: 0
   _uiRoot: {fileID: 224472538447306846}
   _sideUIRoot: {fileID: 224139274217591774}
   _cameraRig: {fileID: 1286689621501268}

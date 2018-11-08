@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VRHome/Scenes/Lobby.unity
     guid: 64c7b4b9e2c5cbb4890aecb2e61e33f7
+  - enabled: 1
+    path: Assets/VRHome/Scenes/LevelStreamingTest.unity
+    guid: d15cc803363c0e04f9f6cbdbca11cf78
   m_configObjects: {}

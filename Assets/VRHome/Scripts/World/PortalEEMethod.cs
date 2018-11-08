@@ -23,7 +23,7 @@ public class PortalEEMethod : EEMethod {
 
 
 	public Vector3 offset;
-	override public void InitMethod() {
+	override public void InitMethod(Transform VRPlayer = null) {
 		//set up now pos and to go pos
 		switch(to) {
 			case 0:

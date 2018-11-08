@@ -103,6 +103,8 @@ namespace ExitGames.SportShooting
             Debug.Log("Network.intance: "+_playerPrefab.name);
             GameObject go = PhotonNetwork.Instantiate(_playerPrefab.name, spawnPoint, Quaternion.identity, 0) as GameObject;
             GameModel.Instance.CurrentPlayer = go.GetComponent<Player>();
+            //Set up id
+            GameModel.Instance.CurrentPlayer.playerId = index;
 
             //Initialize UI
             if (!useNonVrPlayerInEditor)
@@ -115,8 +117,10 @@ namespace ExitGames.SportShooting
             }
 
             //Set up entry and exit Player transform
-            EntryExitManager eemanager = GameObject.Find("EntryAndExitManager").GetComponent<EntryExitManager>();
-            eemanager.Init(go.transform);
+            //EntryExitManager eemanager = GameObject.Find("EntryAndExitManager").GetComponent<EntryExitManager>();
+            EntryExitManager.instance.Init(go.transform);
+            // if(eemanager)
+            //     eemanager.Init(go.transform);
 
         }
 

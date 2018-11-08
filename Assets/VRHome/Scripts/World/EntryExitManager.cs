@@ -10,7 +10,7 @@ public class EntryExitManager : MonoBehaviour {
 	//private EEMethod current_method;
 	private GameObject current_method;
 
-	public List<GameObject> EEMethodPrefabs;
+	//public List<GameObject> EEMethodPrefabs;
 	public List<GameObject> EEMethodInstances;
 	
 
@@ -58,7 +58,7 @@ public class EntryExitManager : MonoBehaviour {
 		var eemethod = current_method.GetComponent<EEMethod>();
 		eemethod.CleanUpMethod();
 		eemethod.SetUpBasicInfo(from,to,for_player);
-		eemethod.InitMethod();
+		eemethod.InitMethod(VRPlayer);
 
 	}
 
@@ -86,12 +86,12 @@ public class EntryExitManager : MonoBehaviour {
 			int cur_room = roomSwitcher.GetCurrentRoomIndex();
 			int to_room = cur_room == 1? 0:1;
 
-			SetUpMethodTriggered(cur_room, to_room, 1);
+			OnSetUpMethod(cur_room, to_room, 1);
 		}
 
 	}
 
-	public void SetUpMethodTriggered(int from, int to, int for_player) {
+	public void OnSetUpMethod(int from, int to, int for_player) {
 		
 		int methodIndex = Settings.instance.method;
 		photonView.RPC("SetUpMethod", PhotonTargets.All, methodIndex, from, to, for_player);

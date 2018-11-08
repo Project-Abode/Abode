@@ -11,7 +11,9 @@ public class InvitationUI : MonoBehaviour {
 	public string msg;
 
 	public void OnGoButtonClicked(){ //ACC
-		EntryExitManager.instance.SetUpMethodTriggered(inv_to, inv_from, inv_to);
+		EntryExitManager.instance.OnSetUpMethod(inv_to, inv_from, inv_to);
+		//???
+		invitationPanel.SetActive(false);
 	}
 
 	void Update() {
