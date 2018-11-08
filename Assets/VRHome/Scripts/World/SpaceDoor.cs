@@ -33,10 +33,10 @@ public class SpaceDoor : MonoBehaviour {
 
 
 		//Only Current Player can control
-		if(collidePlayer.playerId != Settings.instance.id) return;
+		if(!collidePlayer.playerId.Equals(Settings.instance.id)) return;
 
 		//does player own that door?
-		if(collidePlayer.playerId == doorID) {
+		if(collidePlayer.playerId.Equals(doorID)) {
 			//operate door
 			OperateDoor();
 		}else {
