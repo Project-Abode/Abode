@@ -9,11 +9,12 @@ namespace ExitGames.SportShooting
     public class Player : MonoBehaviour
     {
 
-        public int playerId;
+        public int playerId = -1;
 
         public void SetPlayerId(int id) {
-            var photonView = GetComponent<PhotonView>();
-            photonView.RPC("SetPlayerIdOnNetwork", PhotonTargets.All, id);
+            playerId = id;
+            // var photonView = GetComponent<PhotonView>();
+            // photonView.RPC("SetPlayerIdOnNetwork", PhotonTargets.All, id);
         }
 
         [PunRPC]
