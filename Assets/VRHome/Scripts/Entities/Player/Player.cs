@@ -11,6 +11,16 @@ namespace ExitGames.SportShooting
 
         public int playerId;
 
+        public void SetPlayerId(int id) {
+            var photonView = GetComponent<PhotonView>();
+            photonView.RPC("SetPlayerIdOnNetwork", PhotonTargets.All, id);
+        }
+
+        [PunRPC]
+        void SetPlayerIdOnNetwork(int id) {
+            playerId = id;
+        }
+
         [SerializeField]
         private Transform _uiRoot;
         public Transform UIRoot
