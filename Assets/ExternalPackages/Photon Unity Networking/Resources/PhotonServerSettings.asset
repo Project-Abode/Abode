@@ -59,4 +59,6 @@ MonoBehaviour:
   - KnockDoor
   - OpenDoor
   - SetPlayerIdOnNetwork
+  - CloseDoorRPC
+  - OpenDoorRPC
   DisableAutoOpenWizard: 1

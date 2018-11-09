@@ -896,7 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: 1
   id: 1
-  method: 0
+  method: 1
 --- !u!4 &859779510
 Transform:
   m_ObjectHideFlags: 0

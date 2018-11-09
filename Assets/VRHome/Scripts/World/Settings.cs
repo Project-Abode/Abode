@@ -37,6 +37,14 @@ public class Settings : MonoBehaviour {
 			room = 2;
 			id = 2;
 		}
+
+		if(Input.GetKeyDown(KeyCode.P)) {
+			method = 0;
+		}
+
+		if(Input.GetKeyDown(KeyCode.E)) {
+			method = 1;
+		}
 	}
 
 }
