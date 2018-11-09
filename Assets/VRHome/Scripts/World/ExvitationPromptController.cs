@@ -13,6 +13,8 @@ public class ExvitationPromptController : MonoBehaviour {
 
 	public GameObject rain;
 
+	//public GameObject prompt
+
 	void Awake () {
 		audioSource = GetComponent<AudioSource>();
 		photonView = GetComponent<PhotonView>();
