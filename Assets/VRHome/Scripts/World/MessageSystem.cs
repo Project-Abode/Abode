@@ -32,7 +32,7 @@ public class MessageSystem : MonoBehaviour {
 	}
 
 	public void SendAC(int to_player) {
-
+		photonView.RPC("ReceiveAC", PhotonTargets.Others, Settings.instance.id, to_player);
 	}
 
 
@@ -45,7 +45,10 @@ public class MessageSystem : MonoBehaviour {
 	}
 
 	[PunRPC]
-	public void ReceiveAC() {
+	public void ReceiveAC(int from_player, int to_player) {
+		if(to_player!=Settings.instance.id) return;
+
+		//TV Controller
 
 	}
 

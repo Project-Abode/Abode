@@ -12,7 +12,8 @@ public class InvitationUI : MonoBehaviour {
 
 	public void OnGoButtonClicked(){ //ACC
 		EntryExitManager.instance.OnSetUpMethod(inv_to, inv_from, inv_to);
-		//???
+
+		SendAcception(inv_from);
 		invitationPanel.SetActive(false);
 	}
 
@@ -24,10 +25,18 @@ public class InvitationUI : MonoBehaviour {
 
 	public void ReceiveInvitation(int from_player, int to_player, string msg) {
 
+		if(from_player < 0 || to_player < 0) return;
+
 		inv_from = from_player;
 		inv_to = to_player;
 		this.msg = msg;
 
 		invitationPanel.SetActive(true);
 	}
+
+	void SendAcception(int to_player) {
+		if(to_player < 0) return;
+		MessageSystem.instance.SendAC(to_player);
+	}
+
 }

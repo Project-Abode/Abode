@@ -91,6 +91,7 @@ public class EntryExitManager : MonoBehaviour {
 
 	}
 
+	//Depart from ____, to ______, for player ____;
 	public void OnSetUpMethod(int from, int to, int for_player) {
 		
 		int methodIndex = Settings.instance.method;
