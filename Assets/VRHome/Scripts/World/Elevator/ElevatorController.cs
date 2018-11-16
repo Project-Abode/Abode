@@ -12,7 +12,12 @@ public class ElevatorController : MonoBehaviour {
 
 	public ElevatorButton button;
 
+	private AudioSource audioSource;
+	//public List<AudioClip> clips;
+
+
 	void Awake() {
+		audioSource = GetComponent<AudioSource>();
 		photonView = GetComponent<PhotonView>();
 		button.notifyTouched += OnButtonClicked;
 	}
@@ -36,7 +41,7 @@ public class ElevatorController : MonoBehaviour {
 	void CloseDoorRPC() {
 		doorObject.SetActive(true);
 		isDoorOpen = false;
-
+		audioSource.Play();
 	}
 
 
@@ -48,6 +53,7 @@ public class ElevatorController : MonoBehaviour {
 	void OpenDoorRPC() {
 		doorObject.SetActive(false);
 		isDoorOpen = true;
+		audioSource.Play();
 	}
 
 }

@@ -19,8 +19,15 @@ public class ElevatorEEMethod : EEMethod {
 	Transform guestBase;
     Transform hostBase;
 
+	AudioSource audioSource;
+	public AudioClip lift;
+	public AudioClip ding;
+
 
 	override public void InitMethod(Transform VRPlayer = null) {
+
+		audioSource = GetComponent<AudioSource>();
+
 		if(forPlayer != Settings.instance.id) return;
 
 		this.VRPlayer = VRPlayer;
@@ -48,37 +55,34 @@ public class ElevatorEEMethod : EEMethod {
 		guestInside.SetActive(false);
 		elevators[guestID].CloseDoor();
 
-		StartCoroutine(ElevatorCountDown(3,0));
+		StartCoroutine(ElevatorCountDown(5,0));
 	}
 
 
 	IEnumerator ElevatorCountDown(float seconds, int choice) {
 
+		audioSource.PlayOneShot(lift);
 		yield return new WaitForSeconds(seconds);
 
 
 		if(choice == 0) {
 			EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
-			//VRPlayer.position = hostBase.position;
-			elevators[hostID].OpenDoor();
-		}
 
-		// }else {
-			
-		// 	VRPlayer.position = guestBase.position;
-		// 	elevators[guestID].OpenDoor();
-		// }	
+			elevators[hostID].OpenDoor();
+			audioSource.PlayOneShot(ding);
+		}
 		
+
 	}
 
 	IEnumerator ElevatorBackCountDown(float seconds) {
-		//VRPlayer.position = guestBase.position;
 
 		EntryExitManager.instance.TeleportPlayerTo(guestID, guestBase.position);
-
+		audioSource.PlayOneShot(lift);
 		yield return new WaitForSeconds(seconds);
 		
 		elevators[guestID].OpenDoor();
+		audioSource.PlayOneShot(ding);
 	}
 
 

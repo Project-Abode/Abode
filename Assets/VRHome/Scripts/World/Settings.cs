@@ -26,8 +26,6 @@ public class Settings : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Alpha0)) {
 			room = 0; //hearth
 			id = 0;
-
-			//Settings.instance.room = 0;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -42,15 +40,20 @@ public class Settings : MonoBehaviour {
 
 		//Entry and exit method
 
-		if(Input.GetKeyDown(KeyCode.P)) {
-			//Portal
-			method = 0;
-		}
+		// if(Input.GetKeyDown(KeyCode.P)) {
+		// 	//Portal
+		// 	method = 0;
+		// }
 
-		if(Input.GetKeyDown(KeyCode.E)) {
-			//Elevator
-			method = 1;
-		}
+		// if(Input.GetKeyDown(KeyCode.E)) {
+		// 	//Elevator
+		// 	method = 1;
+		// }
+
+		// if(Input.GetKeyDown(KeyCode.L)) {
+		// 	//level streaming
+		// 	method = 0;
+		// }
 	}
 
 }
