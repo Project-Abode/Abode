@@ -4,14 +4,16 @@ using UnityEngine;
 
 namespace ExitGames.SportShooting {
 	public class EnterGame : MonoBehaviour {
-
+        private bool go=false;
 		private void Update()
 		{
 		
-			if (Input.GetKeyDown(KeyCode.W))
+			if (Input.GetKeyDown(KeyCode.W)|| go)
 			{
-				StartPlayer("World");
-			}
+                go = false;
+                StartPlayer("World");
+                
+			}            
 
 			if(Input.GetKeyDown(KeyCode.D)) {
 				StartPlayer("LevelStreamingTest");
@@ -23,6 +25,10 @@ namespace ExitGames.SportShooting {
 		{
 			GameController.Instance.StartGame(id);
 		}
-		
+
+        public void GoToWorld()
+        {
+            go = true;
+        }
 	}
 }
