@@ -17,6 +17,11 @@ namespace ExitGames.SportShooting {
 				StartPlayer("LevelStreamingTest");
 			}
 
+			if(Input.GetKeyDown(KeyCode.L)) {
+				StartPlayer("LevelStreaming");
+			}
+
+
 		}
 
 		public void StartPlayer(string id)

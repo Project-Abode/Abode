@@ -107,18 +107,17 @@ public class LevelEEMethod : EEMethod {
     }
 
     void Update() {
-        // if(Input.GetKeyDown(KeyCode.Space)) {
-        //     InitMethod();
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            InitMethod();
 
-        //     //HACK only for single player
-        //     VRPlayer = GameObject.Find("Player(Clone)").transform;
+            //HACK only for single player
+            VRPlayer = GameObject.Find("Player(Clone)").transform;
 
-        // }
+        }
     }
 
     void Awake() {
-         //InitMethod();
-         //VRPlayer = GameObject.Find("Player(Clone)").transform;
+
     }
 
 
