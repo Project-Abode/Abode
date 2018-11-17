@@ -13,7 +13,7 @@ namespace ExitGames.SportShooting {
 				StartPlayer("World");
 			}
 
-			if(Input.GetKeyDown(KeyCode.S)) {
+			if(Input.GetKeyDown(KeyCode.L)) {
 				//StartPlayer("LevelStreamingTest");
 				StartPlayer("LevelStreaming");
 			}

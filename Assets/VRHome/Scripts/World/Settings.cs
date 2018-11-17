@@ -69,22 +69,7 @@ public class Settings : MonoBehaviour {
 			id = 2;
 		}
 
-		//Entry and exit method
-
-		// if(Input.GetKeyDown(KeyCode.P)) {
-		// 	//Portal
-		// 	method = 0;
-		// }
-
-		// if(Input.GetKeyDown(KeyCode.E)) {
-		// 	//Elevator
-		// 	method = 1;
-		// }
-
-		// if(Input.GetKeyDown(KeyCode.L)) {
-		// 	//level streaming
-		// 	method = 0;
-		// }
+		
 	}
 
 }
