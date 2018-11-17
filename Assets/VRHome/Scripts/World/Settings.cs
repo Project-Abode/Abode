@@ -9,6 +9,11 @@ public class Settings : MonoBehaviour {
 	public int room;
 	public int id;
 	public int method;
+
+	public int exvitation;
+
+	public int avatar;
+
 	//avatar
 	//exit
 	//entry
@@ -21,6 +26,32 @@ public class Settings : MonoBehaviour {
 		 else if (instance != this)
              Destroy(gameObject); 
 	}
+
+
+	public void SetRoom(int value) {
+		room = value;
+		id = value;
+	}
+
+	//0: portal
+	//1: magic wand
+	//2: elevator
+	//3: levelstream
+	//4: magic door
+	//5: hot airballoon
+	
+	public void SetEntryExitMethod(int value) {
+		method = value;
+	}
+
+	public void SetExvitation(int value) {
+		exvitation = value;
+	}
+
+	public void SetAvatar(int value) {
+		avatar = value;
+	}
+
 
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Alpha0)) {
