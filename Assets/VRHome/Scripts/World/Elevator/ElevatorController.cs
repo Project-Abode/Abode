@@ -37,11 +37,42 @@ public class ElevatorController : MonoBehaviour {
 
 	//todo: AudioSource
 
+	Coroutine doorCoroutine;
+	float doorOPTime = 1.855f;
+
 	[PunRPC]
 	void CloseDoorRPC() {
-		doorObject.SetActive(true);
+		//doorObject.SetActive(true);
+		
 		isDoorOpen = false;
+
+		if(doorCoroutine!=null) {
+			audioSource.Stop();
+			StopCoroutine(doorCoroutine);
+		}
+		
+		doorCoroutine = StartCoroutine(DoorCoroutine(-1,doorOPTime));
+;
+
+		
+	}
+
+	IEnumerator DoorCoroutine(int dir, float time){
+
 		audioSource.Play();
+		Vector3 target = doorObject.transform.position + new Vector3(0,0,dir);
+		Vector3 start = doorObject.transform.position;
+		float elapsedTime = 0f;
+      
+ 
+      while (elapsedTime < time)
+      {
+		doorObject.transform.position = Vector3.Lerp(start, target, (elapsedTime / time));
+          elapsedTime += Time.deltaTime;
+        yield return new WaitForEndOfFrame();
+      }
+
+		yield return null;
 	}
 
 
@@ -51,9 +82,17 @@ public class ElevatorController : MonoBehaviour {
 
 	[PunRPC]
 	void OpenDoorRPC() {
-		doorObject.SetActive(false);
+		//doorObject.SetActive(false);
+
 		isDoorOpen = true;
-		audioSource.Play();
+		
+		if(doorCoroutine!=null) {
+			audioSource.Stop();
+			StopCoroutine(doorCoroutine);
+		}
+		
+		doorCoroutine = StartCoroutine(DoorCoroutine(1,doorOPTime));
+		
 	}
 
 }
