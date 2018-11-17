@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.55
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 812147ad6b67d4511b92639d66b20a32, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.003435818, g: 0.0048872866, b: 0.006511286, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -53,7 +53,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 1a426e130cdbdaa429bfb54c6252a17b,
+  m_LightingDataAsset: {fileID: 112000002, guid: aeda6b412a88d0440b64d6a910f44d17,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -10014,7 +10014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invitationControllers:
   - {fileID: 0}
-  - {fileID: 1969618667}
+  - {fileID: 0}
 --- !u!1001 &514116402
 Prefab:
   m_ObjectHideFlags: 0
@@ -19519,7 +19519,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1100937972}
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.529, y: 5.179, z: 0.459}
+  m_LocalPosition: {x: -0.531, y: 5.179, z: 0.459}
   m_LocalScale: {x: 0.3349901, y: 3.0095284, z: 0.2756001}
   m_Children: []
   m_Father: {fileID: 864830782}
@@ -24437,7 +24437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1462351246
 Transform:
   m_ObjectHideFlags: 0
