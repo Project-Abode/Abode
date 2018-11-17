@@ -53,29 +53,34 @@ public class ElevatorEEMethod : EEMethod {
 
 	void OnGuestInsideCollide() {
 		guestInside.SetActive(false);
-		elevators[guestID].CloseDoor();
 
-		StartCoroutine(ElevatorCountDown(5,0));
+		elevators[guestID].CloseDoor();
+		//need wait 1.855 second
+		StartCoroutine(ElevatorGoCountDown(5));
 	}
 
 
-	IEnumerator ElevatorCountDown(float seconds, int choice) {
+	IEnumerator ElevatorGoCountDown(float seconds) {
+
+		//HACK:need wait 1.855 second for door close
+		yield return new WaitForSeconds(1.855f);
 
 		audioSource.PlayOneShot(lift);
 		yield return new WaitForSeconds(seconds);
 
 
-		if(choice == 0) {
-			EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
+		EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
 
-			elevators[hostID].OpenDoor();
-			audioSource.PlayOneShot(ding);
-		}
+		elevators[hostID].OpenDoor();
+		audioSource.PlayOneShot(ding);
+		
 		
 
 	}
 
 	IEnumerator ElevatorBackCountDown(float seconds) {
+		//HACK:need wait 1.855 second for door close
+		yield return new WaitForSeconds(1.855f);
 
 		EntryExitManager.instance.TeleportPlayerTo(guestID, guestBase.position);
 		audioSource.PlayOneShot(lift);
