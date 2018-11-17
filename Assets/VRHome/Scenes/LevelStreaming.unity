@@ -10014,7 +10014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invitationControllers:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1969618667}
 --- !u!1001 &514116402
 Prefab:
   m_ObjectHideFlags: 0
