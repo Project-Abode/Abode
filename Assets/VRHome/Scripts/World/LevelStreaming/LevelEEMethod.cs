@@ -86,7 +86,7 @@ public class LevelEEMethod : EEMethod {
 
         if(guestOutDetector.InRange()) {
             //VRPlayer.position = hallBase.position;
-            EntryExitManager.instance.TeleportPlayerTo(guestID, hallBase.position);
+            EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
         }
 
     }
@@ -96,7 +96,7 @@ public class LevelEEMethod : EEMethod {
 
         if(hallHostOutDetector.InRange()) {
             //VRPlayer.position = hostBase.position;
-            EntryExitManager.instance.TeleportPlayerTo(guestID, hostBase.position);
+            EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
         }
 
     }
@@ -106,7 +106,7 @@ public class LevelEEMethod : EEMethod {
 
          if(hostOutDetector.InRange()) {
             //VRPlayer.position = hallBase.position;
-            EntryExitManager.instance.TeleportPlayerTo(guestID, hallBase.position);
+            EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
         }
 
     }
