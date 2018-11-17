@@ -32,7 +32,8 @@ public class ElevatorController : MonoBehaviour {
 
 
 	public void CloseDoor() {
-		photonView.RPC("CloseDoorRPC", PhotonTargets.All);
+		if(isDoorOpen)
+			photonView.RPC("CloseDoorRPC", PhotonTargets.All);
 	}
 
 	//todo: AudioSource
@@ -77,7 +78,8 @@ public class ElevatorController : MonoBehaviour {
 
 
 	public void OpenDoor() {
-		photonView.RPC("OpenDoorRPC", PhotonTargets.All);
+		if(!isDoorOpen)
+			photonView.RPC("OpenDoorRPC", PhotonTargets.All);
 	}
 
 	[PunRPC]
