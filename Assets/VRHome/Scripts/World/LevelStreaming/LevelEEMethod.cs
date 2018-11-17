@@ -44,6 +44,8 @@ public class LevelEEMethod : EEMethod {
 
         guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
+
+        doors[guestID].OperateDoor();
         
     }
     
