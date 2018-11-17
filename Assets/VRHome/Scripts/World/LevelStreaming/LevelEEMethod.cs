@@ -65,8 +65,8 @@ public class LevelEEMethod : EEMethod {
         Debug.Log("OnGuestHallWayDoorTouched");
         doors[guestID].OperateDoor();
 
-        VRPlayer.position = guestBase.position;
-
+        //VRPlayer.position = guestBase.position;
+        EntryExitManager.instance.TeleportPlayerTo(guestID, guestBase.position);
     }
 
     void OnHostHallWayDoorTouched() {
@@ -83,7 +83,8 @@ public class LevelEEMethod : EEMethod {
         Debug.Log("OnGuestDoorClose");
 
         if(guestOutDetector.InRange()) {
-            VRPlayer.position = hallBase.position;
+            //VRPlayer.position = hallBase.position;
+            EntryExitManager.instance.TeleportPlayerTo(guestID, hallBase.position);
         }
 
     }
@@ -92,7 +93,8 @@ public class LevelEEMethod : EEMethod {
         Debug.Log("OnHostDoorOpen");
 
         if(hallHostOutDetector.InRange()) {
-            VRPlayer.position = hostBase.position;
+            //VRPlayer.position = hostBase.position;
+            EntryExitManager.instance.TeleportPlayerTo(guestID, hostBase.position);
         }
 
     }
@@ -101,7 +103,8 @@ public class LevelEEMethod : EEMethod {
         Debug.Log("OnHostDoorClose");
 
          if(hostOutDetector.InRange()) {
-            VRPlayer.position = hallBase.position;
+            //VRPlayer.position = hallBase.position;
+            EntryExitManager.instance.TeleportPlayerTo(guestID, hallBase.position);
         }
 
     }
