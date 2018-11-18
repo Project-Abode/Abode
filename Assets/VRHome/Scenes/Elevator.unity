@@ -11488,9 +11488,9 @@ MonoBehaviour:
   forPlayer: 0
   elevators:
   - {fileID: 386833168}
-  - {fileID: 0}
+  - {fileID: 1089167293}
   VRPlayer: {fileID: 0}
-  guestInside: {fileID: 0}
+  guestInside: {fileID: 1963042575}
   hostInside: {fileID: 1464369523}
   hostOutside: {fileID: 1150800775}
   lift: {fileID: 8300000, guid: cb65a1806abc48a499bcf8527fde71f3, type: 3}
