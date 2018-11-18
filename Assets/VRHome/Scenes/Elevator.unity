@@ -7220,7 +7220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invitationControllers:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1969618667}
 --- !u!1001 &514116402
 Prefab:
   m_ObjectHideFlags: 0
@@ -15521,7 +15521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1207086953
 Transform:
   m_ObjectHideFlags: 0
