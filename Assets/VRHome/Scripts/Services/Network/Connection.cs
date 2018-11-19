@@ -16,6 +16,8 @@ namespace ExitGames.SportShooting
 
         public void Connect() // connect to server
         {
+
+            Debug.Log("Connect");
             NetworkController.Instance.ChangeNetworkState(NetworkState.CONNECTING_TO_SERVER);
             if (PhotonNetwork.connected) //already connect
             {
@@ -43,32 +45,25 @@ namespace ExitGames.SportShooting
             PhotonNetwork.LeaveRoom();
         }
 
-        public void CreateAndJoinMyRoom() {
-            Debug.Log("[Connection]Create Room:" + NetworkController.myID);
-            //!!!
-            PhotonNetwork.JoinOrCreateRoom(NetworkController.myID , new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
+        // public void CreateAndJoinMyRoom() {
+        //     Debug.Log("[Connection]Create Room:" + NetworkController.myID);
+        //     //!!!
+        //     PhotonNetwork.JoinOrCreateRoom(NetworkController.myID , new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
+        // }
+
+        // +++++++++++++++++++++++++
+        public void CreateOrJoinRoom(string roomName) {
+
+            PhotonNetwork.JoinOrCreateRoom(roomName , new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
         }
+
+
 
         #region PUN Callbacks
         public override void OnConnectedToMaster()
         {
 
-            // Here we only create our own room
-            //CreateAndJoinMyRoom();
-
-            NetworkController.Instance.LoadToGoScene();
-
-            //Reference:
-            //NetworkController.Instance.ChangeNetworkState(NetworkState.JOINING_ROOM);
-            //if (PhotonNetwork.inRoom)
-            //{
-            //    OnJoinedRoom();
-            //}
-            //else
-            //{
-            //    NetworkController.Instance.ChangeNetworkState(NetworkState.JOINING_ROOM);
-            //    PhotonNetwork.JoinRandomRoom();
-            //}
+            Debug.Log("Connected to Master");
         }
 
         public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
@@ -83,12 +78,12 @@ namespace ExitGames.SportShooting
             //PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = NetworkController.MAX_PLAYERS }, null);
 
             //When some one goes back to their home: there is no room and need to be created
-            Debug.Log("[Connection]Failed to join room");
-            Debug.Log(codeAndMsg[1]);
+            // Debug.Log("[Connection]Failed to join room");
+            // Debug.Log(codeAndMsg[1]);
             
-            //Faile to join a room, GO back to my home
-            NetworkController.toID = NetworkController.myID;
-            NetworkController.Instance.LoadToGoScene();
+            // //Faile to join a room, GO back to my home
+            // NetworkController.toID = NetworkController.myID;
+            // NetworkController.Instance.LoadToGoScene();
         }
 
         public override void OnJoinedRoom()
@@ -98,13 +93,19 @@ namespace ExitGames.SportShooting
         }
 
         public override void OnLeftRoom() {
+            //happens when:
+            //1: lobby -> world
+            //2: world -> lobby
+
             Debug.Log("[Connection]Left room Successful");
             NetworkController.Instance.LoadToGoScene();
-
         }
 
         public override void OnJoinedLobby() {
-            JoinRoom(NetworkController.toID);
+            //OnConnectedToMaster();
+            //JoinRoom(NetworkController.toID);
+            Debug.Log("On joined Lobby");
+            CreateOrJoinRoom("Menu");
         }
 
         public override void OnCreatedRoom()
@@ -127,17 +128,17 @@ namespace ExitGames.SportShooting
 
         public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
         {
-            NetworkController.Instance.ChangeNetworkState(NetworkState.SOME_PLAYER_CONNECTED, newPlayer);
+            //NetworkController.Instance.ChangeNetworkState(NetworkState.SOME_PLAYER_CONNECTED, newPlayer);
         }
 
         public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
         {
-            NetworkController.Instance.ChangeNetworkState(NetworkState.SOME_PLAYER_DISCONNECTED, otherPlayer);
+            //NetworkController.Instance.ChangeNetworkState(NetworkState.SOME_PLAYER_DISCONNECTED, otherPlayer);
         }
 
         public override void OnDisconnectedFromPhoton()
         {
-            NetworkController.Instance.ChangeNetworkState(NetworkState.DISCONNECTED);
+            //NetworkController.Instance.ChangeNetworkState(NetworkState.DISCONNECTED);
         }
         #endregion        
     }

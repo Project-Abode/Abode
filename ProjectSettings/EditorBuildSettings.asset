@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/VRHome/Scenes/VRHome/003.unity
     guid: dfaf747afc9b5314fafd76d324ca68ed
   - enabled: 1
+    path: Assets/VRHome/Scenes/Menu.unity
+    guid: f8f4361dc67a80746ba413c9ea970d92
+  - enabled: 0
     path: Assets/VRHome/Scenes/Lobby.unity
     guid: 64c7b4b9e2c5cbb4890aecb2e61e33f7
   - enabled: 1

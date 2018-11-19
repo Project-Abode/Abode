@@ -14,10 +14,6 @@ public class LobbyMenuController: MonoBehaviour {
 
     public GameObject[] UIStatusText;
 
-    // [HideInInspector] public int room;
-    // [HideInInspector] public int id;
-    // [HideInInspector] public int method;
-
     // [HideInInspector] public bool isHost=false;
     
     /*
@@ -53,6 +49,9 @@ public class LobbyMenuController: MonoBehaviour {
 
     void Update() {
         ShowUI();
+
+        
+
 	}
 
     //switch between UI panels based on Panel enum value
@@ -125,7 +124,7 @@ public class LobbyMenuController: MonoBehaviour {
     {    
         Settings.instance.SetRoom(0);
         panel = Panel.hearth_entryExit;
-        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Room/Hearth").SetActive(true);
+        
         choices[1].text = "Room: " + "Hearth";
     }
 
@@ -134,7 +133,7 @@ public class LobbyMenuController: MonoBehaviour {
         Settings.instance.SetRoom(2);
         panel = Panel.garden_entryExit;
         choices[1].text = "Room: " + "Garden";
-        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Room/Garden").SetActive(true);
+       
     }
     #endregion
 
@@ -174,9 +173,12 @@ public class LobbyMenuController: MonoBehaviour {
     #endregion
 
     List<string> ExvitationDict =  new List<string>{
-
-        "Clock","Rain", "Candle", "Gift Hearth","Gift Garden", "Air Balloon"
-
+        "Clock",
+        "Rain", 
+        "Candle", 
+        "Gift Hearth",
+        "Gift Garden", 
+        "Air Balloon"
     };
 
     #region exvitation

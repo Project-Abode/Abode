@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: bebff237-9b83-418d-9986-32ea20cf40bc
+  AppID: 098de882-4f6b-4a29-9fe0-bf7f0dde32b3
   VoiceAppID: 2dac5a68-b704-4d3d-a3f3-dafc2b6635b0
   ChatAppID: 
   HostType: 1
@@ -27,38 +27,36 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - AfterTeleportEffect
   - Chat
+  - Chime
+  - CloseDoor
+  - CloseDoorRPC
   - DestroyByCollision
   - DestroyByHit
   - DestroyRpc
   - ForceUpdateItem
   - InstantiateRpc
+  - OpenDoor
+  - OpenDoorRPC
   - PickupItemInit
+  - PlayClockSound
+  - PlayGoEffect
+  - PlayKnockSound
+  - PlayRainEffect
   - PlayShotSound
+  - PreTeleportEffect
   - PunPickup
   - PunPickupSimple
   - PunRespawn
-  - RequestForPickupItems
-  - RequestForPickupTimes
-  - PlayKnockSound
-  - Holded
-  - Released
-  - TryGrab
-  - TryRelease
-  - SetActiveByRPC
-  - Chime
-  - PlayGoEffect
-  - SetUpMethod
-  - AfterTeleportEffect
-  - PreTeleportEffect
   - ReceiveAC
   - ReceiveInvitation
-  - PlayClockSound
-  - PlayRainEffect
-  - CloseDoor
-  - KnockDoor
-  - OpenDoor
+  - RequestForPickupItems
+  - RequestForPickupTimes
+  - SetActiveByRPC
   - SetPlayerIdOnNetwork
-  - CloseDoorRPC
-  - OpenDoorRPC
+  - SetUpMethod
+  - TryGrab
+  - TryRelease
+  - UpdateSettingsFromHostData
   DisableAutoOpenWizard: 1

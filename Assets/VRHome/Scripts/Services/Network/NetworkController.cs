@@ -45,21 +45,26 @@ namespace ExitGames.SportShooting
             Instance = this;
             _connection = GetComponent<Connection>();
 
-             SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            Debug.Log("OnSceneLoaded: " + scene.name);
+            //Debug.Log("OnSceneLoaded: " + scene.name);
+            //if(scene.name.Equals("Lobby")) return;
 
-            if(scene.name.Equals("Lobby")) return;
+            //if(scene.name == myID) {
+                //_connection.CreateAndJoinMyRoom();
+            //}else {
+                //_connection.JoinRoom(toID);
+            //}
 
-            if(scene.name == myID) {
-                _connection.CreateAndJoinMyRoom();
-            }else {
-                _connection.JoinRoom(toID);
+            if(PhotonNetwork.connected) {
+                Debug.Log("scene loaded and connected");
+                _connection.CreateOrJoinRoom(myID);
+
             }
-           
+
         }
 
 
@@ -75,17 +80,22 @@ namespace ExitGames.SportShooting
 
         public void StartMultiplayerGame(string id)
         {
+
+            Debug.Log("StartMultiplayerGame");
             myID = id;
-            toID = myID;
-            
+            toID = myID; // no need
+
+            //if(!PhotonNetwork.connected) {
             _connection.Init();
             _connection.Connect();
+
         }
 
         public void JoinRoom(string id)
         {
-            //SceneManager.UnloadScene(toID);
-            toID = id;  
+            Debug.Log("network controller Join room");
+            myID = id; 
+            toID = id; //No need 
             _connection.LeaveRoom();
         }
 

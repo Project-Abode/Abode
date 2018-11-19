@@ -36,7 +36,7 @@ public class Portal : MonoBehaviour {
 	
 	IEnumerator LeaveAfterSeconds(float duration) {
 		yield return new WaitForSeconds(duration);
-		GameController.Instance.JoinRoom(roomID);
+//		GameController.Instance.JoinRoom(roomID);
 		yield return null;
 	}
 

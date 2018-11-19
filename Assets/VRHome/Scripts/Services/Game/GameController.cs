@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace ExitGames.SportShooting
 {
@@ -7,15 +8,39 @@ namespace ExitGames.SportShooting
     {
         public static GameController Instance { get; private set; }
 
-        void Awake()
-        {
-            Instance = this;
-        }
-
         void Start()
         {
-            //InitMainMenu();
+            Instance = this;
+            StartGame("Menu");
         }
+
+        void Update() {
+            // if(Input.GetKeyDown(KeyCode.Space)) {
+            //     StartGame("Menu");
+            // }
+        }
+
+		List<string> worldDict = new List<string>{
+			"World",//portal
+			"MagicWand",
+			"Elevator",
+			"LevelStreaming",
+			"MagicDoor",
+			"HotAirballoon"
+		};
+
+		public void EnterGameWithSettings(){
+			var setting = Settings.instance;
+
+			if(setting.isHost) {
+				//sync
+				setting.OnHostRequstedSync();
+			}else {
+				setting.CopyBufferIntoSettings();
+			}
+
+			StartGame(worldDict[setting.method]);
+		}
 
         public void InitMainMenu()
         {
@@ -33,25 +58,24 @@ namespace ExitGames.SportShooting
 
         public void StartGame(string id)
         {
+            Debug.Log("Game Controller start game: " + id);
             GameModel.Instance.ChangeGameState(new ConnectingGameState());
             GameView.Instance.ShowNetworkPanel();
             NetworkController.Instance.StartMultiplayerGame(id);
         }
 
 
-        public void JoinRoom(string id)
-        {
-            GameModel.Instance.ChangeGameState(new ConnectingGameState());
-            GameView.Instance.ShowNetworkPanel();
-            NetworkController.Instance.JoinRoom(id);
-        }
+        // public void JoinRoom(string id)
+        // {
+        //     GameModel.Instance.ChangeGameState(new ConnectingGameState());
+        //     GameView.Instance.ShowNetworkPanel();
+        //     NetworkController.Instance.JoinRoom(id);
+        // }
 
-        public void GoBackToHome() {
-            GameModel.Instance.ChangeGameState(new ConnectingGameState());
-            //NetworkController.Instance.JoinRoom(id);
-        }
-
-
+        // public void GoBackToHome() {
+        //     GameModel.Instance.ChangeGameState(new ConnectingGameState());
+        //     //NetworkController.Instance.JoinRoom(id);
+        // }
 
     }
 }

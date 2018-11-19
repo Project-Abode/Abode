@@ -53,7 +53,7 @@ namespace ExitGames.SportShooting
 
 
         public void JoinRoom(string id) {
-            GameController.Instance.JoinRoom(id);
+//            GameController.Instance.JoinRoom(id);
         }
 
     }

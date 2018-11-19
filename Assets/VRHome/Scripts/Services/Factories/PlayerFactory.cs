@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.VR;
+using UnityEngine.SceneManagement;
 
 namespace ExitGames.SportShooting
 {
@@ -62,14 +63,20 @@ namespace ExitGames.SportShooting
 
         public void Build()
         {
-            if (GameModel.Instance.ActiveGameState is InitializingGameState)
-            {
+            Scene scene = SceneManager.GetActiveScene();
+            if(scene.name.Equals("Menu")) {
+                BuildPlayerForMenu();
+            }else {
                 BuildPlayerForGame();
             }
-            else if (GameModel.Instance.ActiveGameState is MainMenuGameState)
-            {
-                BuildPlayerForMenu();
-            }
+            // if (GameModel.Instance.ActiveGameState is InitializingGameState)
+            // {
+            //     BuildPlayerForGame();
+            // }
+            // else if (GameModel.Instance.ActiveGameState is MainMenuGameState)
+            // {
+            //     BuildPlayerForMenu();
+            // }
         }
 
         public void BuildPlayerForGame()
