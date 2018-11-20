@@ -97,7 +97,8 @@ public class LobbyMenuController: MonoBehaviour {
     {
 //        isHost = true;
         panel = Panel.room;
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);      
+        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);
+        Settings.instance.SetIsHost(true);
     }
 
     public void ChooseGuest()
@@ -106,6 +107,7 @@ public class LobbyMenuController: MonoBehaviour {
         //set room id to meditation here
         Settings.instance.SetRoom(1);
         choices[1].text = "Room: " + "Guest Room";
+        Settings.instance.SetIsHost(false);
         //rest of the things, except the avatar are selected by the host
         panel = Panel.avatar;
 

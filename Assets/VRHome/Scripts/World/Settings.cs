@@ -31,6 +31,9 @@ public class Settings : MonoBehaviour {
 		settingSync = GetComponent<PhotonView>();
 	}
 
+	public void SetIsHost(bool value) {
+		isHost = value;
+	}
 
 	public void SetRoom(int value) {
 		room = value;
@@ -66,7 +69,8 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void OnHostRequstedSync() {
-		settingSync.RPC("UpdateSettingsFromHostData", PhotonTargets.Others, room, method, exvitation, avatar);
+		if(isHost)
+			settingSync.RPC("UpdateSettingsFromHostData", PhotonTargets.Others, room, method, exvitation, avatar);
 	}
 
 	
@@ -113,7 +117,7 @@ public class Settings : MonoBehaviour {
 		// 	id = 2;
 		// }
 
-		
+
 
 
 
