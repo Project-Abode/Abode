@@ -50,14 +50,6 @@ namespace ExitGames.SportShooting
 
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            //Debug.Log("OnSceneLoaded: " + scene.name);
-            //if(scene.name.Equals("Lobby")) return;
-
-            //if(scene.name == myID) {
-                //_connection.CreateAndJoinMyRoom();
-            //}else {
-                //_connection.JoinRoom(toID);
-            //}
 
             if(PhotonNetwork.connected) {
                 Debug.Log("scene loaded and connected");
@@ -88,9 +80,14 @@ namespace ExitGames.SportShooting
                 _connection.Init();
                 _connection.Connect();
             }else {
-                JoinRoom(myID);
+                LeaveCurrentRoom();
+                //JoinRoom(myID); //actually leave current room
             }
 
+        }
+
+        public void LeaveCurrentRoom() {
+             _connection.LeaveRoom();
         }
 
         public void JoinRoom(string id)

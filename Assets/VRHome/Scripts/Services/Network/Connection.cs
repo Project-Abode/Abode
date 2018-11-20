@@ -98,14 +98,15 @@ namespace ExitGames.SportShooting
             //2: world -> lobby
 
             Debug.Log("[Connection]Left room Successful");
-            NetworkController.Instance.LoadToGoScene();
+            //NetworkController.Instance.LoadToGoScene();
         }
 
         public override void OnJoinedLobby() {
             //OnConnectedToMaster();
             //JoinRoom(NetworkController.toID);
             Debug.Log("On joined Lobby");
-            CreateOrJoinRoom("Menu");
+            NetworkController.Instance.LoadToGoScene();
+            //CreateOrJoinRoom(NetworkController.myID);
         }
 
         public override void OnCreatedRoom()

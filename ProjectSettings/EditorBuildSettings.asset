@@ -5,36 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/Lobby.unity
-    guid: 6280e6ecccc53e240afefc5d4fd280b9
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/001.unity
-    guid: e296eb47958afa6459bc20ae8b01712c
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/debug.unity
-    guid: 33054a752caaf0744bd57b59c18c753e
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/002.unity
-    guid: 30606eb83cef4cc4eaac041639dc3703
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/SinglePlayerDebug.unity
-    guid: b27980d6664049e4d8148dee92d07e65
-  - enabled: 0
-    path: Assets/VRHome/Scenes/VRHome/003.unity
-    guid: dfaf747afc9b5314fafd76d324ca68ed
+  - enabled: 1
+    path: Assets/VRHome/Scenes/Prestage.unity
+    guid: 46681dcc24cfe6a4eb82c68b4c9bea23
   - enabled: 1
     path: Assets/VRHome/Scenes/Menu.unity
     guid: f8f4361dc67a80746ba413c9ea970d92
-  - enabled: 0
-    path: Assets/VRHome/Scenes/Lobby.unity
-    guid: 64c7b4b9e2c5cbb4890aecb2e61e33f7
   - enabled: 1
     path: Assets/VRHome/Scenes/World.unity
     guid: 52041f25af874d24f8eb86939877820b
-  - enabled: 0
-    path: Assets/VRHome/Scenes/LevelStreamingTest.unity
-    guid: d15cc803363c0e04f9f6cbdbca11cf78
   - enabled: 1
     path: Assets/VRHome/Scenes/LevelStreaming.unity
     guid: e2b871aada990944f801ca072f952361
