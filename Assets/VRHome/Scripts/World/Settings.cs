@@ -84,7 +84,7 @@ public class Settings : MonoBehaviour {
 	}
 
 	
-	public List<int> buffer;
+	List<int> buffer;
 
 	//delegate for buffer data ready
 

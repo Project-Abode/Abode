@@ -107,7 +107,7 @@ namespace ExitGames.SportShooting
                 spawnPoint.y += 1;
             }
 
-            Debug.Log("Network.intance: "+_playerPrefab.name);
+            //Debug.Log("Network.intance: "+_playerPrefab.name);
             GameObject go = PhotonNetwork.Instantiate(_playerPrefab.name, spawnPoint, Quaternion.identity, 0) as GameObject;
             GameModel.Instance.CurrentPlayer = go.GetComponent<Player>();
             
@@ -140,14 +140,15 @@ namespace ExitGames.SportShooting
             }
 
             Vector3 spawnPoint = PlayerSpawnPoints.GetChild(0).position;
-            
+
             
             if (useNonVrPlayerInEditor)
             {
                 spawnPoint.y += 1;
             }
 
-            GameObject go = GameObject.Instantiate(_playerPrefab, spawnPoint, Quaternion.identity) as GameObject;
+            GameObject go = PhotonNetwork.Instantiate(_playerPrefab.name, spawnPoint, Quaternion.identity, 0) as GameObject;
+            //GameObject.Instantiate(_playerPrefab, spawnPoint, Quaternion.identity) as GameObject;
             GameModel.Instance.CurrentPlayer = go.GetComponent<Player>();
 
             //Initializing UI
