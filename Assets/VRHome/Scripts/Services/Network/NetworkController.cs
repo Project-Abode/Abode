@@ -62,7 +62,6 @@ namespace ExitGames.SportShooting
             if(PhotonNetwork.connected) {
                 Debug.Log("scene loaded and connected");
                 _connection.CreateOrJoinRoom(myID);
-
             }
 
         }
@@ -81,21 +80,24 @@ namespace ExitGames.SportShooting
         public void StartMultiplayerGame(string id)
         {
 
-            Debug.Log("StartMultiplayerGame");
+            //Debug.Log("StartMultiplayerGame");
             myID = id;
             toID = myID; // no need
 
-            //if(!PhotonNetwork.connected) {
-            _connection.Init();
-            _connection.Connect();
+            if(!PhotonNetwork.connected) {
+                _connection.Init();
+                _connection.Connect();
+            }else {
+                JoinRoom(myID);
+            }
 
         }
 
         public void JoinRoom(string id)
         {
             Debug.Log("network controller Join room");
-            myID = id; 
-            toID = id; //No need 
+            // myID = id; 
+            // toID = id; //No need 
             _connection.LeaveRoom();
         }
 

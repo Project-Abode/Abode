@@ -38,18 +38,18 @@ namespace ExitGames.SportShooting
             //     freePositions.Add(pos); //[0,1,2,3,4]
             // } // all position
 
-            Debug.Log("Print Players in network");
-            foreach (PhotonPlayer player in PhotonNetwork.playerList)
-            {
-                // if(player.CustomProperties["position"] != null)
-                // {
-                //     freePositions.Remove((int)player.CustomProperties["position"]);
-                // }
+            // Debug.Log("Print Players in network");
+            // foreach (PhotonPlayer player in PhotonNetwork.playerList)
+            // {
+            //     // if(player.CustomProperties["position"] != null)
+            //     // {
+            //     //     freePositions.Remove((int)player.CustomProperties["position"]);
+            //     // }
 
-                Debug.Log(player.ID);
+            //     Debug.Log(player.ID);
 
-            } // remove already taken position
-            Debug.Log("Print Players in network - end");
+            // } // remove already taken position
+            // Debug.Log("Print Players in network - end");
 
             // string playerName = string.Empty;
 

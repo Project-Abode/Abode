@@ -32,12 +32,12 @@ namespace ExitGames.SportShooting
 		public void EnterGameWithSettings(){
 			var setting = Settings.instance;
 
-			if(setting.isHost) {
-				//sync
-				setting.OnHostRequstedSync();
-			}else {
-				setting.CopyBufferIntoSettings();
-			}
+			// if(setting.isHost) {
+			// 	//sync
+			// 	setting.OnHostRequstedSync();
+			// }else {
+			// 	setting.CopyBufferIntoSettings();
+			// }
 
 			StartGame(worldDict[setting.method]);
 		}

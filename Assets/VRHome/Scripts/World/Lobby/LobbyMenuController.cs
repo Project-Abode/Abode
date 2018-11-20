@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using ExitGames.SportShooting;
 
 public class LobbyMenuController: MonoBehaviour {
 
     //UI Panels
     GameObject[] UI_Panels;
     public GameObject UI_Parent;
-    [HideInInspector] public enum Panel { welcome, role, room, garden_entryExit, hearth_entryExit, hearth_exvitation, garden_exvitation, exvitecontroller, time, avatar, loading };
+    [HideInInspector] public enum Panel { welcome, role, room, 
+    garden_entryExit, hearth_entryExit, hearth_exvitation, 
+    garden_exvitation, exvitecontroller, time, avatar, loading,
+
+    waitingHost
+
+    };
     public Panel panel;
 
     public GameObject[] UIStatusText;
@@ -50,7 +57,10 @@ public class LobbyMenuController: MonoBehaviour {
     void Update() {
         ShowUI();
 
-        
+        if(Input.GetKeyDown(KeyCode.S)) {
+            Settings.instance.Seed();
+            Ending();
+        }
 
 	}
 
@@ -227,8 +237,20 @@ public class LobbyMenuController: MonoBehaviour {
     //set time variable
 
     public void SetAvatar(int avatar) {
-        panel = Panel.loading;
         Settings.instance.SetAvatar(avatar);
+
+        Ending();
+        
+    }
+
+    void Ending() {
+        if(Settings.instance.isHost) {
+            panel = Panel.loading;
+            Settings.instance.OnHostRequstedSync();
+            GameController.Instance.EnterGameWithSettings();
+        }else {
+            panel = Panel.waitingHost;
+        }
     }
 
     #endregion

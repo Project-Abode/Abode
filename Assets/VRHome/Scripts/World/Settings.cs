@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ExitGames.SportShooting;
 
 public class Settings : MonoBehaviour {
 
 	public static Settings instance = null;
 
-	public bool isHost;
+	public bool isHost = true;
 	public int room;
 	public int id;
 	public int method;
@@ -60,12 +61,21 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void ClearUpSettings() {
-		isHost = false;
+		isHost = true;
 		room = -1;
 		id = -1;
 		method = -1;
 		exvitation = -1;
 		avatar = -1;
+	}
+
+	public void Seed() {
+		isHost = true;
+		room = 0;
+		id = 0;
+		method = 2;
+		exvitation = 0;
+		avatar = 0;
 	}
 
 	public void OnHostRequstedSync() {
@@ -86,8 +96,6 @@ public class Settings : MonoBehaviour {
 		buffer[2] = exvitation;
 		buffer[3] = avatar;
 
-		//call buffer data ready delegate
-
 	}
 
 	public void CopyBufferIntoSettings() {
@@ -101,6 +109,9 @@ public class Settings : MonoBehaviour {
 		}
 	}
 
+	bool syncDone = false;
+
+	
 	void Update() {
 		// if(Input.GetKeyDown(KeyCode.Alpha0)) {
 		// 	room = 0; //hearth
@@ -117,9 +128,16 @@ public class Settings : MonoBehaviour {
 		// 	id = 2;
 		// }
 
+		if(isHost) return;
 
-
-
+		if(!syncDone) {
+			if(buffer!=null && avatar != -1) {
+				CopyBufferIntoSettings();
+				GameController.Instance.EnterGameWithSettings();
+				syncDone = true;
+			}
+		}
+		
 
 	}
 

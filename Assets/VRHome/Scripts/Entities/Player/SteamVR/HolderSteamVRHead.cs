@@ -21,10 +21,10 @@ namespace ExitGames.SportShooting
 
             if(photonView.isMine)
             {
-                Debug.Log("mine");
+//                Debug.Log("mine");
                 _headModel.SetActive(false);
             }else {
-                Debug.Log("not mine");
+ //               Debug.Log("not mine");
             }
 
              
