@@ -141,6 +141,7 @@ namespace ExitGames.SportShooting
 
             Vector3 spawnPoint = PlayerSpawnPoints.GetChild(0).position;
             
+            
             if (useNonVrPlayerInEditor)
             {
                 spawnPoint.y += 1;
