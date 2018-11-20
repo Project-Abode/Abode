@@ -85,6 +85,7 @@ public class Settings : MonoBehaviour {
 
 	
 	List<int> buffer;
+	bool bufferReady = false;
 
 	//delegate for buffer data ready
 
@@ -95,7 +96,7 @@ public class Settings : MonoBehaviour {
 		buffer[1] = method;
 		buffer[2] = exvitation;
 		buffer[3] = avatar;
-
+		bufferReady = true;
 	}
 
 	public void CopyBufferIntoSettings() {
@@ -131,7 +132,7 @@ public class Settings : MonoBehaviour {
 		if(isHost) return;
 
 		if(!syncDone) {
-			if(buffer!=null && avatar != -1) {
+			if(bufferReady && avatar != -1) {
 				CopyBufferIntoSettings();
 				GameController.Instance.EnterGameWithSettings();
 				syncDone = true;
