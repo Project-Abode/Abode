@@ -100,8 +100,8 @@ public class Settings : MonoBehaviour {
 
 	public void CopyBufferIntoSettings() {
 		if(buffer!=null) {
-			room = buffer[0];
-			id = room;
+			//room = buffer[0];
+			//id = room;
 			method = buffer[1];
 			exvitation = buffer[2];
 			avatar = buffer[3];
