@@ -95,7 +95,10 @@ public class EntryExitManager : MonoBehaviour {
 	public void OnSetUpMethod(int from, int to, int for_player) {
 		
 		int methodIndex = Settings.instance.method;
-		photonView.RPC("SetUpMethod", PhotonTargets.All, methodIndex, from, to, for_player);
+
+		//if(methodIndex == 2 || methodIndex == )
+
+		photonView.RPC("SetUpMethod", PhotonTargets.All, 0, from, to, for_player);
 
 	}
 	

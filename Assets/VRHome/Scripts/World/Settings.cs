@@ -91,7 +91,7 @@ public class Settings : MonoBehaviour {
 
 	[PunRPC]
 	public void UpdateSettingsFromHostData(int room, int method, int exvitation, int avatar) {
-		buffer = new List<int>(4);
+		buffer = new List<int>{0,0,0,0};
 		buffer[0] = room;
 		buffer[1] = method;
 		buffer[2] = exvitation;
