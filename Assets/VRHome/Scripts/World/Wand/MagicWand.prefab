@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 1174545232367402}
   m_LocalRotation: {x: -0.026929226, y: 0.083002396, z: 0.1861141, w: 0.9786455}
   m_LocalPosition: {x: -0.003016112, y: 0.13604763, z: -0.0011999999}
-  m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4239388592335090}
   - {fileID: 4646637435052240}
@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 1181971252655072}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.000216112, y: -0.45000002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4400891798277144}
   m_Father: {fileID: 4596441613436608}
@@ -5241,8 +5241,8 @@ ParticleSystem:
   lengthInSec: 4.5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5250,7 +5250,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.15
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -14307,8 +14307,8 @@ ParticleSystem:
   lengthInSec: 4.5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -14316,7 +14316,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.15
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -18840,8 +18840,8 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -28077,8 +28077,8 @@ ParticleSystem:
   lengthInSec: 4.5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -28086,7 +28086,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.15
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -28840,7 +28840,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -32610,8 +32610,8 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -32619,7 +32619,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.15
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -41733,8 +41733,8 @@ ParticleSystem:
   lengthInSec: 4.5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -41742,7 +41742,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1.15
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -46323,7 +46323,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -50857,7 +50857,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
