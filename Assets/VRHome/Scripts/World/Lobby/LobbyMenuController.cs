@@ -55,6 +55,11 @@ public class LobbyMenuController: MonoBehaviour {
             Ending();
         }
 
+         if(Input.GetKeyDown(KeyCode.G)) {
+            Settings.instance.SeedForGuest();
+            Ending();
+        }
+
 	}
 
     //switch between UI panels based on Panel enum value

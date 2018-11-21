@@ -70,6 +70,16 @@ public class Settings : MonoBehaviour {
 		avatar = 0;
 	}
 
+	public void SeedForGuest() {
+		isHost = false;
+		room = 1;
+		id = 1;
+		//0-P, 2-E, 3-L
+		method = -1;
+		exvitation = -1;
+		avatar = 2;
+	}
+
 	public void CopyBufferIntoSettings() { //List<int> buffer
 		var buffer = SettingBuffer.instance.GetBuffer();
 		if(buffer!=null) {
