@@ -6,14 +6,14 @@ public class MovingDetector : MonoBehaviour {
 
 	float movingLastingSeconds = 0f;
 	Vector3 lastPosition;
-	public double threshold = 0.1f;
+	//public double threshold = 0.1f;
 	void Start () {
 		lastPosition = transform.position;
 	}
 
 	void Update () {
 		var distance = Vector3.Distance(transform.position,lastPosition);
-		if(distance > threshold) {
+		if(distance > 0) {
 			movingLastingSeconds += Time.deltaTime;
 		}else {
 			movingLastingSeconds = 0f;

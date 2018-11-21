@@ -53,6 +53,7 @@ public class WandController : MonoBehaviour {
 		follower.Disable();
 		movingDetector.enabled = true;
 		wandGrabable.onGrab -= OnGrabbed;
+		wandParticleController.StopAll();
 		state = 1;
 	}
 
