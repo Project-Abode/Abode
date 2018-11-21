@@ -17,6 +17,8 @@ public class WandController : MonoBehaviour {
 	public delegate void RequestTransport();
 	public RequestTransport requestTransport;
 
+	SimpleGrabable wandGrabable;
+
 	// Vector3 hostBase;
 	// Vector3 guestBase;
 
@@ -27,7 +29,9 @@ public class WandController : MonoBehaviour {
 		movingDetector = GetComponent<MovingDetector>();
 		movingDetector.enabled = false;
 
-		state = 0;
+		wandGrabable = GetComponent<SimpleGrabable>();
+		wandGrabable.onGrab += OnGrabbed;
+		
 
 		var cameraTransform = player.GetChild(0).GetChild(2);
 		follower.Init(cameraTransform);
@@ -37,6 +41,10 @@ public class WandController : MonoBehaviour {
 		shadow.Init(transform, guestBase, hostBase);
 
 		wandParticleController.PlayParticleEffect(0);
+
+		state = 0;
+
+
 	}
 	
 	void OnGrabbed() {
@@ -44,6 +52,7 @@ public class WandController : MonoBehaviour {
 		
 		follower.Disable();
 		movingDetector.enabled = true;
+		wandGrabable.onGrab -= OnGrabbed;
 		state = 1;
 	}
 

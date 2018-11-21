@@ -12,6 +12,8 @@ TagManager:
   - FxTemporaire
   - interactable
   - RemoteController
+  - lb_bird
+  - grabable
   layers:
   - Default
   - TransparentFX
