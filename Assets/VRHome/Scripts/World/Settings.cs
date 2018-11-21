@@ -52,6 +52,8 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void ClearUpSettings() {
+		isFinished = false;
+
 		isHost = true;
 		room = -1;
 		id = -1;
