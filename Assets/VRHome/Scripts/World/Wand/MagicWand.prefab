@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114115955490209882}
   - component: {fileID: 65120321222078450}
   - component: {fileID: 54530884805140962}
+  - component: {fileID: 114386630974519184}
   m_Layer: 0
   m_Name: MagicWand
   m_TagString: grabable
@@ -615,6 +616,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.1
+--- !u!114 &114386630974519184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025423526289112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a27950ffd992664293a40629dc41841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114583176093154944
 MonoBehaviour:
   m_ObjectHideFlags: 1
