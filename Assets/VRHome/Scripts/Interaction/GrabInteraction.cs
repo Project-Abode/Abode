@@ -21,7 +21,6 @@ public class GrabInteraction : MonoBehaviour {
 	}
 
 
-
 	[PunRPC]
 	public void TryGrab() {
 		if (collidingObject) {

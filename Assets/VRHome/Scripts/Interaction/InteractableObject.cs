@@ -10,10 +10,6 @@ public class InteractableObject : MonoBehaviour {
 
 	public bool locked = false;
 
-	// [SerializeField]
-    // PhotonView _photonView;
-
-
 	void Awake() {
 
 		var rb = GetComponent<Rigidbody>();
@@ -49,19 +45,5 @@ public class InteractableObject : MonoBehaviour {
 		//_photonView.RPC("Released", PhotonTargets.All);
 		locked = false;
 	}
-
-	// [PunRPC]
-    // public void Holded()
-    // {
-    //    locked = true;
-    // }
-
-	
-	// [PunRPC]
-    // public void Released()
-    // {
-    //    locked = false;
-    // }
-
 
 }

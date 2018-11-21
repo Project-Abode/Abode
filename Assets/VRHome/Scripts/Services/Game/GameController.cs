@@ -26,7 +26,8 @@ namespace ExitGames.SportShooting
 			"Elevator",
 			"LevelStreaming",
 			"MagicDoor",
-			"HotAirballoon"
+			"HotAirballoon",
+            "WandTest"
 		};
 
 		public void EnterGameWithSettings(){
