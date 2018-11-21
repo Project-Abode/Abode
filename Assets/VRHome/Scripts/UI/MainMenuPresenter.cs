@@ -9,7 +9,7 @@ namespace ExitGames.SportShooting
         public Portal portal;
         public void OnStartButtonClick()
         {
-            GameController.Instance.StartMultiplayerGame();
+//            GameController.Instance.StartMultiplayerGame();
         }
 
         public void OnGoButtonClick() {

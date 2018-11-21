@@ -15,9 +15,9 @@ namespace ExitGames.SportShooting
         }
 
         void Update() {
-            // if(Input.GetKeyDown(KeyCode.Space)) {
-            //     StartGame("Menu");
-            // }
+            if(Input.GetKeyDown(KeyCode.X)) {
+                StartGame("Menu");
+            }
         }
 
 		List<string> worldDict = new List<string>{
@@ -31,29 +31,21 @@ namespace ExitGames.SportShooting
 
 		public void EnterGameWithSettings(){
 			var setting = Settings.instance;
-
-			// if(setting.isHost) {
-			// 	//sync
-			// 	setting.OnHostRequstedSync();
-			// }else {
-			// 	setting.CopyBufferIntoSettings();
-			// }
-
 			StartGame(worldDict[setting.method]);
 		}
 
-        public void InitMainMenu()
-        {
-            //GameModel.Instance.ChangeGameState(new MainMenuGameState());
-            //GameView.Instance.ShowMainMenuPanel();
-        }
+        // public void InitMainMenu()
+        // {
+        //     //GameModel.Instance.ChangeGameState(new MainMenuGameState());
+        //     //GameView.Instance.ShowMainMenuPanel();
+        // }
 
-        public void StartMultiplayerGame()
-        {
-            //GameModel.Instance.ChangeGameState(new ConnectingGameState());
-            //GameView.Instance.ShowNetworkPanel();
-            //NetworkController.Instance.StartMultiplayerGame();
-        }
+        // public void StartMultiplayerGame()
+        // {
+        //     //GameModel.Instance.ChangeGameState(new ConnectingGameState());
+        //     //GameView.Instance.ShowNetworkPanel();
+        //     //NetworkController.Instance.StartMultiplayerGame();
+        // }
 
 
         public void StartGame(string id)

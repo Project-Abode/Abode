@@ -14,14 +14,6 @@ public class Settings : MonoBehaviour {
 	public int exvitation;
 	public int avatar;
 
-	//avatar
-	//exit
-	//entry
-	//invitation
-	//exvitation
-
-	PhotonView settingSync;
-
 	void Awake() {
 		if (instance == null)
 			 instance = this;
@@ -29,7 +21,7 @@ public class Settings : MonoBehaviour {
              Destroy(gameObject); 
 
 		ClearUpSettings();
-		settingSync = GetComponent<PhotonView>();
+		
 	}
 
 	public void SetIsHost(bool value) {
@@ -47,7 +39,6 @@ public class Settings : MonoBehaviour {
 	//3: levelstream
 	//4: magic door
 	//5: hot airballoon
-
 	public void SetEntryExitMethod(int value) {
 		method = value;
 	}
@@ -73,46 +64,27 @@ public class Settings : MonoBehaviour {
 		isHost = true;
 		room = 0;
 		id = 0;
-		method = 2;
+		//0-P, 2-E, 3-L
+		method = 3;
 		exvitation = 0;
 		avatar = 0;
 	}
 
-	public void OnHostRequstedSync() {
-		if(isHost)
-			settingSync.RPC("UpdateSettingsFromHostData", PhotonTargets.Others, room, method, exvitation, avatar);
-	}
-
-	
-	List<int> buffer;
-	bool bufferReady = false;
-
-	//delegate for buffer data ready
-
-	[PunRPC]
-	public void UpdateSettingsFromHostData(int room, int method, int exvitation, int avatar) {
-		buffer = new List<int>{0,0,0,0};
-		buffer[0] = room;
-		buffer[1] = method;
-		buffer[2] = exvitation;
-		buffer[3] = avatar;
-		bufferReady = true;
-	}
-
-	public void CopyBufferIntoSettings() {
+	public void CopyBufferIntoSettings() { //List<int> buffer
+		var buffer = SettingBuffer.instance.GetBuffer();
 		if(buffer!=null) {
-			//room = buffer[0];
-			//id = room;
-			method = buffer[1];
-			exvitation = buffer[2];
-			avatar = buffer[3];
-			//buffer = null;
+			method = buffer[0];
+			exvitation = buffer[1];
 		}
 	}
 
-	bool syncDone = false;
+	public void FinishedSetting(){
+		isFinished = true;
+	}
 
-	
+	bool isFinished = false;
+
+	bool syncDone = false;
 	void Update() {
 		// if(Input.GetKeyDown(KeyCode.Alpha0)) {
 		// 	room = 0; //hearth
@@ -129,17 +101,17 @@ public class Settings : MonoBehaviour {
 		// 	id = 2;
 		// }
 
+		//Guest waiting for host buffer data
 		if(isHost) return;
 
 		if(!syncDone) {
-			if(bufferReady && avatar != -1) {
+			if(SettingBuffer.instance.IsBufferReady() && isFinished) {
 				CopyBufferIntoSettings();
 				GameController.Instance.EnterGameWithSettings();
 				syncDone = true;
 			}
 		}
 		
-
 	}
 
 }

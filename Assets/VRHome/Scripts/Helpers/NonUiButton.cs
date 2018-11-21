@@ -17,7 +17,7 @@ namespace ExitGames.SportShooting
         public void LeaveMatch()
         {
             NetworkController.Instance.EndMultiplayerGame();
-            GameController.Instance.InitMainMenu();            
+//            GameController.Instance.InitMainMenu();            
 
             PhotonNetwork.player.CustomProperties.Clear();
         }

@@ -94,7 +94,7 @@ namespace Exitgames.SportShooting
             {
                 if (!PhotonNetwork.connected && !PhotonNetwork.connecting)
                 {
-                    GameController.Instance.StartMultiplayerGame();
+//                    GameController.Instance.StartMultiplayerGame();
                 }
             }
 
@@ -103,7 +103,7 @@ namespace Exitgames.SportShooting
                 if (PhotonNetwork.connected && PhotonNetwork.inRoom)
                 {
                     NetworkController.Instance.EndMultiplayerGame();
-                    GameController.Instance.InitMainMenu();
+//                    GameController.Instance.InitMainMenu();
 
                     PhotonNetwork.player.CustomProperties.Clear();
                 }

@@ -21,20 +21,8 @@ public class LobbyMenuController: MonoBehaviour {
 
     public GameObject[] UIStatusText;
 
-    // [HideInInspector] public bool isHost=false;
-    
-    /*
-    //avatar
-    enum Avatar {a1,a2,a3};
-    Avatar hostAvatar;
-    Avatar guestAvatar;*/
-
-    //int time;
-
-    //enum ExvitationControl { time, host, facilitator}
-    //ExvitationControl exviteControl;
 	
-    public List<Text> choices;
+    public List<Text> choices; //record panel of settings
 
     private void Awake()
     {
@@ -52,11 +40,16 @@ public class LobbyMenuController: MonoBehaviour {
 
         WelcomeScreen();
         ShowUI();
+
+        //clear up previous settings
+        Settings.instance.ClearUpSettings();
+
     }
 
     void Update() {
         ShowUI();
 
+        //debug for host seed settings
         if(Input.GetKeyDown(KeyCode.S)) {
             Settings.instance.Seed();
             Ending();
@@ -96,7 +89,6 @@ public class LobbyMenuController: MonoBehaviour {
 
     public void PressedBegin()
     {
-        //Debug.Log("pressed");
         panel = Panel.role;
     }
     #endregion
@@ -105,7 +97,6 @@ public class LobbyMenuController: MonoBehaviour {
     //1. Role
     public void ChooseHost()
     {
-//        isHost = true;
         panel = Panel.room;
         GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);
         Settings.instance.SetIsHost(true);
@@ -113,8 +104,6 @@ public class LobbyMenuController: MonoBehaviour {
 
     public void ChooseGuest()
     {
-        //isHost = false;
-        //set room id to meditation here
         Settings.instance.SetRoom(1);
         choices[1].text = "Room: " + "Guest Room";
         Settings.instance.SetIsHost(false);
@@ -122,7 +111,6 @@ public class LobbyMenuController: MonoBehaviour {
         panel = Panel.avatar;
 
         GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Guest").SetActive(true);
-        //GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Room/Guest Home").SetActive(true);
         GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Inv-Entry-Exit/Selected by Host").SetActive(true);
         GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Exvitation Prompt/Selected by Host").SetActive(true);
         GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Experience Time/Selected by Host").SetActive(true);
@@ -131,7 +119,6 @@ public class LobbyMenuController: MonoBehaviour {
     #endregion
 
     #region room
-    //room
     public void SelectHearth()
     {    
         Settings.instance.SetRoom(0);
@@ -151,7 +138,6 @@ public class LobbyMenuController: MonoBehaviour {
 
 
     #region invitation/entry/exit
-    //inv/entry/exit 
 
     List<string> EEDict = new List<string>{
         //0: portal
@@ -164,23 +150,18 @@ public class LobbyMenuController: MonoBehaviour {
 
     };
     public void Hearth_inv_entry_exit(int setting_value)
-    {
-        //store entry/exit system in some variable here
-        
+    {       
         Settings.instance.SetEntryExitMethod(setting_value);
 
         panel = Panel.hearth_exvitation;
         choices[2].text = "Inv-Entry-Exit: " + EEDict[setting_value];
-
     }
 
     public void Garden_inv_entry_exit(int setting_value)
     {  
-        //store entry/exit system in some variable here
         Settings.instance.SetEntryExitMethod(setting_value);
         panel = Panel.garden_exvitation;
         choices[2].text = "Inv-Entry-Exit: " + EEDict[setting_value];
-
     }
     #endregion
 
@@ -194,10 +175,8 @@ public class LobbyMenuController: MonoBehaviour {
     };
 
     #region exvitation
-    //exvitation controller
     public void ExvitationPrompt(int setting_value)
     {
-        //store exvitation in some variable here
         Settings.instance.SetExvitation(setting_value);
         panel = Panel.exvitecontroller;
         choices[3].text = "Exvitation Prompt: " + ExvitationDict[setting_value];
@@ -213,19 +192,15 @@ public class LobbyMenuController: MonoBehaviour {
     };
 
     #region exvitation controller
-    //exvitation controller
     public void ExvitationController(int setting_value)
     {
-
         panel = Panel.time;
         choices[4].text = "Exvitation Controller: " + ExvitationControlDict[setting_value];
-
     }
     #endregion
 
     #region experience timer
     //set time variable
-
     public void SetTimer(float time) {
         panel = Panel.avatar;
         choices[5].text = "Time: " + time + " Min";
@@ -234,19 +209,19 @@ public class LobbyMenuController: MonoBehaviour {
     #endregion
 
     #region avatar
-    //set time variable
-
+    //set avatar
     public void SetAvatar(int avatar) {
         Settings.instance.SetAvatar(avatar);
-
         Ending();
-        
     }
 
+
     void Ending() {
+        Settings.instance.FinishedSetting();
+
         if(Settings.instance.isHost) {
             panel = Panel.loading;
-            Settings.instance.OnHostRequstedSync();
+            SettingBuffer.instance.OnHostRequstedSync();
             GameController.Instance.EnterGameWithSettings();
         }else {
             panel = Panel.waitingHost;
@@ -254,7 +229,5 @@ public class LobbyMenuController: MonoBehaviour {
     }
 
     #endregion
-
-
 
 }
