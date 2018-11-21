@@ -53,6 +53,7 @@ public class Settings : MonoBehaviour {
 
 	public void ClearUpSettings() {
 		isFinished = false;
+		syncDone = false;
 
 		isHost = true;
 		room = -1;
