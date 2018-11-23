@@ -59,4 +59,6 @@ MonoBehaviour:
   - TryGrab
   - TryRelease
   - UpdateSettingsFromHostData
+  - PlayNetworkParticleRPC
+  - StopAllNetworkParticleRPC
   DisableAutoOpenWizard: 1

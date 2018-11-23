@@ -7,10 +7,8 @@ public class EntryExitManager : MonoBehaviour {
 	public RoomSwitcher roomSwitcher;
 	public Transform VRPlayer;
 
-	//private EEMethod current_method;
-	private GameObject current_method;
 
-	//public List<GameObject> EEMethodPrefabs;
+	private GameObject current_method;
 	public List<GameObject> EEMethodInstances;
 	
 
@@ -36,21 +34,10 @@ public class EntryExitManager : MonoBehaviour {
 	[PunRPC]
 	public void SetUpMethod(int methodIndex, int from, int to, int for_player) {
 
-		// if(current_method) {
-		// 	CleanUpMethod();
-		// }
-
 		if(current_method) {
 			//need clean up?
 			current_method.SetActive(false);
 		}
-
-		//Should be network instantiate or scene photonview activate
-		// current_method = Instantiate(EEMethodPrefabs[methodIndex]).GetComponent<EEMethod>();
-		// if(current_method!=null) {
-		// 	current_method.SetUpBasicInfo(from,to,for_player);
-		// 	current_method.InitMethod();
-		// }
 
 		current_method = EEMethodInstances[methodIndex];
 		current_method.SetActive(true);
@@ -83,10 +70,13 @@ public class EntryExitManager : MonoBehaviour {
 	void Update() {
 
 		if(Input.GetKeyDown(KeyCode.S)) {
-			int cur_room = roomSwitcher.GetCurrentRoomIndex();
-			int to_room = cur_room == 1? 0:1;
+			// int cur_room = roomSwitcher.GetCurrentRoomIndex();
+			// int to_room = cur_room == 1? 0:1;
 
-			OnSetUpMethod(cur_room, to_room, 1);
+			// int cur_room = 0;
+			// int to_room = 1;
+			
+			OnSetUpMethod(1, 0, 1);
 		}
 
 	}

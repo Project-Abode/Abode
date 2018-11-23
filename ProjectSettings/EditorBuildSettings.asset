@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VRHome/Scenes/Elevator.unity
     guid: c39b74d3fc82c174fb06e5d335e55b92
+  - enabled: 1
+    path: Assets/VRHome/Scenes/WandTest.unity
+    guid: 1ca288a118f92aa48b574507c53e838f
   m_configObjects: {}

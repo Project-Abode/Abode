@@ -1,44 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ExitGames.SportShooting;
 
-public class GrabInteraction : MonoBehaviour {
+public class SimpleGrab : MonoBehaviour {
 
-	public GameObject collidingObject;
-	public GameObject remoteController;
+	public ControllerEvent controllerEvent;
+
+ 	public GameObject collidingObject;
+	
     public GameObject objectInHand;
 
-	public PhotonView _photonView;
 
-	public void ControllerTriggerDown(SteamVR_TrackedController controller) {
-		_photonView.RPC("TryGrab", PhotonTargets.MasterClient);
+	void OnEnable() {	
+		controllerEvent.onTriggerDown += TryGrab;
+		controllerEvent.onTriggerUp += TryRelease;
 	}
 
-
-	public void ControllerTriggerUp(SteamVR_TrackedController controller) {
-		_photonView.RPC("TryRelease", PhotonTargets.MasterClient);
+	void OnDisable() {	
+		controllerEvent.onTriggerDown -= TryGrab;
+		controllerEvent.onTriggerUp -= TryRelease;
 	}
 
-
-	[PunRPC]
 	public void TryGrab() {
 		if (collidingObject) {
-				var interactable = collidingObject.GetComponent<InteractableObject>();
-				if(!interactable.locked) {
-					interactable.HoldObject();
-					GrabObject ();
-				}
+				GrabObject ();
 			}
 	}
 
-	[PunRPC]
 	public void TryRelease() {
 		if (objectInHand) {
-				var interactable = objectInHand.GetComponent<InteractableObject>();
-				if(interactable.locked) {
-					interactable.ReleaseObject();
-				}
 				ReleaseObject ();
 			}
 	}
@@ -46,18 +36,13 @@ public class GrabInteraction : MonoBehaviour {
 
 	private void SetCollidingObject(Collider col)
 	{	
-		if (collidingObject || !col.GetComponent<Rigidbody>() || col.tag != "interactable")
+		if (collidingObject || !col.GetComponent<Rigidbody>() || col.tag != "grabable")
 		{
 			return;
 		}
 
 		collidingObject = col.gameObject;
 	}
-
-	private void SetRemoteController(Collider other) {
-		remoteController = other.gameObject;
-	}
-	
 
 	public void OnTriggerEnter(Collider other)
 	{
@@ -69,7 +54,6 @@ public class GrabInteraction : MonoBehaviour {
         SetCollidingObject (other);
 	}
 
-	
 
 	public void OnTriggerExit(Collider other)
 	{
@@ -96,9 +80,13 @@ public class GrabInteraction : MonoBehaviour {
 
         collidingObject = null;
 
-        
 		var joint = AddFixedJoint ();
 		joint.connectedBody = objectInHand.GetComponent<Rigidbody> ();
+
+		var grabable = objectInHand.GetComponent<SimpleGrabable>();
+		if(grabable!= null) {
+			grabable.Grab();
+		}
 	}
 
 	private FixedJoint AddFixedJoint()
@@ -116,14 +104,15 @@ public class GrabInteraction : MonoBehaviour {
 			GetComponent<FixedJoint> ().connectedBody = null;
 			Destroy (GetComponent<FixedJoint> ());
 
+			var grabable = objectInHand.GetComponent<SimpleGrabable>();
+			if(grabable!= null) {
+				grabable.Release();
+			}
 			//TODO:
 			//objectInHand.GetComponent<Rigidbody> ().velocity = Controller.velocity;
 			//objectInHand.GetComponent<Rigidbody> ().angularVelocity = Controller.angularVelocity;
 		}
-
-		
+	
 		objectInHand = null;
 	}
-
-
 }
