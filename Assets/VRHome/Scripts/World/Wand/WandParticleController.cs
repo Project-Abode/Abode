@@ -6,6 +6,8 @@ public class WandParticleController : MonoBehaviour {
 
 	public List<GameObject> particles;
 
+	//AudioSource audioSource;
+
 
 	public void PlayParticleEffect(int index) {
 
