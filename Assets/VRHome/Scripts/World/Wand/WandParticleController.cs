@@ -33,5 +33,10 @@ public class WandParticleController : MonoBehaviour {
 		}
 	}
 
+	void Update(){
+		//fix the third particle to the ground
+		particles[2].transform.position = new Vector3(particles[2].transform.position.x, 0, particles[2].transform.position.z);
+	}
+
 
 }
