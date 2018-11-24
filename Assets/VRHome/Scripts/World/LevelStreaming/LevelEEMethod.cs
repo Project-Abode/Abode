@@ -42,10 +42,13 @@ public class LevelEEMethod : EEMethod {
         hallwayDoors[guestID].notifyTouched += OnGuestHallWayDoorTouched;
 
 
+        guestOutDetector.notifyEnterArea += OnGuestEnterOutArea;
+        hostOutDetector.notifyEnterArea += OnGuestEnterBackArea;
+
         guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
 
-        doors[guestID].OperateDoor();
+        doors[guestID].OnlyOpenDoor();
         
     }
     
@@ -65,8 +68,8 @@ public class LevelEEMethod : EEMethod {
 
     void OnGuestHallWayDoorTouched() {
         Debug.Log("OnGuestHallWayDoorTouched");
-        doors[guestID].OperateDoor();
-
+        //doors[guestID].OperateDoor();
+        doors[guestID].OnlyOpenDoor();
         //VRPlayer.position = guestBase.position;
         EntryExitManager.instance.TeleportPlayerTo(guestID, guestBase.position);
     }
@@ -84,12 +87,26 @@ public class LevelEEMethod : EEMethod {
     void OnGuestDoorClose() {
         Debug.Log("OnGuestDoorClose");
 
-        if(guestOutDetector.InRange()) {
-            //VRPlayer.position = hallBase.position;
-            EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
-        }
+        // if(guestOutDetector.InRange()) {
+        //     //VRPlayer.position = hallBase.position;
+        //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+        // }
 
     }
+
+    void OnGuestEnterOutArea(){
+        //close guest door
+        doors[guestID].OnlyCloseDoor();
+        EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+        guestOutDetector.notifyEnterArea -= OnGuestEnterOutArea;
+    }
+
+    void OnGuestEnterBackArea() {
+        EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+        hostOutDetector.notifyEnterArea -= OnGuestEnterBackArea;
+        
+    }
+
 
     void OnHostDoorOpen() {
         Debug.Log("OnHostDoorOpen");
@@ -104,10 +121,10 @@ public class LevelEEMethod : EEMethod {
     void OnHostDoorClose() {
         Debug.Log("OnHostDoorClose");
 
-         if(hostOutDetector.InRange()) {
-            //VRPlayer.position = hallBase.position;
-            EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
-        }
+        //  if(hostOutDetector.InRange()) {
+        //     //VRPlayer.position = hallBase.position;
+        //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+        // }
 
     }
 

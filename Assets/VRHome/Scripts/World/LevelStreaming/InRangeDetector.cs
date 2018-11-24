@@ -8,12 +8,19 @@ public class InRangeDetector : MonoBehaviour {
 	//MainCamera
 	public bool inRange = false;
 
+	public delegate void NotifyEnterArea();
+	public NotifyEnterArea notifyEnterArea;
+	
+
 	void OnTriggerEnter(Collider col) {
 
 		Debug.Log(gameObject.name + " Enter: " + col.gameObject.tag );
 
 		if(col.gameObject.tag.Equals(TargetTag)) {
 			inRange = true;
+			
+			if(notifyEnterArea!=null)
+				notifyEnterArea();
 		}
 	}
 

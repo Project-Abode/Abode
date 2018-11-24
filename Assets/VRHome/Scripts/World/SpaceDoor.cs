@@ -55,11 +55,31 @@ public class SpaceDoor : MonoBehaviour {
 		}
 	}
 
+	public void OnlyCloseDoor(){
+		if(doorIsOpen) {
+			photonView.RPC("CloseDoor", PhotonTargets.All);
+		}
+	}
+
+	public void OnlyOpenDoor(){
+		if(!doorIsOpen) {
+			photonView.RPC("OpenDoor", PhotonTargets.All);
+		}
+	}
+
+
+	public Coroutine curDoorAnim;
+	
 	[PunRPC]
 	void OpenDoor() {
 		//DO animation
-		transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0f));
 		doorIsOpen = true;
+		if(curDoorAnim!= null) {
+			StopCoroutine(curDoorAnim);
+		}
+		curDoorAnim = StartCoroutine(DoorAnimation(Quaternion.Euler(new Vector3(0.0f, 0.0f, 0f))));
+		//transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0f));
+		
 		if(notifyOpen != null)
 			notifyOpen();
 	}
@@ -67,11 +87,36 @@ public class SpaceDoor : MonoBehaviour {
 	[PunRPC]
 	void CloseDoor() {
 		//DO animation
-		transform.rotation = Quaternion.Euler(new Vector3(0.0f, 90.0f, 0f));
+		//transform.rotation = Quaternion.Euler(new Vector3(0.0f, 90.0f, 0f));
 		doorIsOpen = false;
+
+		if(curDoorAnim!= null) {
+			StopCoroutine(curDoorAnim);
+		}
+		curDoorAnim = StartCoroutine(DoorAnimation(Quaternion.Euler(new Vector3(0.0f, 90.0f, 0f))));
 
 		if(notifyClose != null)
 			notifyClose();
+	}
+
+
+	
+	IEnumerator DoorAnimation(Quaternion target) {
+		
+		Quaternion startingRotation = transform.rotation; // have a startingRotation as well
+		Quaternion targetRotation =  target;
+
+		float time = 2f;
+		float elapsedTime = 0;
+		
+		while (elapsedTime < time) {
+			elapsedTime += Time.deltaTime; // <- move elapsedTime increment here
+			
+			transform.rotation = Quaternion.Slerp(startingRotation, targetRotation,  (elapsedTime / time)  );
+			yield return new WaitForEndOfFrame ();
+		}
+
+		yield return null;
 	}
 
 	
@@ -92,7 +137,7 @@ public class SpaceDoor : MonoBehaviour {
 	}
 	
 
-	//Debug:
+	//Debug: host open door
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.H)) {
 			OperateDoor();

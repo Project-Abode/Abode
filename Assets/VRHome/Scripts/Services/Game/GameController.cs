@@ -32,7 +32,7 @@ namespace ExitGames.SportShooting
             "GardenWorld",
             "HearthWorld",
             "Elevator",
-            "LevelStream"
+            "LevelStreaming"
 
 		};
 
