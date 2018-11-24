@@ -72,6 +72,7 @@ public class WandController : MonoBehaviour {
 		//wandParticleController.StopAll();
 		PlayNetworkedParticleEffect(-1);
 		state = 1;
+		DetectMovement();
 	}
 
 	void OnMovementAchieved(){
@@ -86,7 +87,7 @@ public class WandController : MonoBehaviour {
 		//wandParticleController.PlayParticleEffect(2);
 		PlayNetworkedParticleEffect(2);
 		shadow.PlayNetworkParticle(2);
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3.5f);
 		StartTransport();
 		yield return null;
 	}
@@ -109,29 +110,59 @@ public class WandController : MonoBehaviour {
 
 
 	bool lastIsMoving = false;
-	void Update() {
-		if(state == 1) {
 
-			bool curIsMoving = movingDetector.IsMoving();
+	IEnumerator DetectMovement() {
 
-			if(lastIsMoving == false && curIsMoving == true) {
-				//wandParticleController.PlayParticleEffect(1);
-				PlayNetworkedParticleEffect(1);
-				shadow.PlayNetworkParticle(1);
+		for(;;) {
+			if(state == 1) {
+				bool curIsMoving = movingDetector.IsMoving();
+
+				if(lastIsMoving == false && curIsMoving == true) {
+					PlayNetworkedParticleEffect(1);
+					shadow.PlayNetworkParticle(1);
+				}
+
+				if(lastIsMoving == true && curIsMoving == false) {
+					PlayNetworkedParticleEffect(-1);
+					shadow.StopAllNetworkParticle();
+				}
+
+				lastIsMoving = curIsMoving;
+
+				if(movingDetector.DoesMovingLastSeconds(3f)) {
+					OnMovementAchieved();
+					break;
+				}
 			}
-
-			if(lastIsMoving == true && curIsMoving == false) {
-				//wandParticleController.StopAll();
-				PlayNetworkedParticleEffect(-1);
-				shadow.StopAllNetworkParticle();
-			}
-
-			lastIsMoving = curIsMoving;
-
-			if(movingDetector.DoesMovingLastSeconds(3f)) {
-				OnMovementAchieved();
-			}
+			yield return new WaitForSeconds(0.1);
 		}
+
+	}
+
+
+	void Update() {
+		// if(state == 1) {
+
+		// 	bool curIsMoving = movingDetector.IsMoving();
+
+		// 	if(lastIsMoving == false && curIsMoving == true) {
+		// 		//wandParticleController.PlayParticleEffect(1);
+		// 		PlayNetworkedParticleEffect(1);
+		// 		shadow.PlayNetworkParticle(1);
+		// 	}
+
+		// 	if(lastIsMoving == true && curIsMoving == false) {
+		// 		//wandParticleController.StopAll();
+		// 		PlayNetworkedParticleEffect(-1);
+		// 		shadow.StopAllNetworkParticle();
+		// 	}
+
+		// 	lastIsMoving = curIsMoving;
+
+		// 	if(movingDetector.DoesMovingLastSeconds(3f)) {
+		// 		OnMovementAchieved();
+		// 	}
+		// }
 
 	}
 
