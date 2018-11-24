@@ -72,7 +72,7 @@ public class WandController : MonoBehaviour {
 		//wandParticleController.StopAll();
 		PlayNetworkedParticleEffect(-1);
 		state = 1;
-		DetectMovement();
+		StartCoroutine(DetectMovement());
 	}
 
 	void OnMovementAchieved(){
@@ -134,7 +134,7 @@ public class WandController : MonoBehaviour {
 					break;
 				}
 			}
-			yield return new WaitForSeconds(0.1);
+			yield return new WaitForSeconds(0.1f);
 		}
 
 	}
