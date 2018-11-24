@@ -22,6 +22,10 @@ public class WandEEMethod : EEMethod {
 	override public void InitMethod(Transform VRPlayer = null) {
 	
 		
+		if(forPlayer != Settings.instance.id) {
+			return;
+		}
+
 		player = VRPlayer;
 
 		guestID = from;
@@ -30,16 +34,15 @@ public class WandEEMethod : EEMethod {
         guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
 
-		//Photon network instantiate
-		wand = PhotonNetwork.Instantiate(wandPrefabName, guestBase.position, Quaternion.identity,0);
-		//wand = PhotonNetwork.Instantiate(wandPrefabName, spawnPoint, Quaternion.identity, 0) as GameObject;
-		
 		if(forPlayer != Settings.instance.id) {
 			//limit grab by guest
-			wand.gameObject.tag = "Untagged";
+			//wand.gameObject.tag = "Untagged";
 			return;
 		}
-		
+
+		wand = PhotonNetwork.Instantiate(wandPrefabName, guestBase.position, Quaternion.identity,0);
+		wand.gameObject.tag = "grabable";
+	
 		//Only guest needs to init
 		wandController = wand.GetComponent<WandController>();
 		wandController.Init(player, hostBase.position, guestBase.position);
