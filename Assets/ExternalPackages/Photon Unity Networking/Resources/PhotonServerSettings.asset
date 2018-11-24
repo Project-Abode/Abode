@@ -61,4 +61,5 @@ MonoBehaviour:
   - UpdateSettingsFromHostData
   - PlayNetworkParticleRPC
   - StopAllNetworkParticleRPC
+  - PlayNetworkedParticleEffectRPC
   DisableAutoOpenWizard: 1

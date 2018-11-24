@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WandEEMethod : EEMethod {
-
-	void Awake() {
-	}
-
 	Transform player;
 
-	public GameObject wandPrefab;
+	//public GameObject wandPrefab;
 	WandController wandController;
 
 	Transform guestBase;
@@ -19,12 +15,13 @@ public class WandEEMethod : EEMethod {
 	int hostID;
 
 
+	GameObject wand;
+
+	string wandPrefabName = "MagicWand";
+
 	override public void InitMethod(Transform VRPlayer = null) {
-
-		if(forPlayer != Settings.instance.id) {
-			return;
-		}
-
+	
+		
 		player = VRPlayer;
 
 		guestID = from;
@@ -33,10 +30,19 @@ public class WandEEMethod : EEMethod {
         guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
 
-		var wand = Instantiate(wandPrefab, Vector3.zero, Quaternion.identity);
+		//Photon network instantiate
+		wand = PhotonNetwork.Instantiate(wandPrefabName, guestBase.position, Quaternion.identity,0);
+		//wand = PhotonNetwork.Instantiate(wandPrefabName, spawnPoint, Quaternion.identity, 0) as GameObject;
+		
+		if(forPlayer != Settings.instance.id) {
+			//limit grab by guest
+			wand.gameObject.tag = "Untagged";
+			return;
+		}
+		
+		//Only guest needs to init
 		wandController = wand.GetComponent<WandController>();
 		wandController.Init(player, hostBase.position, guestBase.position);
-
 		wandController.requestTransport += OnRequestTransport;
 
 	}
@@ -44,6 +50,10 @@ public class WandEEMethod : EEMethod {
 
 	void OnRequestTransport() {
 		EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
+
+		//network clean up wand
+		PhotonNetwork.Destroy(wand);
+
 	}
 
 	override public void CleanUpMethod() {

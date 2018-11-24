@@ -79,6 +79,16 @@ public class EntryExitManager : MonoBehaviour {
 			OnSetUpMethod(1, 0, 1);
 		}
 
+		if(Input.GetKeyDown(KeyCode.O)) {
+			// int cur_room = roomSwitcher.GetCurrentRoomIndex();
+			// int to_room = cur_room == 1? 0:1;
+
+			// int cur_room = 0;
+			// int to_room = 1;
+			
+			OnSetUpMethod(0, 1, 1);
+		}
+
 	}
 
 	//Depart from ____, to ______, for player ____;

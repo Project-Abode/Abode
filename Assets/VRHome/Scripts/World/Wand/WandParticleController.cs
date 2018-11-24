@@ -9,6 +9,10 @@ public class WandParticleController : MonoBehaviour {
 
 	public void PlayParticleEffect(int index) {
 
+		if(index == -1) {
+			StopAll();
+			return;
+		}
 
 		if(index > particles.Count) {
 			return;

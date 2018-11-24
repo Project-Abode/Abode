@@ -22,8 +22,9 @@ public class WandController : MonoBehaviour {
 	// Vector3 hostBase;
 	// Vector3 guestBase;
 
-	public void Init(Transform player, Vector3 hostBase, Vector3 guestBase) {
+	PhotonView photonView;
 
+	public void Init(Transform player, Vector3 hostBase, Vector3 guestBase) {
 		follower = GetComponent<Follower>();
 		
 		movingDetector = GetComponent<MovingDetector>();
@@ -40,12 +41,27 @@ public class WandController : MonoBehaviour {
 		shadow = shadowGO.GetComponent<ShadowParticleController>();
 		shadow.Init(transform, guestBase, hostBase);
 
-		wandParticleController.PlayParticleEffect(0);
-
+		PlayNetworkedParticleEffect(0);
 		state = 0;
-
-
+		
 	}
+
+	void Awake() {
+		photonView = GetComponent<PhotonView>();
+	}
+
+
+	void PlayNetworkedParticleEffect(int index) {
+		photonView.RPC("PlayNetworkedParticleEffectRPC",PhotonTargets.All,index);
+	}
+
+
+	[PunRPC]
+	public void PlayNetworkedParticleEffectRPC(int index){
+		wandParticleController.PlayParticleEffect(index);
+	}
+
+
 	
 	void OnGrabbed() {
 		if(state != 0) return;
@@ -53,7 +69,8 @@ public class WandController : MonoBehaviour {
 		follower.Disable();
 		movingDetector.enabled = true;
 		wandGrabable.onGrab -= OnGrabbed;
-		wandParticleController.StopAll();
+		//wandParticleController.StopAll();
+		PlayNetworkedParticleEffect(-1);
 		state = 1;
 	}
 
@@ -66,16 +83,18 @@ public class WandController : MonoBehaviour {
 	}
 
 	IEnumerator TransportEffect() {
-		wandParticleController.PlayParticleEffect(2);
+		//wandParticleController.PlayParticleEffect(2);
+		PlayNetworkedParticleEffect(2);
 		shadow.PlayNetworkParticle(2);
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(2f);
 		StartTransport();
 		yield return null;
 	}
 
 	void StartTransport(){
 		state = 3;
-		wandParticleController.StopAll();
+		//wandParticleController.StopAll();
+		PlayNetworkedParticleEffect(-1);
 		shadow.StopAllNetworkParticle();
 
 		if(requestTransport!=null)
@@ -86,7 +105,6 @@ public class WandController : MonoBehaviour {
 
 	void CleanUpWand() {
 		PhotonNetwork.Destroy(shadow.gameObject);
-		Destroy(gameObject);
 	}
 
 
@@ -97,12 +115,14 @@ public class WandController : MonoBehaviour {
 			bool curIsMoving = movingDetector.IsMoving();
 
 			if(lastIsMoving == false && curIsMoving == true) {
-				wandParticleController.PlayParticleEffect(1);
+				//wandParticleController.PlayParticleEffect(1);
+				PlayNetworkedParticleEffect(1);
 				shadow.PlayNetworkParticle(1);
 			}
 
 			if(lastIsMoving == true && curIsMoving == false) {
-				wandParticleController.StopAll();
+				//wandParticleController.StopAll();
+				PlayNetworkedParticleEffect(-1);
 				shadow.StopAllNetworkParticle();
 			}
 
