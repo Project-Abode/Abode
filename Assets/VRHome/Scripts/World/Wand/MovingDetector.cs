@@ -9,17 +9,37 @@ public class MovingDetector : MonoBehaviour {
 	//public double threshold = 0.1f;
 	void Start () {
 		lastPosition = transform.position;
+        StartCoroutine(MovementDetection());
 	}
 
-	void Update () {
-		var distance = Vector3.Distance(transform.position,lastPosition);
-		if(distance > 0) {
-			movingLastingSeconds += Time.deltaTime;
-		}else {
-			movingLastingSeconds = 0f;
-		}
-		lastPosition = transform.position;
-	}
+	//void Update () {
+	//	var distance = Vector3.Distance(transform.position,lastPosition);
+	//	if(distance > 0) {
+	//		movingLastingSeconds += Time.deltaTime;
+	//	}else {
+	//		movingLastingSeconds = 0f;
+	//	}
+	//	lastPosition = transform.position;
+	//}
+
+    IEnumerator MovementDetection()
+    {
+        for(; ; )
+        {
+            var distance = Vector3.Distance(transform.position, lastPosition);
+            if (distance > 0)
+            {
+                movingLastingSeconds += 0.1f;
+            }
+            else
+            {
+                movingLastingSeconds = 0f;
+            }
+            lastPosition = transform.position;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+    }
 
 
 	public bool DoesMovingLastSeconds(float seconds) {

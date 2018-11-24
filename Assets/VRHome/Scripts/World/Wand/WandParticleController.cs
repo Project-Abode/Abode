@@ -6,9 +6,13 @@ public class WandParticleController : MonoBehaviour {
 
 	public List<GameObject> particles;
 
+    Transform target = null;
 	//AudioSource audioSource;
 
-
+    public void SetParticle3Target(Transform _target)
+    {
+        target = _target;
+    }
 	public void PlayParticleEffect(int index) {
 
 		if(index == -1) {
@@ -36,9 +40,12 @@ public class WandParticleController : MonoBehaviour {
 	}
 
 	void Update(){
-		//fix the third particle to the ground
-		particles[2].transform.position = new Vector3(particles[2].transform.position.x, 0, particles[2].transform.position.z);
-	}
+        //fix the third particle to the ground
+        if(target != null)
+            particles[2].transform.position = new Vector3(target.position.x , 0, target.position.z);
+        particles[2].transform.eulerAngles = new Vector3(-90,0,0);
+
+    }
 
 
 }

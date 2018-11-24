@@ -55,7 +55,7 @@ public class WandEEMethod : EEMethod {
 		EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
 
 		//network clean up wand
-		PhotonNetwork.Destroy(wand);
+		//PhotonNetwork.Destroy(wand);
 
 	}
 

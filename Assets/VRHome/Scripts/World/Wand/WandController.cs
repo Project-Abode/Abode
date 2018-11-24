@@ -41,7 +41,10 @@ public class WandController : MonoBehaviour {
 		shadow = shadowGO.GetComponent<ShadowParticleController>();
 		shadow.Init(transform, guestBase, hostBase);
 
-		PlayNetworkedParticleEffect(0);
+        wandParticleController.SetParticle3Target(cameraTransform);
+
+
+        PlayNetworkedParticleEffect(0);
 		state = 0;
 		
 	}
@@ -87,26 +90,38 @@ public class WandController : MonoBehaviour {
 		//wandParticleController.PlayParticleEffect(2);
 		PlayNetworkedParticleEffect(2);
 		shadow.PlayNetworkParticle(2);
-		yield return new WaitForSeconds(3.5f);
-		StartTransport();
-		yield return null;
+		yield return new WaitForSeconds(3.0f);
+        //StartTransport();
+        state = 3;
+
+        if (requestTransport != null)
+            requestTransport();
+
+        yield return new WaitForSeconds(1.5f);
+        //wandParticleController.StopAll();
+        PlayNetworkedParticleEffect(-1);
+        shadow.StopAllNetworkParticle();
+
+        CleanUpWand();
+        yield return null;
 	}
 
-	void StartTransport(){
-		state = 3;
-		//wandParticleController.StopAll();
-		PlayNetworkedParticleEffect(-1);
-		shadow.StopAllNetworkParticle();
+	//void StartTransport(){
+	//	state = 3;
+	//	//wandParticleController.StopAll();
+	//	PlayNetworkedParticleEffect(-1);
+	//	shadow.StopAllNetworkParticle();
 
-		if(requestTransport!=null)
-			requestTransport();
+	//	if(requestTransport!=null)
+	//		requestTransport();
 		
-		CleanUpWand();
-	}
+	//	CleanUpWand();
+	//}
 
 	void CleanUpWand() {
 		PhotonNetwork.Destroy(shadow.gameObject);
-	}
+        PhotonNetwork.Destroy(gameObject);
+    }
 
 
 	bool lastIsMoving = false;
@@ -129,7 +144,7 @@ public class WandController : MonoBehaviour {
 
 				lastIsMoving = curIsMoving;
 
-				if(movingDetector.DoesMovingLastSeconds(3f)) {
+				if(movingDetector.DoesMovingLastSeconds(2.0f)) {
 					OnMovementAchieved();
 					break;
 				}
