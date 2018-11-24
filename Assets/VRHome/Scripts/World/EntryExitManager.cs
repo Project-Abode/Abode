@@ -96,9 +96,12 @@ public class EntryExitManager : MonoBehaviour {
 		
 		int methodIndex = Settings.instance.method;
 
-		//if(methodIndex == 2 || methodIndex == )
-
-		photonView.RPC("SetUpMethod", PhotonTargets.All, 0, from, to, for_player);
+		if(methodIndex == 1 || methodIndex == 5) //Magic wand
+			photonView.RPC("SetUpMethod", PhotonTargets.All, 1, from, to, for_player);
+		else {
+			photonView.RPC("SetUpMethod", PhotonTargets.All, 0, from, to, for_player);
+		}
+				
 
 	}
 	

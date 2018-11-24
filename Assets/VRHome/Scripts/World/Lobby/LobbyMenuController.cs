@@ -151,7 +151,14 @@ public class LobbyMenuController: MonoBehaviour {
         //3: levelstream
         //4: magic door
         //5: hot airballoon
-        "portal", "magic wand", "elevator", "levelstream", "magic door", "hot airballoon"
+        "Hearth Portal",
+        "Hearth Magic Wand", 
+
+        "Elevator", 
+        "Level Stream",
+        
+        "Garden Portal", 
+        "Garden Magic Wand"
 
     };
     public void Hearth_inv_entry_exit(int setting_value)

@@ -57,7 +57,7 @@ public class TVController : MonoBehaviour {
 
 		SetMsg("Your portal to home is next to the door.");
 
-		EntryExitManager.instance.OnSetUpMethod(Settings.instance.id,1,1);
+		EntryExitManager.instance.OnSetUpMethod(0,1,1);
 
 		// if(!portal.visible) {
 		// 	portal.ShowEntity();

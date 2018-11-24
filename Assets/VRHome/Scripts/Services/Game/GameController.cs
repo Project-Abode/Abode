@@ -21,18 +21,35 @@ namespace ExitGames.SportShooting
         }
 
 		List<string> worldDict = new List<string>{
-			"World",//portal
-			"MagicWand",
-			"Elevator",
-			"LevelStreaming",
-			"MagicDoor",
-			"HotAirballoon",
-            "WandTest"
+			// "HearthWorld",//portal + magic wand
+			// "MagicWand",
+			// "Elevator",
+			// "LevelStreaming",
+			// "MagicDoor",
+			// "HotAirballoon",
+            // "WandTest"
+            
+            "GardenWorld",
+            "HearthWorld",
+            "Elevator",
+            "LevelStream"
+
 		};
 
 		public void EnterGameWithSettings(){
 			var setting = Settings.instance;
-			StartGame(worldDict[setting.method]);
+            if(setting.method == 2 || setting.method == 3){
+                StartGame(worldDict[setting.method]);
+                return;
+            }
+            else {
+                if(setting.method == 0 || setting.method == 1) {
+                    StartGame(worldDict[1]); //Hearth
+                }else {
+                    StartGame(worldDict[0]); //Garden
+                }
+
+            }
 		}
 
         // public void InitMainMenu()
