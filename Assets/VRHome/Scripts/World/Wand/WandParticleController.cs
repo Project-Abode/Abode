@@ -42,7 +42,10 @@ public class WandParticleController : MonoBehaviour {
 	void Update(){
         //fix the third particle to the ground
         if(target != null)
-            particles[2].transform.position = new Vector3(target.position.x , 0, target.position.z);
+        {
+            particles[2].transform.position = new Vector3(target.position.x, target.parent.parent.position.y, target.position.z);
+        }
+            //particles[2].transform.position = new Vector3(target.position.x , 0, target.position.z);
         particles[2].transform.eulerAngles = new Vector3(-90,0,0);
 
     }
