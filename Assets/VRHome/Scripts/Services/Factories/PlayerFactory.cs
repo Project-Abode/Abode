@@ -118,17 +118,15 @@ namespace ExitGames.SportShooting
             if (!useNonVrPlayerInEditor)
             {
                 GameModel.Instance.CurrentPlayer.CameraRig.SetActive(true);
-                GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
-                GameModel.Instance.CurrentPlayer.SideUIRoot.gameObject.SetActive(true);
-                GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
-                GameView.Instance.SideUIRoot = GameModel.Instance.CurrentPlayer.SideUIRoot;
+                //GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
+                //GameModel.Instance.CurrentPlayer.SideUIRoot.gameObject.SetActive(true);
+                //GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
+                //GameView.Instance.SideUIRoot = GameModel.Instance.CurrentPlayer.SideUIRoot;
             }
 
             //Set up entry and exit Player transform
             //EntryExitManager eemanager = GameObject.Find("EntryAndExitManager").GetComponent<EntryExitManager>();
             EntryExitManager.instance.Init(go.transform);
-            // if(eemanager)
-            //     eemanager.Init(go.transform);
 
         }
 
