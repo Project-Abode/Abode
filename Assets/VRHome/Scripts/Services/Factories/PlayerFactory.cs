@@ -108,7 +108,8 @@ namespace ExitGames.SportShooting
             }
 
             //Debug.Log("Network.intance: "+_playerPrefab.name);
-            GameObject go = PhotonNetwork.Instantiate("Avatar", spawnPoint, Quaternion.identity, 0) as GameObject;
+            string avatar_prefab = "Avatar"+ Settings.instance.avatar;
+            GameObject go = PhotonNetwork.Instantiate(avatar_prefab, spawnPoint, Quaternion.identity, 0) as GameObject;
             GameModel.Instance.CurrentPlayer = go.GetComponent<Player>();
             
             //Set up id

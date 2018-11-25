@@ -27,6 +27,8 @@ public class BlinkController : MonoBehaviour {
 		for(int i = 0 ; i < objs.Count; i++){
 			renderers.Add(objs[i].GetComponent<Renderer>());
 		}
+
+		ResetToStandard(avatar_choice);
 	}
 	
 	

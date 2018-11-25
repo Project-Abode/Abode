@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 114122459072292632}
   - component: {fileID: 114831343870785028}
   m_Layer: 0
-  m_Name: Avatar
+  m_Name: Avatar0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3517,7 +3517,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3ee2d4b10f66443d28e26593bb8cf003, type: 2}
   stand: {fileID: 2100000, guid: 48946c9728c749f44ae303cf66960c0a, type: 2}
   dissolve: {fileID: 2100000, guid: aebd7c7c47287477aba36a2647a306d0, type: 2}
-  avatar_choice: 1
+  avatar_choice: 0
 --- !u!114 &114122459072292632
 MonoBehaviour:
   m_ObjectHideFlags: 1

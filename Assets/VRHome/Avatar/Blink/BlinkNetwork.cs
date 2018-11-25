@@ -8,11 +8,11 @@ public class BlinkNetwork : MonoBehaviour {
 	BlinkController blinkController;
 	void Start () {
 
-		var playerID = GetComponent<Player>().playerId;
+		// var playerID = GetComponent<Player>().playerId;
 
-		if(playerID == -1) {
-			this.enabled = false;
-		}
+		// if(playerID == -1) {
+		// 	this.enabled = false;
+		// }
 
 
 		blinkController = GetComponentInChildren<BlinkController>();
@@ -23,8 +23,8 @@ public class BlinkNetwork : MonoBehaviour {
 		
 		photonView = GetComponent<PhotonView>();
 
-		NetWorkSetAvatarChoice(Settings.instance.avatar);
-		NetWorkFadeIn();
+		// NetWorkSetAvatarChoice(Settings.instance.avatar);
+		// NetWorkFadeIn();
 	}
 	
 
