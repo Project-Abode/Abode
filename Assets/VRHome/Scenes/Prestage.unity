@@ -898,9 +898,9 @@ MonoBehaviour:
   isHost: 1
   room: 1
   id: 1
-  method: 0
+  method: 404
   exvitation: 0
-  avatar: 0
+  avatar: 1
   QA_test: 1
 --- !u!4 &859779510
 Transform:

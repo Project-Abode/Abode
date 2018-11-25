@@ -1,4 +1,4 @@
-﻿    using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 namespace ExitGames.SportShooting
 {
@@ -19,13 +19,13 @@ namespace ExitGames.SportShooting
 
             var photonView = GetComponent<PhotonView>();
 
-            if(photonView.isMine)
-            {
-//                Debug.Log("mine");
-                _headModel.SetActive(false);
-            }else {
- //               Debug.Log("not mine");
-            }
+//             if(photonView.isMine)
+//             {
+// //                Debug.Log("mine");
+//                 _headModel.SetActive(false);
+//             }else {
+//  //               Debug.Log("not mine");
+//             }
 
              
         }

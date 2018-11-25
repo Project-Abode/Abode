@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1573532728519628}
+  m_IsPrefabParent: 1
+--- !u!1 &1573532728519628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4773211582296974}
+  - component: {fileID: 114598868870787954}
+  m_Layer: 0
+  m_Name: Blink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4773211582296974
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573532728519628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114598868870787954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573532728519628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4d2ec4cbbea409c9c8758c74912e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hair: {fileID: 0}
+  standards:
+  - {fileID: 2100000, guid: 48946c9728c749f44ae303cf66960c0a, type: 2}
+  - {fileID: 2100000, guid: 85344bf709ff60f4b9da156b60243eb3, type: 2}
+  - {fileID: 2100000, guid: 3782b0e5d5debaf4199eefcd29a9ee38, type: 2}
+  hair_standards:
+  - {fileID: 2100000, guid: 53f73719466f4354197e01dc84072ba1, type: 2}
+  - {fileID: 2100000, guid: e9662acc6f6ceae48a458187542d321f, type: 2}
+  - {fileID: 2100000, guid: 38d26745c1f06944995a6df8e7296582, type: 2}
+  dissolves:
+  - {fileID: 2100000, guid: aebd7c7c47287477aba36a2647a306d0, type: 2}
+  - {fileID: 2100000, guid: 01fc39ae1c9d044118f8533b6626f724, type: 2}
+  - {fileID: 2100000, guid: 06e1183bab192482e84d0ccde314572c, type: 2}
+  hair_dissolves:
+  - {fileID: 2100000, guid: 9e44f00b89764406ca28ea007f992ab6, type: 2}
+  - {fileID: 2100000, guid: fc9efd8efa2c347ce8cc5a14efd758b2, type: 2}
+  - {fileID: 2100000, guid: 3ee2d4b10f66443d28e26593bb8cf003, type: 2}
+  stand: {fileID: 2100000, guid: 48946c9728c749f44ae303cf66960c0a, type: 2}
+  dissolve: {fileID: 2100000, guid: aebd7c7c47287477aba36a2647a306d0, type: 2}

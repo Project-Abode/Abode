@@ -62,4 +62,7 @@ MonoBehaviour:
   - PlayNetworkParticleRPC
   - StopAllNetworkParticleRPC
   - PlayNetworkedParticleEffectRPC
+  - FadeIn
+  - FadeOut
+  - SetAvatarChoice
   DisableAutoOpenWizard: 1

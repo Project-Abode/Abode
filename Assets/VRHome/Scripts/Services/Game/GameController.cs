@@ -32,12 +32,19 @@ namespace ExitGames.SportShooting
             "GardenWorld",
             "HearthWorld",
             "Elevator",
-            "LevelStreaming"
+            "LevelStreaming",
+            "WandTest"
 
 		};
 
 		public void EnterGameWithSettings(){
 			var setting = Settings.instance;
+
+            if(setting.method == 404) {
+                StartGame("WandTest");
+                return;
+            }
+
             if(setting.method == 2 || setting.method == 3){
                 StartGame(worldDict[setting.method]);
                 return;
