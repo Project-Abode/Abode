@@ -5,7 +5,7 @@ using UnityEngine;
 public class TosorFollower : MonoBehaviour {
 
 	public Transform target;
-	float offset = 0.34f;
+	public float offset = 0.34f;
 	public float speed = 1f;
  
     void Update () {
