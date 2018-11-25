@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/VRHome/Scenes/Menu.unity
     guid: f8f4361dc67a80746ba413c9ea970d92
   - enabled: 1
-    path: Assets/VRHome/Scenes/World.unity
-    guid: 52041f25af874d24f8eb86939877820b
-  - enabled: 1
     path: Assets/VRHome/Scenes/LevelStreaming.unity
     guid: e2b871aada990944f801ca072f952361
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VRHome/Scenes/WandTest.unity
     guid: 1ca288a118f92aa48b574507c53e838f
+  - enabled: 1
+    path: Assets/VRHome/Scenes/HearthWorld.unity
+    guid: 52041f25af874d24f8eb86939877820b
   m_configObjects: {}
