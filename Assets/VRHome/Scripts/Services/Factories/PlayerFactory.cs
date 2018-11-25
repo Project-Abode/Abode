@@ -132,11 +132,13 @@ namespace ExitGames.SportShooting
 
         }
 
+        public GameObject menuPlayer;
         public void BuildPlayerForMenu()
         {
             if (GameModel.Instance.CurrentPlayer != null)
             {
-                PhotonNetwork.Destroy(GameModel.Instance.CurrentPlayer.gameObject);
+                //PhotonNetwork.Destroy(GameModel.Instance.CurrentPlayer.gameObject);
+                Destroy(GameModel.Instance.CurrentPlayer.gameObject);
             }
 
             Vector3 spawnPoint = PlayerSpawnPoints.GetChild(0).position;
@@ -147,7 +149,8 @@ namespace ExitGames.SportShooting
                 spawnPoint.y += 1;
             }
 
-            GameObject go = PhotonNetwork.Instantiate(_playerPrefab.name, spawnPoint, Quaternion.identity, 0) as GameObject;
+            //GameObject go = PhotonNetwork.Instantiate(_playerPrefab.name, Vector3.zero, Quaternion.identity, 0) as GameObject;
+            GameObject go = Instantiate(menuPlayer, Vector3.zero, Quaternion.identity) as GameObject;
             //GameObject.Instantiate(_playerPrefab, spawnPoint, Quaternion.identity) as GameObject;
             GameModel.Instance.CurrentPlayer = go.GetComponent<Player>();
 
@@ -155,11 +158,11 @@ namespace ExitGames.SportShooting
             if (!useNonVrPlayerInEditor)
             {
                 GameModel.Instance.CurrentPlayer.CameraRig.SetActive(true);
-                GameModel.Instance.CurrentPlayer.Rifle.SetActive(false);
+                //GameModel.Instance.CurrentPlayer.Rifle.SetActive(false);
                 GameModel.Instance.CurrentPlayer.LaserPointer.SetActive(true);
-                GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
-                GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
-                GameView.Instance.SideUIRoot = GameModel.Instance.CurrentPlayer.SideUIRoot;
+                //GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
+                //GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
+                //GameView.Instance.SideUIRoot = GameModel.Instance.CurrentPlayer.SideUIRoot;
             }
         }
 

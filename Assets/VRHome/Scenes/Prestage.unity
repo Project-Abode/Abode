@@ -374,6 +374,7 @@ MonoBehaviour:
   _nonVrPlayerPrefab: {fileID: 1624300386951932, guid: d90f2fd8bd6e67b4790c265583c4ce52,
     type: 2}
   _playerSpawnPoints: {fileID: 355551622}
+  menuPlayer: {fileID: 1796393146327812, guid: 2435efd079d87094a891c95191f9046b, type: 2}
 --- !u!1 &290023781
 GameObject:
   m_ObjectHideFlags: 0

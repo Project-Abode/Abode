@@ -19,8 +19,8 @@ public class LobbyMenuController: MonoBehaviour {
     };
     public Panel panel;
 
-    public GameObject[] UIStatusText;
-
+    //public GameObject[] UIStatusText;
+    public GameObject choicePanel;
 	
     public List<Text> choices; //record panel of settings
 
@@ -33,10 +33,10 @@ public class LobbyMenuController: MonoBehaviour {
             UI_Panels[i] = UI_Parent.transform.GetChild(i).gameObject;
         }
 
-        for (int i = 0; i < UIStatusText.Length; i++)
-        {
-            UIStatusText[i].SetActive(false);
-        }
+        // for (int i = 0; i < UIStatusText.Length; i++)
+        // {
+        //     UIStatusText[i].SetActive(false);
+        // }
 
         WelcomeScreen();
         ShowUI();
@@ -95,6 +95,7 @@ public class LobbyMenuController: MonoBehaviour {
     public void PressedBegin()
     {
         panel = Panel.role;
+        choicePanel.SetActive(true);
     }
     #endregion
 
@@ -103,23 +104,33 @@ public class LobbyMenuController: MonoBehaviour {
     public void ChooseHost()
     {
         panel = Panel.room;
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);
+        //GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);
+        choices[0].text = "ROLE: " + "Host";
         Settings.instance.SetIsHost(true);
     }
 
     public void ChooseGuest()
     {
         Settings.instance.SetRoom(1);
-        choices[1].text = "Room: " + "Guest Room";
+        choices[0].text = "ROLE: " + "Guest";
+        choices[1].text = "ROOM: " + "Guest Room";
         Settings.instance.SetIsHost(false);
         //rest of the things, except the avatar are selected by the host
         panel = Panel.avatar;
 
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Guest").SetActive(true);
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Inv-Entry-Exit/Selected by Host").SetActive(true);
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Exvitation Prompt/Selected by Host").SetActive(true);
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Experience Time/Selected by Host").SetActive(true);
-        GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Exvitation Controller/Selected by Host").SetActive(true);
+        choices[2].text = "ENTRY | EXIT: " +  "Selected By Host";
+        choices[3].text = "EXVITATION PROMPT: " +  "Selected By Host";
+        choices[4].text = "EXVITATION CONTROL: " +  "Selected By Host";
+        choices[5].text = "TIMER: " + "Selected By Host";
+
+
+
+
+        //GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Guest").SetActive(true);
+        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Inv-Entry-Exit/Selected by Host").SetActive(true);
+        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Exvitation Prompt/Selected by Host").SetActive(true);
+        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Experience Time/Selected by Host").SetActive(true);
+        // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Exvitation Controller/Selected by Host").SetActive(true);
     }
     #endregion
 
