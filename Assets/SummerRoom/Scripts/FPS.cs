@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FPS : MonoBehaviour
+public class FPSold : MonoBehaviour
 {
 
     void OnGUI()
