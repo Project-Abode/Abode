@@ -33,13 +33,13 @@ public class BlinkController : MonoBehaviour {
 	
 	
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.D)) {
-			FadeOut();
-		}
+		// if(Input.GetKeyDown(KeyCode.D)) {
+		// 	FadeOut();
+		// }
 
-		if(Input.GetKeyDown(KeyCode.A)) {
-			FadeIn();
-		}
+		// if(Input.GetKeyDown(KeyCode.A)) {
+		// 	FadeIn();
+		// }
 	}
 
 	public void FadeIn() {

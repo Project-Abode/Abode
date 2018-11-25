@@ -8,13 +8,6 @@ public class BlinkNetwork : MonoBehaviour {
 	BlinkController blinkController;
 	void Start () {
 
-		// var playerID = GetComponent<Player>().playerId;
-
-		// if(playerID == -1) {
-		// 	this.enabled = false;
-		// }
-
-
 		blinkController = GetComponentInChildren<BlinkController>();
 		
 		if(blinkController == null) {
@@ -22,9 +15,17 @@ public class BlinkNetwork : MonoBehaviour {
 		}
 		
 		photonView = GetComponent<PhotonView>();
+	}
 
-		// NetWorkSetAvatarChoice(Settings.instance.avatar);
-		// NetWorkFadeIn();
+
+	void Update() {
+		// if(Input.GetKeyDown(KeyCode.D)) {
+		// 	NetWorkFadeOut();
+		// }
+
+		// if(Input.GetKeyDown(KeyCode.A)) {
+		// 	NetWorkFadeIn();
+		// }
 	}
 	
 
