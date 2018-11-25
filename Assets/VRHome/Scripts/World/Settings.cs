@@ -14,13 +14,15 @@ public class Settings : MonoBehaviour {
 	public int exvitation;
 	public int avatar;
 
+    public bool QA_test;
+
 	void Awake() {
 		if (instance == null)
 			 instance = this;
 		else if (instance != this)
              Destroy(gameObject); 
 
-		ClearUpSettings();
+		//ClearUpSettings();
 		
 	}
 
@@ -32,13 +34,7 @@ public class Settings : MonoBehaviour {
 		room = value;
 		id = value;
 	}
-
-	//0: portal
-	//1: magic wand
-	//2: elevator
-	//3: levelstream
-	//4: magic door
-	//5: hot airballoon
+    
 	public void SetEntryExitMethod(int value) {
 		method = value;
 	}
@@ -52,6 +48,9 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void ClearUpSettings() {
+
+        if (QA_test) return;
+           
 		isFinished = false;
 		syncDone = false;
 
@@ -64,13 +63,6 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void Seed() {
-		// isHost = true;
-		// room = 0;
-		// id = 0;
-		// //0-P, 2-E, 3-L
-		// method = 3;
-		// exvitation = 0;
-		// avatar = 0;
 
 		//debug
 

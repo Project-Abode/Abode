@@ -895,12 +895,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48c20a1c3c15914c96393bbe0727c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHost: 0
-  room: -1
-  id: -1
-  method: -1
-  exvitation: -1
-  avatar: -1
+  isHost: 1
+  room: 1
+  id: 1
+  method: 0
+  exvitation: 0
+  avatar: 0
+  QA_test: 1
 --- !u!4 &859779510
 Transform:
   m_ObjectHideFlags: 0

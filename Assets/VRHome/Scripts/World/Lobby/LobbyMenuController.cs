@@ -51,7 +51,7 @@ public class LobbyMenuController: MonoBehaviour {
 
         //debug for host seed settings
         if(Input.GetKeyDown(KeyCode.S)) {
-            Settings.instance.Seed();
+           // Settings.instance.Seed();
             Ending();
         }
 
