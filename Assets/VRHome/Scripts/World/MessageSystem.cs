@@ -8,7 +8,7 @@ public class MessageSystem : MonoBehaviour {
 	private PhotonView photonView;
 	
 	public List<InvitationUI> invitationControllers;
-
+	public TVController hostTVControllers;
 
 	public static MessageSystem instance = null;
 	void Awake() {
@@ -31,8 +31,8 @@ public class MessageSystem : MonoBehaviour {
 
 	}
 
-	public void SendAC(int to_player) {
-		photonView.RPC("ReceiveAC", PhotonTargets.Others, Settings.instance.id, to_player);
+	public void SendAC(int to_host) {
+		photonView.RPC("ReceiveAC", PhotonTargets.Others, Settings.instance.id, to_host);
 	}
 
 
@@ -45,11 +45,11 @@ public class MessageSystem : MonoBehaviour {
 	}
 
 	[PunRPC]
-	public void ReceiveAC(int from_player, int to_player) {
-		if(to_player!=Settings.instance.id) return;
+	public void ReceiveAC(int from_player, int to_host) {
+		if(to_host!=Settings.instance.id) return;
 
 		//TV Controller
-
+		hostTVController.OnGuestAccept();
 	}
 
 

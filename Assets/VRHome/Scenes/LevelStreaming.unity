@@ -290,6 +290,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224207108412691012, guid: 365c495f09268f54999f1c72915ad5db,
     type: 2}
   m_PrefabInternal: {fileID: 1008656}
+--- !u!114 &1008659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
+  m_Script: {fileID: 11500000, guid: ff4e9816263c6b441bdf69e61ae1731c, type: 3}
 --- !u!4 &3169397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0926ad3fcc57bcd48b05b3fa80c84241,
@@ -7645,6 +7651,7 @@ MonoBehaviour:
   invitationControllers:
   - {fileID: 0}
   - {fileID: 1969618667}
+  hostTVControllers: {fileID: 1008659}
 --- !u!1001 &514116402
 Prefab:
   m_ObjectHideFlags: 0

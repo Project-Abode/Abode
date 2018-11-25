@@ -15,6 +15,7 @@ public class ElevatorController : MonoBehaviour {
 	private AudioSource audioSource;
 	//public List<AudioClip> clips;
 
+	
 
 	void Awake() {
 		audioSource = GetComponent<AudioSource>();

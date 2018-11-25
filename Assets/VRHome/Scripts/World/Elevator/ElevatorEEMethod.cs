@@ -23,6 +23,8 @@ public class ElevatorEEMethod : EEMethod {
 	public AudioClip lift;
 	public AudioClip ding;
 
+	public SpaceDoor guestDoor;
+
 
 	override public void InitMethod(Transform VRPlayer = null) {
 
@@ -46,6 +48,7 @@ public class ElevatorEEMethod : EEMethod {
 		guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
 
+		guestDoor.OnlyOpenDoor();
 		elevators[guestID].OpenDoor();
 
 	}

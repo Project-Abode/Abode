@@ -34,9 +34,9 @@ public class InvitationUI : MonoBehaviour {
 		invitationPanel.SetActive(true);
 	}
 
-	void SendAcception(int to_player) {
-		if(to_player < 0) return;
-		MessageSystem.instance.SendAC(to_player);
+	void SendAcception(int to_host) {
+		if(to_host < 0) return;
+		MessageSystem.instance.SendAC(to_host);
 	}
 
 }

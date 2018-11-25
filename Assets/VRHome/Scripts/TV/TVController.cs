@@ -9,6 +9,8 @@ public class TVController : MonoBehaviour {
 	//public Portal portal;
 	//public GameObject portalBtn;
 	
+	//TODO:TV audio
+
 	void Awake () {
 		if(Settings.instance.id != forPlayer) {
 			gameObject.SetActive(false);
@@ -38,11 +40,6 @@ public class TVController : MonoBehaviour {
 	public void OnInviteClicked() {
 		Debug.Log("Invite Clicked");
 		SetMsg("Invitation sent. Awaiting for guest response...");
-		
-		//if(socket) {
-		//	socket.SendMyMessage("send invitation");
-		//}
-
 		MessageSystem.instance.SendInvitation(1,"Hi");
 		
 	}
@@ -55,17 +52,18 @@ public class TVController : MonoBehaviour {
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
 
-		SetMsg("Your portal to home is next to the door.");
-
+		switch(Settings.instance.method) {
+			case 0:
+				SetMsg("Guest's portal to home is outside the door.");
+				break;
+			case 1:
+				SetMsg("Guest's magic wand is here to take him back home");
+				break;
+			
+		}
+		
 		EntryExitManager.instance.OnSetUpMethod(0,1,1);
 
-		// if(!portal.visible) {
-		// 	portal.ShowEntity();
-		// 	SetMsg("Your portal to home is next to the door.");
-		// }else {
-		// 	portal.DisappearEntity();
-		// 	SetMsg("");
-		// }
 	}
 
 
@@ -76,19 +74,20 @@ public class TVController : MonoBehaviour {
 
 
 	//Callback
-	public void GuestAccept() {
+	public void OnGuestAccept() {
 		SetMsg("Invatation accepted. Guest is on the way!");
-	}
-
-	public void GuestArrive() {
-		SetMsg("");
-	}
-
-	public void GuestCancel() {
 		
 	}
 
+	public void OnGuestArrive() {
+		SetMsg("Your Guest is Arrived!");
+	}
 
+	IEnumerator CleanMsg(float timer) {
+		yield return new WaitForSeconds(timer);
+		SetMsg("");
+		yield return null;
+	}
 
 
 }
