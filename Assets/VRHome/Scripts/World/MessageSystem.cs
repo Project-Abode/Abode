@@ -8,7 +8,7 @@ public class MessageSystem : MonoBehaviour {
 	private PhotonView photonView;
 	
 	public List<InvitationUI> invitationControllers;
-	public TVController hostTVControllers;
+	public TVController hostTVController;
 
 	public static MessageSystem instance = null;
 	void Awake() {

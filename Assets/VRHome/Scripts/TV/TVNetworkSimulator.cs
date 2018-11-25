@@ -9,7 +9,7 @@ public class TVNetworkSimulator : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.C)) {
 			//Guest accept invitation
-			tv.GuestAccept();
+//			tv.GuestAccept();
 		}
 	}
 

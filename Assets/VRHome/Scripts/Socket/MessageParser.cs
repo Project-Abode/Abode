@@ -22,7 +22,7 @@ public class MessageParser : MonoBehaviour {
 				//ETA shows on host
 				var tvController = GameObject.Find("TV").GetComponent<TVController>();
 				if(tvController) {
-					tvController.GuestAccept();
+					tvController.OnGuestAccept();
 				}
 			break;
 		}
