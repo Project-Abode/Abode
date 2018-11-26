@@ -20,6 +20,8 @@ public class SpaceDoor : MonoBehaviour {
 	public delegate void NotifyClose();
 	public NotifyClose notifyClose;
 
+	public AudioClip doorOP;
+
 	// public void AddNofifyOpenListener() {
 	// 	notifyOpen += OperateDoor;
 	// }
@@ -103,6 +105,8 @@ public class SpaceDoor : MonoBehaviour {
 	
 	IEnumerator DoorAnimation(Quaternion target) {
 		
+		audioSource.PlayOneShot(doorOP);
+
 		Quaternion startingRotation = transform.rotation; // have a startingRotation as well
 		Quaternion targetRotation =  target;
 
