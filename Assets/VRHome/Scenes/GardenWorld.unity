@@ -30281,6 +30281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockSound: {fileID: 8300000, guid: 54f966937357707488539115029a8c26, type: 3}
   rain: {fileID: 669130948}
+  candle: {fileID: 0}
 --- !u!1 &1078158329
 GameObject:
   m_ObjectHideFlags: 0
@@ -39423,7 +39424,7 @@ Prefab:
     - target: {fileID: 108767065359512108, guid: 036a4435eee79c8489253655940da8fc,
         type: 2}
       propertyPath: m_Intensity
-      value: 1.3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036a4435eee79c8489253655940da8fc, type: 2}
