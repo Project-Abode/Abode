@@ -67,12 +67,12 @@ public class Settings : MonoBehaviour {
 		//debug
 
 		isHost = true;
-		room = 1;
-		id = 1;
+		room = 0;
+		id = 0;
 		//0-P, 2-E, 3-L
-		method = 2;
+		method = 1;
 		exvitation = 0;
-		avatar = 0;
+		avatar = 1;
 	}
 
 	public void SeedForGuest() {
