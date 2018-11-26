@@ -334,6 +334,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 184
       objectReference: {fileID: 0}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d3296c32861369b4c816f0dcaf630b1f, type: 3}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: msgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3297134479cc4d7439bcbe507df7b73e, type: 3}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}

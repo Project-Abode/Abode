@@ -14929,7 +14929,7 @@ MonoBehaviour:
   invitationControllers:
   - {fileID: 0}
   - {fileID: 1969618667}
-  hostTVController: {fileID: 0}
+  hostTVController: {fileID: 1828833171}
 --- !u!1 &511485826
 GameObject:
   m_ObjectHideFlags: 0
@@ -53807,6 +53807,16 @@ Prefab:
       propertyPath: m_Center.z
       value: -35.817722
       objectReference: {fileID: 0}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d3296c32861369b4c816f0dcaf630b1f, type: 3}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: msgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3297134479cc4d7439bcbe507df7b73e, type: 3}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
@@ -53825,6 +53835,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1024282207724898, guid: 365c495f09268f54999f1c72915ad5db,
     type: 2}
   m_PrefabInternal: {fileID: 1828833168}
+--- !u!114 &1828833171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828833168}
+  m_Script: {fileID: 11500000, guid: ff4e9816263c6b441bdf69e61ae1731c, type: 3}
 --- !u!1 &1829103397
 GameObject:
   m_ObjectHideFlags: 0

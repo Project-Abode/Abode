@@ -11,10 +11,17 @@ public class TVController : MonoBehaviour {
 	
 	//TODO:TV audio
 
+	AudioSource audio;
+	public AudioClip buttonSound;
+	public AudioClip msgSound;
+
 	void Awake () {
 		if(Settings.instance.id != forPlayer) {
 			gameObject.SetActive(false);
 		}
+
+		audio = gameObject.AddComponent<AudioSource>();
+
 	}
 	
 	void Update () {
@@ -41,7 +48,7 @@ public class TVController : MonoBehaviour {
 		Debug.Log("Invite Clicked");
 		SetMsg("Invitation sent. Awaiting for guest response...");
 		MessageSystem.instance.SendInvitation(1,"Hi");
-		
+		audio.PlayOneShot(buttonSound);
 	}
 
 	public void OnQuestionClicked() {
@@ -52,6 +59,7 @@ public class TVController : MonoBehaviour {
 	public void OnPortalClicked() {
 		Debug.Log("Portal Clicked");
 
+		audio.PlayOneShot(buttonSound);
 		switch(Settings.instance.method) {
 			case 0:
 				SetMsg("Guest's portal to home is outside the door.");
@@ -63,12 +71,12 @@ public class TVController : MonoBehaviour {
 		}
 		
 		EntryExitManager.instance.OnSetUpMethod(0,1,1);
-
+		
 	}
 
 
-	//[RPC]
 	public void SetMsg(string msg) {
+		audio.PlayOneShot(msgSound);
 		msgtxt.text = msg;
 	}
 
