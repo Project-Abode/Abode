@@ -8390,7 +8390,29 @@ Prefab:
     - target: {fileID: 108244728225281458, guid: 7d5fac0efe938994aba24a88ba9c3057,
         type: 2}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108244728225281458, guid: 7d5fac0efe938994aba24a88ba9c3057,
+        type: 2}
+      propertyPath: m_Range
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263854075063806, guid: 7d5fac0efe938994aba24a88ba9c3057, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263854075063806, guid: 7d5fac0efe938994aba24a88ba9c3057, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.1397
+      objectReference: {fileID: 0}
+    - target: {fileID: 108244728225281458, guid: 7d5fac0efe938994aba24a88ba9c3057,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263854075063806, guid: 7d5fac0efe938994aba24a88ba9c3057, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.2801
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5fac0efe938994aba24a88ba9c3057, type: 2}
@@ -16603,7 +16625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!220 &1081444120
 LightProbeGroup:
   m_ObjectHideFlags: 0
@@ -19487,6 +19509,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11491258, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
   m_IsPrefabAsset: 0
@@ -20655,7 +20681,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 84e7736d52ac67548bc259730519eb74, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20664,7 +20690,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.34
-  MaxDistance: 2.91
+  MaxDistance: 2.64
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -20699,7 +20725,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
