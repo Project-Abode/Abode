@@ -51,7 +51,8 @@ public class EntryExitManager : MonoBehaviour {
 
 	public void TeleportPlayerTo(int roomID, Vector3 position) {
 		
-		roomSwitcher.ChangeToRoomWithDescription(roomID);
+		if(Settings.instance.method != 3)
+			roomSwitcher.ChangeToRoomWithDescription(roomID);
 
 		if(VRPlayer!=null)
 			VRPlayer.position = position;
