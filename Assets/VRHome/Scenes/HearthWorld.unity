@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -89,8 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 1a426e130cdbdaa429bfb54c6252a17b,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -253,7 +252,7 @@ Prefab:
     - target: {fileID: 114763727649034572, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
       propertyPath: m_Color.a
-      value: 0.78431374
+      value: 0.1764706
       objectReference: {fileID: 0}
     - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
@@ -268,6 +267,72 @@ Prefab:
     - target: {fileID: 1917682316763092, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
       propertyPath: m_Name
       value: TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 224572527938342554, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -193
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024282207724898, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805415440527514, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96e981df57166ee43b9b7222605ae002,
+        type: 3}
+    - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eaf1e110ea88c5f4a86de53ca04cac88,
+        type: 3}
+    - target: {fileID: 114899510154254618, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 224546668975632332, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 349.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 65745971909461728, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 354.51123
+      objectReference: {fileID: 0}
+    - target: {fileID: 65745971909461728, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 75.63999
+      objectReference: {fileID: 0}
+    - target: {fileID: 65745971909461728, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 4.501514
+      objectReference: {fileID: 0}
+    - target: {fileID: 224546668975632332, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 184
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
