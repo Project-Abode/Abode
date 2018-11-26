@@ -896,11 +896,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHost: 1
-  room: 1
-  id: 1
+  room: 0
+  id: 0
   method: 1
   exvitation: 0
-  avatar: 0
+  avatar: 1
   QA_test: 1
 --- !u!4 &859779510
 Transform:
