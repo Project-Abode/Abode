@@ -70,7 +70,7 @@ public class TVController : MonoBehaviour {
 			
 		}
 		
-		EntryExitManager.instance.OnSetUpMethod(0,1,1);
+		EntryExitManager.instance.OnSetUpMethod(Settings.instance.id,1,1);
 		
 	}
 
