@@ -16,8 +16,44 @@ public class UnderwaterPostEffects : MonoBehaviour
 
     void OnEnable()
     {
-        cam = Camera.main;
+        // cam = Camera.main;
+        // if(cam == null) {
+        //     Debug.Log("cam null");
+        // }
+        // SunShafts = cam.gameObject.AddComponent<WFX_SunShafts> ();
+
+        //  if(SunShafts == null) {
+        //     Debug.Log("SunShafts null");
+        // }
+
+        // SunShafts.sunShaftIntensity = ShuftsIntensity;
+        // var target = new GameObject("SunShaftTarget");
+        // SunShafts.sunTransform = target.transform;
+        // target.transform.parent = cam.transform;
+        // target.transform.localPosition = SunShaftTargetPosition;
+        // SunShafts.screenBlendMode = SunShuftsScreenBlend;
+        // SunShafts.sunShaftsShader = Shader.Find("Hidden/SunShaftsComposite");
+        // SunShafts.simpleClearShader = Shader.Find("Hidden/SimpleClear");
+
+        // var underwater = cam.gameObject.AddComponent<Underwater>();
+        // underwater.UnderwaterLevel = transform.position.y;
+        // underwater.FogColor = FogColor;
+        // underwater.FogDensity = FogDensity;
+    }
+
+
+    bool setuped = false;
+    void SetUp() {
+        Debug.Log("set up water");
+        if(cam == null) {
+            Debug.Log("cam null");
+        }
         SunShafts = cam.gameObject.AddComponent<WFX_SunShafts> ();
+
+         if(SunShafts == null) {
+            Debug.Log("SunShafts null");
+        }
+
         SunShafts.sunShaftIntensity = ShuftsIntensity;
         var target = new GameObject("SunShaftTarget");
         SunShafts.sunTransform = target.transform;
@@ -31,14 +67,26 @@ public class UnderwaterPostEffects : MonoBehaviour
         underwater.UnderwaterLevel = transform.position.y;
         underwater.FogColor = FogColor;
         underwater.FogDensity = FogDensity;
+
+        setuped = true;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (cam == null)
+
+
+        if (cam == null) {
+            cam = Camera.main;
             return;
+        }
+            
+
+        if(!setuped) {
+            SetUp();
+        }
+        
         if (cam.transform.position.y < transform.position.y)
         {
             if (!SunShafts.enabled)
