@@ -65,4 +65,5 @@ MonoBehaviour:
   - FadeIn
   - FadeOut
   - SetAvatarChoice
+  - PlayCandle
   DisableAutoOpenWizard: 1

@@ -12,6 +12,7 @@ public class ExvitationPromptController : MonoBehaviour {
 	public AudioClip clockSound;
 
 	public GameObject rain;
+	public GameObject candle;
 
 	//public GameObject prompt
 
@@ -28,6 +29,10 @@ public class ExvitationPromptController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.R)) {
 			photonView.RPC("PlayRainEffect", PhotonTargets.All);
 		}
+
+		if(Input.GetKeyDown(KeyCode.K)) {
+			photonView.RPC("PlayCandle", PhotonTargets.All);
+		}
 	}
 
 	[PunRPC]
@@ -38,6 +43,11 @@ public class ExvitationPromptController : MonoBehaviour {
 	[PunRPC]
 	public void PlayRainEffect() {
 		rain.SetActive(true);
+	}
+
+	[PunRPC]
+	public void PlayCandle() {
+		candle.SetActive(true);
 	}
 
 

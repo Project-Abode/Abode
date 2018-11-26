@@ -8292,7 +8292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &510932952
 Transform:
   m_ObjectHideFlags: 0
@@ -8300,7 +8300,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 510932951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.926, y: -0.18, z: 0}
+  m_LocalPosition: {x: 1.926, y: -0.145, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1459219774}
@@ -16325,6 +16325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockSound: {fileID: 8300000, guid: 54f966937357707488539115029a8c26, type: 3}
   rain: {fileID: 0}
+  candle: {fileID: 510932951}
 --- !u!1 &1080368215
 GameObject:
   m_ObjectHideFlags: 0
@@ -27725,7 +27726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378446163339450, guid: 5d4efec188da4414e9c639186c8e12fb, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114433399667115868, guid: 5d4efec188da4414e9c639186c8e12fb,
         type: 2}
@@ -28416,7 +28417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378446163339450, guid: 5d4efec188da4414e9c639186c8e12fb, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114433399667115868, guid: 5d4efec188da4414e9c639186c8e12fb,
         type: 2}
@@ -39523,7 +39524,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378446163339450, guid: 5d4efec188da4414e9c639186c8e12fb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114433399667115868, guid: 5d4efec188da4414e9c639186c8e12fb,
         type: 2}
@@ -39941,7 +39942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378446163339450, guid: 5d4efec188da4414e9c639186c8e12fb, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114433399667115868, guid: 5d4efec188da4414e9c639186c8e12fb,
         type: 2}
