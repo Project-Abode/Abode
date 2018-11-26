@@ -25817,19 +25817,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1453194882}
     m_Modifications:
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.883
+      value: 0.025894685
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.586
+      value: 0.024526313
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.743
+      value: -0.0013157822
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25837,7 +25837,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalRotation.z
@@ -25845,23 +25845,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1.0000001
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.0005263148
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.14999999
+      value: 0.007894736
       objectReference: {fileID: 0}
     - target: {fileID: 4783268864257956, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.02631574
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12c35c64235a994eb9292987abec9d7, type: 2}
