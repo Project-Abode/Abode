@@ -16911,7 +16911,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 914034423}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &606157974
 AudioSource:
@@ -40379,7 +40379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441162, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 441162, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
       propertyPath: m_LocalScale.x
@@ -40403,6 +40403,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491258, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 187400, guid: 9b0b9daf9b2f85147b1db8c367064cac, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -54250,6 +54254,56 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &1909539168
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 914034423}
+    m_Modifications:
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 22.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232486016125174, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fabe79cbdfc0cdb4dba834102514470c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1910245958
 GameObject:
   m_ObjectHideFlags: 0

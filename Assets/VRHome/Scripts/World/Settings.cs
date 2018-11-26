@@ -67,8 +67,8 @@ public class Settings : MonoBehaviour {
 		//debug
 
 		isHost = true;
-		room = 0;
-		id = 0;
+		room = 1;
+		id = 1;
 		//0-P, 2-E, 3-L
 		method = 1;
 		exvitation = 0;
