@@ -24,6 +24,8 @@ public class LobbyMenuController: MonoBehaviour {
 	
     public List<Text> choices; //record panel of settings
 
+    AudioSource audio;
+
     private void Awake()
     {
         UI_Panels = new GameObject[UI_Parent.transform.childCount];
@@ -44,6 +46,8 @@ public class LobbyMenuController: MonoBehaviour {
         //clear up previous settings
         Settings.instance.ClearUpSettings();
 
+
+        audio = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -96,6 +100,7 @@ public class LobbyMenuController: MonoBehaviour {
     {
         panel = Panel.role;
         choicePanel.SetActive(true);
+        audio.Play();
     }
     #endregion
 
@@ -107,6 +112,7 @@ public class LobbyMenuController: MonoBehaviour {
         //GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Host").SetActive(true);
         choices[0].text = "ROLE: " + "Host";
         Settings.instance.SetIsHost(true);
+        audio.Play();
     }
 
     public void ChooseGuest()
@@ -124,7 +130,7 @@ public class LobbyMenuController: MonoBehaviour {
         choices[5].text = "TIMER: " + "Selected By Host";
 
 
-
+        audio.Play();
 
         //GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Role/Guest").SetActive(true);
         // GameObject.Find("/Lobby UI Parent/Lobby Selection UI/Canvas--Choices made/Inv-Entry-Exit/Selected by Host").SetActive(true);
@@ -141,6 +147,7 @@ public class LobbyMenuController: MonoBehaviour {
         panel = Panel.hearth_entryExit;
         
         choices[1].text = "Room: " + "Hearth";
+        audio.Play();
     }
 
     public void SelectGarden()
@@ -148,6 +155,7 @@ public class LobbyMenuController: MonoBehaviour {
         Settings.instance.SetRoom(2);
         panel = Panel.garden_entryExit;
         choices[1].text = "Room: " + "Garden";
+        audio.Play();
        
     }
     #endregion
@@ -178,6 +186,7 @@ public class LobbyMenuController: MonoBehaviour {
 
         panel = Panel.hearth_exvitation;
         choices[2].text = "Inv-Entry-Exit: " + EEDict[setting_value];
+        audio.Play();
     }
 
     public void Garden_inv_entry_exit(int setting_value)
@@ -185,6 +194,7 @@ public class LobbyMenuController: MonoBehaviour {
         Settings.instance.SetEntryExitMethod(setting_value);
         panel = Panel.garden_exvitation;
         choices[2].text = "Inv-Entry-Exit: " + EEDict[setting_value];
+        audio.Play();
     }
     #endregion
 
@@ -203,7 +213,7 @@ public class LobbyMenuController: MonoBehaviour {
         Settings.instance.SetExvitation(setting_value);
         panel = Panel.exvitecontroller;
         choices[3].text = "Exvitation Prompt: " + ExvitationDict[setting_value];
-
+        audio.Play();
     }
 
     #endregion
@@ -219,6 +229,7 @@ public class LobbyMenuController: MonoBehaviour {
     {
         panel = Panel.time;
         choices[4].text = "Exvitation Controller: " + ExvitationControlDict[setting_value];
+        audio.Play();
     }
     #endregion
 
@@ -227,6 +238,7 @@ public class LobbyMenuController: MonoBehaviour {
     public void SetTimer(float time) {
         panel = Panel.avatar;
         choices[5].text = "Time: " + time + " Min";
+        audio.Play();
     }
 
     #endregion
@@ -235,6 +247,7 @@ public class LobbyMenuController: MonoBehaviour {
     //set avatar
     public void SetAvatar(int avatar) {
         Settings.instance.SetAvatar(avatar);
+        audio.Play();
         Ending();
     }
 
