@@ -901,7 +901,7 @@ MonoBehaviour:
   method: 4
   exvitation: 0
   avatar: 1
-  QA_test: 1
+  QA_test: 0
 --- !u!4 &859779510
 Transform:
   m_ObjectHideFlags: 0
