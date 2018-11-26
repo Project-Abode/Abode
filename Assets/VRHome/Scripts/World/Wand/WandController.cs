@@ -36,7 +36,7 @@ public class WandController : MonoBehaviour {
 		wandGrabable.onGrab += OnGrabbed;
 		
 
-		var cameraTransform = player.GetChild(0).GetChild(2);
+		var cameraTransform = player.GetChild(0).Find("Camera (head)");
 		follower.Init(cameraTransform);
 
 		var shadowGO = PhotonNetwork.Instantiate(shadowPrefab.name, new Vector3(0,0,0), Quaternion.identity, 0) as GameObject;

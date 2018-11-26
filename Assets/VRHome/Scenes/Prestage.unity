@@ -900,7 +900,7 @@ MonoBehaviour:
   id: 0
   method: 1
   exvitation: 0
-  avatar: 1
+  avatar: 2
   QA_test: 1
 --- !u!4 &859779510
 Transform:
