@@ -3808,16 +3808,21 @@ Prefab:
     - target: {fileID: 114272266178782296, guid: 51403071d65354a42b2f56b0ee43c210,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114007005291199400, guid: 51403071d65354a42b2f56b0ee43c210,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1479457568133068, guid: 51403071d65354a42b2f56b0ee43c210, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036632729698978, guid: 51403071d65354a42b2f56b0ee43c210,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51403071d65354a42b2f56b0ee43c210, type: 2}
