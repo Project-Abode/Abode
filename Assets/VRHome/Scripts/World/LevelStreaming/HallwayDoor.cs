@@ -28,5 +28,12 @@ public class HallwayDoor : MonoBehaviour {
 		//mirrorID = -1;
 	}
 
+	public void PlayKnockSound() {
+		var audioSource = GetComponent<AudioSource>();
+		if(audioSource != null) {
+			audioSource.Play();
+		}
+	}
+
 
 }

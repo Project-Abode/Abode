@@ -77,6 +77,8 @@ public class LevelEEMethod : EEMethod {
     void OnHostHallWayDoorTouched() {
         Debug.Log("OnHostHallWayDoorTouched");
         doors[hostID].KnockDoor();
+        hallwayDoors[0].PlayKnockSound();
+        
     }
 
     void OnGuestDoorOpen() {
