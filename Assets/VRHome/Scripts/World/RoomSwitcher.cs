@@ -49,6 +49,12 @@ public class RoomSwitcher : MonoBehaviour {
 		}
 	}
 	public void ChangeToRoomWithDescription(int index) {
+
+		// if(Settings.instance.method == 3) {
+		// 	roomDescriptions[0].Light.SetActive(true);
+		// 	return;
+		// }
+
 		ClearLastRoomSetting();
 
 		roomDescriptions[index].Light.SetActive(true);
