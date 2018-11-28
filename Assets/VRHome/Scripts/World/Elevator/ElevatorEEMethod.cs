@@ -25,6 +25,8 @@ public class ElevatorEEMethod : EEMethod {
 
 	public SpaceDoor guestDoor;
 
+	public Vector3 guestOffset;
+
 
 	override public void InitMethod(Transform VRPlayer = null) {
 
@@ -72,7 +74,7 @@ public class ElevatorEEMethod : EEMethod {
 		yield return new WaitForSeconds(seconds);
 
 
-		EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
+		EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position + guestOffset);
 
 		elevators[hostID].OpenDoor();
 		audioSource.PlayOneShot(ding);
