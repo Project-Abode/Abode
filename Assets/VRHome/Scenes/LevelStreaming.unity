@@ -21105,6 +21105,11 @@ Prefab:
       propertyPath: doorOP
       value: 
       objectReference: {fileID: 8300000, guid: 9331ab51cbf1add4b98f0fb16c26e0ed, type: 3}
+    - target: {fileID: 82049417666581636, guid: 7943faf6d8665ec4d96e9c7dd0cf6499,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7943faf6d8665ec4d96e9c7dd0cf6499, type: 2}
   m_IsPrefabAsset: 0
@@ -22970,11 +22975,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1589327568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1002.132, y: 1001.152, z: -1002.18604}
+  m_LocalPosition: {x: 2.132019, y: 1.1519775, z: -2.1860352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 2063545070}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1592372154 stripped
 Transform:
@@ -24881,12 +24886,12 @@ Prefab:
     - target: {fileID: 65750099085621488, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.9248966
+      value: 2.0221665
       objectReference: {fileID: 0}
     - target: {fileID: 65750099085621488, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Center.x
-      value: 0.2801866
+      value: 0.82882154
       objectReference: {fileID: 0}
     - target: {fileID: 65750099085621488, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
@@ -24901,22 +24906,22 @@ Prefab:
     - target: {fileID: 65216605243455038, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Size.x
-      value: 1.7854809
+      value: 2.148986
       objectReference: {fileID: 0}
     - target: {fileID: 65216605243455038, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Size.z
-      value: 3.3053002
+      value: 3.113398
       objectReference: {fileID: 0}
     - target: {fileID: 65216605243455038, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Center.x
-      value: -0.16675359
+      value: -0.2980944
       objectReference: {fileID: 0}
     - target: {fileID: 65216605243455038, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Center.z
-      value: -3.6677544
+      value: -3.5718033
       objectReference: {fileID: 0}
     - target: {fileID: 4755676382101122, guid: 1740595dd1bf6884f938ddd043becfce, type: 2}
       propertyPath: m_LocalPosition.y
@@ -24949,22 +24954,22 @@ Prefab:
     - target: {fileID: 65506342699401568, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.9248966
+      value: 3.3618164
       objectReference: {fileID: 0}
     - target: {fileID: 65506342699401568, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Size.z
-      value: 4.0355225
+      value: 3.5628662
       objectReference: {fileID: 0}
     - target: {fileID: 65506342699401568, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Center.x
-      value: 0.2801866
+      value: -0.18353271
       objectReference: {fileID: 0}
     - target: {fileID: 65506342699401568, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
       propertyPath: m_Center.z
-      value: -0.4831543
+      value: -1.5740356
       objectReference: {fileID: 0}
     - target: {fileID: 114332200917380036, guid: 1740595dd1bf6884f938ddd043becfce,
         type: 2}
@@ -29588,6 +29593,11 @@ Prefab:
       propertyPath: doorOP
       value: 
       objectReference: {fileID: 8300000, guid: 9331ab51cbf1add4b98f0fb16c26e0ed, type: 3}
+    - target: {fileID: 82049417666581636, guid: 7943faf6d8665ec4d96e9c7dd0cf6499,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7943faf6d8665ec4d96e9c7dd0cf6499, type: 2}
   m_IsPrefabAsset: 0
@@ -32520,6 +32530,7 @@ Transform:
   - {fileID: 1411131258}
   - {fileID: 2065434564}
   - {fileID: 634908955}
+  - {fileID: 1589327570}
   m_Father: {fileID: 530160683}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -96,15 +96,16 @@ public class LevelEEMethod : EEMethod {
 
     void OnGuestEnterOutArea(){
         //close guest door
+        guestOutDetector.notifyEnterArea -= OnGuestEnterOutArea;
+        guestOutDetector.enabled = false;
         doors[guestID].OnlyCloseDoor();
         EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
-        guestOutDetector.notifyEnterArea -= OnGuestEnterOutArea;
     }
 
     void OnGuestEnterBackArea() {
-        EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
         hostOutDetector.notifyEnterArea -= OnGuestEnterBackArea;
-        
+        hostOutDetector.enabled = false;
+        EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
     }
 
 
