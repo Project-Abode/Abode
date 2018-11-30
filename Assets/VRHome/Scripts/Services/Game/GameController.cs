@@ -15,7 +15,11 @@ namespace ExitGames.SportShooting
         }
 
         void Update() {
-            if(Input.GetKeyDown(KeyCode.X)) {
+            // if(Input.GetKeyDown(KeyCode.X)) {
+            //     StartGame("Menu");
+            // }
+
+            if(Input.GetKeyDown(KeyCode.Backspace)) {
                 StartGame("Menu");
             }
         }
