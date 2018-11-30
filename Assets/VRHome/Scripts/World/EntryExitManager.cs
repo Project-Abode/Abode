@@ -107,7 +107,7 @@ public class EntryExitManager : MonoBehaviour {
 	//Debug for invitation/exvitation 
 	void Update() {
 
-		if(Input.GetKeyDown(KeyCode.S)) {
+		if(Input.GetKeyDown(KeyCode.M)) {
 			// int cur_room = roomSwitcher.GetCurrentRoomIndex();
 			// int to_room = cur_room == 1? 0:1;
 

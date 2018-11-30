@@ -118,7 +118,8 @@ namespace ExitGames.SportShooting
             //Initialize UI
             if (!useNonVrPlayerInEditor)
             {
-                GameModel.Instance.CurrentPlayer.CameraRig.SetActive(true);
+                if(Settings.instance.avatar != 3) 
+                    GameModel.Instance.CurrentPlayer.CameraRig.SetActive(true);
                 //GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
                 //GameModel.Instance.CurrentPlayer.SideUIRoot.gameObject.SetActive(true);
                 //GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;
