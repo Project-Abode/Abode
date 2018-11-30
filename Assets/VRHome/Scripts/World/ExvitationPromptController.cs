@@ -14,6 +14,9 @@ public class ExvitationPromptController : MonoBehaviour {
 	void Awake () {
 		audioSource = GetComponent<AudioSource>();
 		photonView = GetComponent<PhotonView>();
+
+		EntryExitManager.instance.notifyGuestArrive += OnGuestArrive;
+
 	}
 	
 	void Update () {
@@ -33,6 +36,12 @@ public class ExvitationPromptController : MonoBehaviour {
 			PlayExvitation();
 		}
 
+	}
+
+	void OnGuestArrive() {
+		if(Settings.instance.exvitation == 2) {
+			photonView.RPC(ExvitationDict[2], PhotonTargets.All);
+		}
 	}
 
 
