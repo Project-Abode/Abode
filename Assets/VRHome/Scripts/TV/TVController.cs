@@ -15,6 +15,9 @@ public class TVController : MonoBehaviour {
 	public AudioClip buttonSound;
 	public AudioClip msgSound;
 
+	public GameObject sendBackButton;
+	public GameObject inviteButton;
+
 	void Awake () {
 		if(Settings.instance.id != forPlayer) {
 			gameObject.SetActive(false);
@@ -22,6 +25,13 @@ public class TVController : MonoBehaviour {
 
 		audio = gameObject.AddComponent<AudioSource>();
 
+		EntryExitManager.instance.notifyGuestArrive += OnGuestArrive;
+		EntryExitManager.instance.notifyGuestLeft += OnGuestLeft;
+
+		inviteButton.SetActive(true);
+		if(sendBackButton!=null) {
+			sendBackButton.SetActive(false);
+		} 
 	}
 	
 	void Update () {
@@ -34,25 +44,18 @@ public class TVController : MonoBehaviour {
 			OnPortalClicked();
 		}
 
-		// //HACK: need to add to event listener to guest join in
-		// if(PhotonNetwork.playerList.Length >= 2) {
-		// 	portalBtn.SetActive(true);
-		// }else {
-		// 	portalBtn.SetActive(false);
-		// }
-
 	}
 
 	//Buttons:
 	public void OnInviteClicked() {
-		Debug.Log("Invite Clicked");
+		//Debug.Log("Invite Clicked");
 		SetMsg("Invitation sent. Awaiting for guest response...");
 		MessageSystem.instance.SendInvitation(1,"Hi");
 		audio.PlayOneShot(buttonSound);
 	}
 
 	public void OnQuestionClicked() {
-		Debug.Log("Question Clicked");
+		//Debug.Log("Question Clicked");
 		
 	}
 
@@ -71,7 +74,10 @@ public class TVController : MonoBehaviour {
 		}
 		
 		EntryExitManager.instance.OnSetUpMethod(Settings.instance.id,1,1);
-		
+
+		if(sendBackButton!=null) {
+			sendBackButton.SetActive(false);
+		}
 	}
 
 
@@ -83,12 +89,23 @@ public class TVController : MonoBehaviour {
 
 	//Callback
 	public void OnGuestAccept() {
-		SetMsg("Invatation accepted. Guest is on the way!");
-		
+		SetMsg("Invitation accepted. Your guest is on the way!");
 	}
 
 	public void OnGuestArrive() {
 		SetMsg("Your Guest is Arrived!");
+		if(sendBackButton!=null) {
+			sendBackButton.SetActive(true);
+		}
+	}
+
+	public void OnGuestLeft() {
+		SetMsg("Your Guest is already Left!");
+		
+
+		if(inviteButton!=null) {
+			inviteButton.SetActive(true);
+		}
 	}
 
 	IEnumerator CleanMsg(float timer) {

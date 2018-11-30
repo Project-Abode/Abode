@@ -271,11 +271,11 @@ Prefab:
     - target: {fileID: 224572527938342554, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -193
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1024282207724898, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114805415440527514, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
@@ -332,7 +332,7 @@ Prefab:
     - target: {fileID: 224546668975632332, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 184
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
@@ -344,6 +344,16 @@ Prefab:
       propertyPath: msgSound
       value: 
       objectReference: {fileID: 8300000, guid: 3297134479cc4d7439bcbe507df7b73e, type: 3}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: inviteButton
+      value: 
+      objectReference: {fileID: 1008660}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: sendBackButton
+      value: 
+      objectReference: {fileID: 1008657}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
@@ -368,6 +378,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1008656}
   m_Script: {fileID: 11500000, guid: ff4e9816263c6b441bdf69e61ae1731c, type: 3}
+--- !u!1 &1008660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1722380277235306, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
 --- !u!4 &2671569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4378446163339450, guid: 5d4efec188da4414e9c639186c8e12fb,
@@ -3924,7 +3939,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 254598245}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &247722537
 GameObject:
@@ -4154,10 +4169,10 @@ Transform:
   m_LocalPosition: {x: 0.88, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 246741016}
   - {fileID: 338726856}
   - {fileID: 1686049766}
   - {fileID: 1955894232}
-  - {fileID: 246741016}
   - {fileID: 1228625433}
   - {fileID: 1370679754}
   - {fileID: 1087945643}

@@ -66,4 +66,6 @@ MonoBehaviour:
   - FadeOut
   - SetAvatarChoice
   - PlayCandle
+  - GuestArriveAtRoom
+  - GuestLeftRoom
   DisableAutoOpenWizard: 1

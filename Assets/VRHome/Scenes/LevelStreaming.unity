@@ -282,6 +282,11 @@ Prefab:
       propertyPath: msgSound
       value: 
       objectReference: {fileID: 8300000, guid: 3297134479cc4d7439bcbe507df7b73e, type: 3}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: inviteButton
+      value: 
+      objectReference: {fileID: 1008660}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
@@ -306,6 +311,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1008656}
   m_Script: {fileID: 11500000, guid: ff4e9816263c6b441bdf69e61ae1731c, type: 3}
+--- !u!1 &1008660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1722380277235306, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
 --- !u!4 &3169397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0926ad3fcc57bcd48b05b3fa80c84241,

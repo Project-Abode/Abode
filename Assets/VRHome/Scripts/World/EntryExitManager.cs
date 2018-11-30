@@ -36,6 +36,11 @@ public class EntryExitManager : MonoBehaviour {
 
 		if(current_method) {
 			//need clean up?
+			//current_method.CleanUpMethod();
+			var ee = current_method.GetComponent<EEMethod>();
+			if(ee!=null) {
+				ee.CleanUpMethod();
+			}
 			current_method.SetActive(false);
 		}
 
@@ -43,11 +48,13 @@ public class EntryExitManager : MonoBehaviour {
 		current_method.SetActive(true);
 
 		var eemethod = current_method.GetComponent<EEMethod>();
-		eemethod.CleanUpMethod();
 		eemethod.SetUpBasicInfo(from,to,for_player);
 		eemethod.InitMethod(VRPlayer);
 
 	}
+
+	// public delegate void NotifyEnterArea();
+	// public NotifyEnterArea notifyEnterArea;
 
 	public void TeleportPlayerTo(int roomID, Vector3 position) {
 		
@@ -57,7 +64,37 @@ public class EntryExitManager : MonoBehaviour {
 		if(VRPlayer!=null)
 			VRPlayer.position = position;
 
+		//send on arrive
+		if(roomID == 1) { 
+			photonView.RPC("GuestLeftRoom", PhotonTargets.Others);
+		}else{
+			photonView.RPC("GuestArriveAtRoom", PhotonTargets.Others);
+		}
+
 	}
+	
+	public delegate void NotifyGuestArrive();
+	public NotifyGuestArrive notifyGuestArrive;
+
+	public delegate void NotifyGuestLeft();
+	public NotifyGuestLeft notifyGuestLeft;
+
+	[PunRPC] 
+	void GuestArriveAtRoom(int roomID) {
+		if(notifyGuestArrive!=null) {
+			notifyGuestArrive();
+		}
+	
+	}
+
+	[PunRPC] 
+	void GuestLeftRoom(int roomID) {
+		if(notifyGuestLeft!=null) {
+			notifyGuestLeft();
+		}
+	}
+
+
 
 	// public void CleanUpMethod() {
 	// 	if(current_method!=null)
