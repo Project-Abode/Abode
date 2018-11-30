@@ -12,7 +12,11 @@ public class Settings : MonoBehaviour {
 	public int id;
 	public int method;
 	public int exvitation;
+
+	public int excontrol;
+	public float timer;
 	public int avatar;
+	
 
     public bool QA_test;
 
@@ -59,6 +63,8 @@ public class Settings : MonoBehaviour {
 		id = -1;
 		method = -1;
 		exvitation = -1;
+		excontrol = -1;
+		timer = -1;
 		avatar = -1;
 	}
 
@@ -72,17 +78,9 @@ public class Settings : MonoBehaviour {
 		//0-P, 2-E, 3-L
 		method = 3;
 		exvitation = 0;
+		excontrol = 0;
+		timer = -1;
 		avatar = 1;
-	}
-
-	public void SeedForGuest() {
-		isHost = false;
-		room = 1;
-		id = 1;
-		//0-P, 2-E, 3-L
-		method = -1;
-		exvitation = -1;
-		avatar = 2;
 	}
 
 	public void CopyBufferIntoSettings() { //List<int> buffer

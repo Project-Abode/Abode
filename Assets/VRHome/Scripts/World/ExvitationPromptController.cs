@@ -15,7 +15,8 @@ public class ExvitationPromptController : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 		photonView = GetComponent<PhotonView>();
 
-		EntryExitManager.instance.notifyGuestArrive += OnGuestArrive;
+		if(Settings.instance.excontrol == 2) // timer
+			EntryExitManager.instance.notifyGuestArrive += StartTimer;
 
 	}
 	
@@ -80,6 +81,18 @@ public class ExvitationPromptController : MonoBehaviour {
 	public void PlayCandle() {
 		if(candle!=null)
 			candle.SetActive(true);
+	}
+
+
+	public void StartTimer() {
+		var time = Settings.instance.timer * 60;
+		StartCoroutine(TimerCountDownForExvitation(time));
+	}
+
+
+	IEnumerator TimerCountDownForExvitation(float time) {
+		yield return new WaitForSeconds(time);
+		PlayExvitation();
 	}
 
 

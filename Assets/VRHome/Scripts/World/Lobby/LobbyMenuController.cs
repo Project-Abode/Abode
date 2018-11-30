@@ -59,11 +59,6 @@ public class LobbyMenuController: MonoBehaviour {
             Ending();
         }
 
-         if(Input.GetKeyDown(KeyCode.G)) {
-            Settings.instance.SeedForGuest();
-            Ending();
-        }
-
 	}
 
     //switch between UI panels based on Panel enum value
@@ -220,15 +215,21 @@ public class LobbyMenuController: MonoBehaviour {
 
     List<string> ExvitationControlDict =  new List<string>{
 
-        "Host","Timer", "Facilitator"
+       "Facilitator", "Host","Timer"
 
     };
 
     #region exvitation controller
     public void ExvitationController(int setting_value)
     {
-        panel = Panel.time;
         choices[4].text = "Exvitation Controller: " + ExvitationControlDict[setting_value];
+
+        if(setting_value == 2) {
+            panel = Panel.time;
+        }else {
+            panel = Panel.avatar;
+        }
+
         audio.Play();
     }
     #endregion
