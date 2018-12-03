@@ -16,6 +16,7 @@ public class TVController : MonoBehaviour {
 	public AudioClip msgSound;
 
 	public GameObject sendBackButton;
+	public GameObject exvitationButton;
 	public GameObject inviteButton;
 
 	void Start () {
@@ -28,9 +29,13 @@ public class TVController : MonoBehaviour {
 		EntryExitManager.instance.notifyGuestArrive += OnGuestArrive;
 		EntryExitManager.instance.notifyGuestLeft += OnGuestLeft;
 
+		//init buttons on tv
 		inviteButton.SetActive(true);
 		if(sendBackButton!=null) {
 			sendBackButton.SetActive(false);
+		}
+		if(exvitationButton!=null) {
+			exvitationButton.SetActive(false);
 		} 
 	}
 	
@@ -57,9 +62,16 @@ public class TVController : MonoBehaviour {
 		audio.PlayOneShot(buttonSound);
 	}
 
-	public void OnQuestionClicked() {
-		//Debug.Log("Question Clicked");
-		
+	public void OnExvitationButtonClicked() {
+		//Debug.Log("Exvitation Clicked");
+		var exvitationControllerObj = GameObject.Find("ExvitationPrompt");
+		if(exvitationControllerObj!=null) {
+			var controller = exvitationControllerObj.GetComponent<ExvitationPromptController>();
+			if(controller!=null) {
+				controller.PlayExvitation();
+				exvitationButton.SetActive(false);
+			}
+		}
 	}
 
 	public void OnPortalClicked() {
@@ -81,6 +93,10 @@ public class TVController : MonoBehaviour {
 		if(sendBackButton!=null) {
 			sendBackButton.SetActive(false);
 		}
+		if(exvitationButton!=null) {
+			exvitationButton.SetActive(false);
+		}
+		
 	}
 
 
@@ -99,6 +115,10 @@ public class TVController : MonoBehaviour {
 		SetMsg("Your Guest is Arrived!");
 		if(sendBackButton!=null) {
 			sendBackButton.SetActive(true);
+		}
+
+		if(exvitationButton!=null) {
+			exvitationButton.SetActive(true);
 		}
 	}
 
