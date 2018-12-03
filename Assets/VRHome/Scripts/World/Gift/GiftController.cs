@@ -16,7 +16,7 @@ public class GiftController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if(col.gameObject.tag == "Hand") {
+		if(col.gameObject.tag.Equals("Hand")) {
 			StopFloating();
 		}
 	}

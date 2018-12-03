@@ -20,11 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4942523329983034}
   - component: {fileID: 65703462373985670}
+  - component: {fileID: 114677030405923108}
   - component: {fileID: 54778012054700954}
   - component: {fileID: 114601697869837614}
   - component: {fileID: 114359157856640810}
   - component: {fileID: 114575184708760678}
-  - component: {fileID: 114677030405923108}
+  - component: {fileID: 114134951013208896}
   m_Layer: 0
   m_Name: Gift
   m_TagString: Untagged
@@ -145,6 +146,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3, z: 0.3}
   m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!114 &114134951013208896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347752704676022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ec95da7d0cf244ca5b9dc178b5ae8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114359157856640810
 MonoBehaviour:
   m_ObjectHideFlags: 1
