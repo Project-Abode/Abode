@@ -85,6 +85,15 @@ public class ExvitationPromptController : MonoBehaviour {
 
 
 	public void StartTimer() {
+		
+		if(Settings.instance.exvitation == 2) // candle
+		{
+			//TODO: set candle duration
+			PlayExvitation();
+			return;
+		}
+
+
 		var time = Settings.instance.timer * 60;
 		StartCoroutine(TimerCountDownForExvitation(time));
 	}
