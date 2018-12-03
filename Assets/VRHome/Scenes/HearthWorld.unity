@@ -8034,6 +8034,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: a23adc725dbf4564c9a748e2d6719d65,
     type: 3}
   m_PrefabInternal: {fileID: 2023309713}
+--- !u!1 &471836886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471836887}
+  m_Layer: 0
+  m_Name: GiftSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471836887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471836886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.073, y: 0.5, z: 0.136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1075663642}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481343100
 GameObject:
   m_ObjectHideFlags: 0
@@ -16273,6 +16301,7 @@ Transform:
   m_Children:
   - {fileID: 2055566347}
   - {fileID: 1892317084}
+  - {fileID: 471836887}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16411,6 +16440,7 @@ MonoBehaviour:
   clockSound: {fileID: 8300000, guid: 54f966937357707488539115029a8c26, type: 3}
   rain: {fileID: 0}
   candle: {fileID: 2055566346}
+  GiftSpawnPoint: {fileID: 471836887}
 --- !u!1001 &1079577018
 Prefab:
   m_ObjectHideFlags: 0
