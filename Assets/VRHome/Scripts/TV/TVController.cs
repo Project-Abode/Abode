@@ -18,7 +18,7 @@ public class TVController : MonoBehaviour {
 	public GameObject sendBackButton;
 	public GameObject inviteButton;
 
-	void Awake () {
+	void Start () {
 		if(Settings.instance.id != forPlayer) {
 			gameObject.SetActive(false);
 		}
@@ -49,6 +49,9 @@ public class TVController : MonoBehaviour {
 	//Buttons:
 	public void OnInviteClicked() {
 		//Debug.Log("Invite Clicked");
+
+		inviteButton.SetActive(false);
+
 		SetMsg("Invitation sent. Awaiting for guest response...");
 		MessageSystem.instance.SendInvitation(1,"Hi");
 		audio.PlayOneShot(buttonSound);

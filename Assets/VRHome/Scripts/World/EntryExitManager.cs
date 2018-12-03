@@ -80,7 +80,7 @@ public class EntryExitManager : MonoBehaviour {
 	public NotifyGuestLeft notifyGuestLeft;
 
 	[PunRPC] 
-	void GuestArriveAtRoom(int roomID) {
+	void GuestArriveAtRoom() {
 		if(notifyGuestArrive!=null) {
 			notifyGuestArrive();
 		}
@@ -88,7 +88,7 @@ public class EntryExitManager : MonoBehaviour {
 	}
 
 	[PunRPC] 
-	void GuestLeftRoom(int roomID) {
+	void GuestLeftRoom() {
 		if(notifyGuestLeft!=null) {
 			notifyGuestLeft();
 		}

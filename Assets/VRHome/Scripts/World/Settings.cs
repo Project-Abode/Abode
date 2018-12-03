@@ -76,7 +76,7 @@ public class Settings : MonoBehaviour {
 		room = 0;
 		id = 0;
 		//0-P, 2-E, 3-L
-		method = 3;
+		method = 1;
 		exvitation = 0;
 		excontrol = 0;
 		timer = -1;
