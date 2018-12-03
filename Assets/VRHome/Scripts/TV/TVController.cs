@@ -49,6 +49,10 @@ public class TVController : MonoBehaviour {
 			OnPortalClicked();
 		}
 
+		if(Input.GetKeyDown(KeyCode.V)) {
+			OnExvitationButtonClicked();
+		}
+
 	}
 
 	//Buttons:

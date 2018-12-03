@@ -210,9 +210,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: exvitationButton
+      value: 
+      objectReference: {fileID: 1008657}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1008657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1697674320528474, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
 --- !u!224 &1008658 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224207108412691012, guid: 365c495f09268f54999f1c72915ad5db,
