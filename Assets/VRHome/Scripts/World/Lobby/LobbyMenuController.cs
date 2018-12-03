@@ -267,4 +267,64 @@ public class LobbyMenuController: MonoBehaviour {
 
     #endregion
 
+
+    Dictionary<Panel,Panel> prevPanel = new Dictionary<Panel, Panel>() {
+        {Panel.role, Panel.welcome},
+        {Panel.room, Panel.role},
+        {Panel.garden_entryExit, Panel.room},
+        {Panel.hearth_entryExit, Panel.room},
+        {Panel.hearth_exvitation, Panel.hearth_entryExit},
+        {Panel.garden_exvitation, Panel.garden_entryExit},
+
+        {Panel.time, Panel.exvitecontroller},
+        {Panel.avatar, Panel.exvitecontroller}
+        
+    };
+
+
+    // [HideInInspector] public enum Panel { welcome, role, room, 
+    // garden_entryExit, hearth_entryExit, hearth_exvitation, 
+    // garden_exvitation, exvitecontroller, time, avatar, loading,
+
+    // waitingHost
+
+    // };
+
+    public void Back() {
+
+        Panel backToPanel = Panel.welcome;
+        switch(panel) {
+            case Panel.hearth_entryExit:
+                backToPanel = Panel.room;
+                break;
+            case Panel.hearth_exvitation:
+                backToPanel = Panel.hearth_entryExit;
+                break;
+            case Panel.garden_exvitation:
+                backToPanel = Panel.garden_entryExit;
+                break;
+            case Panel.exvitecontroller:
+                if(Settings.instance.room == 0) {
+                    backToPanel = Panel.hearth_exvitation;
+                }else if (Settings.instance.room == 2) {
+                    backToPanel = Panel.garden_exvitation;
+                }
+                break;
+            case Panel.avatar:
+                if(Settings.instance.id == 1) {
+                    backToPanel = Panel.role;
+                }else {
+                    backToPanel = Panel.exvitecontroller;
+                }
+                break;
+            default:
+                backToPanel = (Panel)((int)panel-1);
+                break;
+        }
+
+        if(backToPanel!=null)
+            panel = backToPanel;
+
+    }
+
 }

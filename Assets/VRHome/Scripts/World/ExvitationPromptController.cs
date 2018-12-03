@@ -10,6 +10,8 @@ public class ExvitationPromptController : MonoBehaviour {
 	public GameObject rain;
 	public GameObject candle;
 
+	public Transform GiftSpawnPoint;
+
 
 	void Awake () {
 		audioSource = GetComponent<AudioSource>();
@@ -49,13 +51,16 @@ public class ExvitationPromptController : MonoBehaviour {
 	List<string> ExvitationDict = new List<string>() {
 		"PlayClockSound",//"Clock",
         "PlayRainEffect",//"Rain", 
-        "PlayCandle"//"Candle", 
-        //"Gift Hearth",
+        "PlayCandle",//"Candle", 
+        "ShowGift"
         //"Gift Garden", 
         //"Air Balloon"
 	};
 
 	public void PlayExvitation() {
+
+		
+
 		var exvitationIndex = Settings.instance.exvitation;
 		if(exvitationIndex >= ExvitationDict.Count) {
 			Debug.Log("Exvitaton out of index");
@@ -84,7 +89,30 @@ public class ExvitationPromptController : MonoBehaviour {
 	}
 
 
+	[PunRPC]
+	public void ShowGift() {
+		if(Settings.instance.id == 1) // is guest
+		{
+			var gift  = PhotonNetwork.Instantiate("Gift", GiftSpawnPoint.position, Quaternion.identity, 0) as GameObject;
+			gift.tag = "grabable";
+			var giftController = gift.GetComponent<GiftController>();
+			if(giftController!=null) {
+				giftController.StartFloating();
+			}
+		}
+
+	}
+
 	public void StartTimer() {
+		
+		if(Settings.instance.exvitation == 2) // candle
+		{
+			//TODO: set candle duration
+			PlayExvitation();
+			return;
+		}
+
+
 		var time = Settings.instance.timer * 60;
 		StartCoroutine(TimerCountDownForExvitation(time));
 	}

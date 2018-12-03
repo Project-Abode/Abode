@@ -68,4 +68,5 @@ MonoBehaviour:
   - PlayCandle
   - GuestArriveAtRoom
   - GuestLeftRoom
+  - ShowGift
   DisableAutoOpenWizard: 1
