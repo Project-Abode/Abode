@@ -9,16 +9,22 @@ public class GiftController : MonoBehaviour {
 
 	void Start () {
 		grabable = GetComponent<SimpleGrabable>();
-		grabable.onGrab += OnGiftGrabbed;
+		//grabable.onGrab += OnGiftGrabbed;
 
 		floating = GetComponent<FloatingObj>();
 		
 	}
-	
-	void OnGiftGrabbed() {
-		StopFloating();
-		grabable.onGrab -= OnGiftGrabbed;
+
+	void OnTriggerEnter(Collider col) {
+		if(col.gameObject.tag.Equals("Hand")) {
+			StopFloating();
+		}
 	}
+	
+	// void OnGiftGrabbed() {
+	// 	StopFloating();
+	// 	grabable.onGrab -= OnGiftGrabbed;
+	// }
 
 	public void StopFloating() {
 		floating.enabled = false;

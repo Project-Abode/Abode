@@ -95,10 +95,16 @@ public class ExvitationPromptController : MonoBehaviour {
 		{
 			var gift  = PhotonNetwork.Instantiate("Gift", GiftSpawnPoint.position, Quaternion.identity, 0) as GameObject;
 			gift.tag = "grabable";
-			var giftController = gift.GetComponent<GiftController>();
-			if(giftController!=null) {
-				giftController.StartFloating();
+
+			var floating = gift.GetComponent<FloatingObj>();
+			if(floating!=null) {
+				floating.enabled = true;
 			}
+
+			// var giftController = gift.GetComponent<GiftController>();
+			// if(giftController!=null) {
+			// 	giftController.StartFloating();
+			// }
 		}
 
 	}
