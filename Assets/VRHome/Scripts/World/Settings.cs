@@ -68,10 +68,21 @@ public class Settings : MonoBehaviour {
 		avatar = -1;
 	}
 
+
+	/*
+	 	"Hearth Portal",
+        "Hearth Magic Wand", 
+
+        "Elevator", 
+        "Level Stream",
+        
+        "Garden Portal", 
+        "Garden Magic Wand"
+	*/
+
 	public void Seed() {
 
 		//debug
-
 		isHost = true;
 		room = 0;
 		id = 0;

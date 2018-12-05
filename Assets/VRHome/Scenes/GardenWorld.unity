@@ -26143,7 +26143,7 @@ Prefab:
     - target: {fileID: 224546668975632332, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -1
+      value: -153
       objectReference: {fileID: 0}
     - target: {fileID: 224546668975632332, guid: 365c495f09268f54999f1c72915ad5db,
         type: 2}
@@ -26195,6 +26195,11 @@ Prefab:
       propertyPath: sendBackButton
       value: 
       objectReference: {fileID: 1828833170}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: exvitationButton
+      value: 
+      objectReference: {fileID: 1828833173}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
@@ -26222,6 +26227,11 @@ MonoBehaviour:
 --- !u!1 &1828833172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1722380277235306, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828833168}
+--- !u!1 &1828833173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1697674320528474, guid: 365c495f09268f54999f1c72915ad5db,
     type: 2}
   m_PrefabInternal: {fileID: 1828833168}
 --- !u!1 &1832398838

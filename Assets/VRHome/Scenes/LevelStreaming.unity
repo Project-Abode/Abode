@@ -287,6 +287,21 @@ Prefab:
       propertyPath: inviteButton
       value: 
       objectReference: {fileID: 1008660}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: sendBackButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: exvitationButton
+      value: 
+      objectReference: {fileID: 1008661}
+    - target: {fileID: 224954240034504262, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114081314843183832, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
     - {fileID: 114805977433116404, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
@@ -314,6 +329,11 @@ MonoBehaviour:
 --- !u!1 &1008660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1722380277235306, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
+--- !u!1 &1008661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1697674320528474, guid: 365c495f09268f54999f1c72915ad5db,
     type: 2}
   m_PrefabInternal: {fileID: 1008656}
 --- !u!4 &3169397 stripped
@@ -21897,6 +21917,72 @@ Transform:
   m_Father: {fileID: 1151467229}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1515083282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515083283}
+  - component: {fileID: 1515083284}
+  m_Layer: 0
+  m_Name: Moonlight (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1515083283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515083282}
+  m_LocalRotation: {x: 0.22952306, y: -0.5986099, z: 0.6688193, w: 0.37638572}
+  m_LocalPosition: {x: 1410.7709, y: -942.2, z: -152.15173}
+  m_LocalScale: {x: 0.3000002, y: 0.30000007, z: 0.30000013}
+  m_Children: []
+  m_Father: {fileID: 2071402466}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 103.218994, y: -90, z: -90}
+--- !u!108 &1515083284
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515083282}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0.68462974, g: 0.6978626, b: 0.8018868, a: 1}
+  m_Intensity: 0.2
+  m_Range: 50
+  m_SpotAngle: 62.3
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1515517444
 GameObject:
   m_ObjectHideFlags: 0
@@ -32830,7 +32916,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.90220433, z: -0, w: 0.43130895}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1515083283}
   m_Father: {fileID: 425304631}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 128.899, z: 0}

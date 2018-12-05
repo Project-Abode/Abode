@@ -225,6 +225,25 @@ Prefab:
       propertyPath: inviteButton
       value: 
       objectReference: {fileID: 1008657}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: exvitationButton
+      value: 
+      objectReference: {fileID: 1008660}
+    - target: {fileID: 114569568178004094, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: sendBackButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697674320528474, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224954240034504262, guid: 365c495f09268f54999f1c72915ad5db,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365c495f09268f54999f1c72915ad5db, type: 2}
   m_IsPrefabAsset: 0
@@ -244,6 +263,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1008656}
   m_Script: {fileID: 11500000, guid: ff4e9816263c6b441bdf69e61ae1731c, type: 3}
+--- !u!1 &1008660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1697674320528474, guid: 365c495f09268f54999f1c72915ad5db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1008656}
 --- !u!1 &3264849
 GameObject:
   m_ObjectHideFlags: 0

@@ -322,7 +322,7 @@ public class LobbyMenuController: MonoBehaviour {
                 break;
         }
 
-        if(backToPanel!=null)
+        if(backToPanel!=null && (int)backToPanel >= 0)
             panel = backToPanel;
 
     }
