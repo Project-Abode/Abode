@@ -129,6 +129,9 @@ public class TVController : MonoBehaviour {
 	public void OnGuestLeft() {
 		SetMsg("Your Guest is already Left!");
 		
+		if(exvitationButton!=null) {
+			exvitationButton.SetActive(false);
+		}
 
 		if(inviteButton!=null) {
 			inviteButton.SetActive(true);

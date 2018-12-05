@@ -33,10 +33,10 @@ public class LevelEEMethod : EEMethod {
         guestID = from;
         hostID = to;
 
-        doors[guestID].notifyOpen += OnGuestDoorOpen;
-        doors[guestID].notifyClose += OnGuestDoorClose;
-        doors[hostID].notifyOpen += OnHostDoorOpen;
-        doors[hostID].notifyClose += OnHostDoorClose;
+        // doors[guestID].notifyOpen += OnGuestDoorOpen;
+        // doors[guestID].notifyClose += OnGuestDoorClose;
+         doors[hostID].notifyOpen += OnHostDoorOpen;
+        // doors[hostID].notifyClose += OnHostDoorClose;
 
         hallwayDoors[hostID].notifyTouched += OnHostHallWayDoorTouched;
         hallwayDoors[guestID].notifyTouched += OnGuestHallWayDoorTouched;
@@ -53,10 +53,10 @@ public class LevelEEMethod : EEMethod {
     }
     
     void OnDisable() {
-        doors[guestID].notifyOpen -= OnGuestDoorOpen;
-        doors[guestID].notifyClose -= OnGuestDoorClose;
+        // doors[guestID].notifyOpen -= OnGuestDoorOpen;
+        // doors[guestID].notifyClose -= OnGuestDoorClose;
         doors[hostID].notifyOpen -= OnHostDoorOpen;
-        doors[hostID].notifyClose -= OnHostDoorClose;
+        // doors[hostID].notifyClose -= OnHostDoorClose;
 
         hallwayDoors[hostID].notifyTouched -= OnHostHallWayDoorTouched;
         hallwayDoors[guestID].notifyTouched -= OnGuestHallWayDoorTouched;
@@ -81,20 +81,20 @@ public class LevelEEMethod : EEMethod {
         
     }
 
-    void OnGuestDoorOpen() {
-        Debug.Log("OnGuestDoorOpen");
+    // void OnGuestDoorOpen() {
+    //     Debug.Log("OnGuestDoorOpen");
     
-    }
+    // }
 
-    void OnGuestDoorClose() {
-        Debug.Log("OnGuestDoorClose");
+    // void OnGuestDoorClose() {
+    //     Debug.Log("OnGuestDoorClose");
 
-        // if(guestOutDetector.InRange()) {
-        //     //VRPlayer.position = hallBase.position;
-        //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
-        // }
+    //     // if(guestOutDetector.InRange()) {
+    //     //     //VRPlayer.position = hallBase.position;
+    //     //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+    //     // }
 
-    }
+    // }
 
     void OnGuestEnterOutArea(){
         //close guest door
@@ -121,15 +121,15 @@ public class LevelEEMethod : EEMethod {
 
     }
 
-    void OnHostDoorClose() {
-        Debug.Log("OnHostDoorClose");
+    // void OnHostDoorClose() {
+    //     Debug.Log("OnHostDoorClose");
 
-        //  if(hostOutDetector.InRange()) {
-        //     //VRPlayer.position = hallBase.position;
-        //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
-        // }
+    //     //  if(hostOutDetector.InRange()) {
+    //     //     //VRPlayer.position = hallBase.position;
+    //     //     EntryExitManager.instance.TeleportPlayerTo(2, hallBase.position);
+    //     // }
 
-    }
+    // }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Space)) {
