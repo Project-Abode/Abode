@@ -43,7 +43,8 @@ public class LevelEEMethod : EEMethod {
 
 
         guestOutDetector.notifyEnterArea += OnGuestEnterOutArea;
-        hostOutDetector.notifyEnterArea += OnGuestEnterBackArea;
+        //hostOutDetector.notifyEnterArea += OnGuestEnterBackArea;
+        //hostOutDetector.enabled = false;
 
         guestBase = RoomSwitcher.instance.GetDescriptionAt(guestID).origin;
         hostBase = RoomSwitcher.instance.GetDescriptionAt(hostID).origin;
@@ -117,6 +118,7 @@ public class LevelEEMethod : EEMethod {
         if(hallHostOutDetector.InRange()) {
             //VRPlayer.position = hostBase.position;
             EntryExitManager.instance.TeleportPlayerTo(hostID, hostBase.position);
+            hostOutDetector.notifyEnterArea += OnGuestEnterBackArea;
         }
 
     }
