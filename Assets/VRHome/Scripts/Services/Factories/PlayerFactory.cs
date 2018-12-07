@@ -118,8 +118,12 @@ namespace ExitGames.SportShooting
             //Initialize UI
             if (!useNonVrPlayerInEditor)
             {
-                if(Settings.instance.avatar != 3)  //Not god camera
+                if(Settings.instance.avatar != 3){  //Not god camera
                     GameModel.Instance.CurrentPlayer.CameraRig.SetActive(true);
+                }
+                else {
+                    go.transform.Find("Camera").gameObject.SetActive(true);
+                }
                 //GameModel.Instance.CurrentPlayer.UIRoot.gameObject.SetActive(true);
                 //GameModel.Instance.CurrentPlayer.SideUIRoot.gameObject.SetActive(true);
                 //GameView.Instance.UIRoot = GameModel.Instance.CurrentPlayer.UIRoot;

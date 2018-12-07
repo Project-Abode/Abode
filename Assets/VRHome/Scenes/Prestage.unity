@@ -900,6 +900,8 @@ MonoBehaviour:
   id: 2
   method: 4
   exvitation: 0
+  excontrol: 0
+  timer: 0
   avatar: 1
   QA_test: 0
 --- !u!4 &859779510
