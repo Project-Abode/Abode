@@ -84,14 +84,14 @@ public class Settings : MonoBehaviour {
 
 		//debug
 		isHost = true;
-		room = 0;
-		id = 0;
+		room = 2;
+		id = 2;
 		//0-P, 2-E, 3-L
-		method = 3;
+		method = 5;
 		exvitation = 0;
 		excontrol = 1;
 		timer = -1;
-		avatar = 1;
+		avatar = 3;
 	}
 
 	public void CopyBufferIntoSettings() { //List<int> buffer

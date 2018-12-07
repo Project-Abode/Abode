@@ -62,7 +62,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distance: 0.9962608
+    - _Distance: 0.9976957
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -79,7 +79,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 1000.6101, g: 1001.0531, b: 999.7584, a: 0}
+    - _Center: {r: 1000.43713, g: 1000.99744, b: 1000.08014, a: 0}
     - _Color: {r: 0.08088237, g: 0.056498714, b: 0.056498714, a: 1}
     - _DissolveColor: {r: 0, g: 0.83448267, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

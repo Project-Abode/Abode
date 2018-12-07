@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class livingBirdsDemoScript : MonoBehaviour {
-	public lb_BirdController birdControl;
+	//public lb_BirdController birdControl;
 	public Camera camera1;
 	public Camera camera2;
 
@@ -13,7 +13,7 @@ public class livingBirdsDemoScript : MonoBehaviour {
 
 	void Start(){
 		currentCamera = Camera.main;
-		birdControl = GameObject.Find ("_livingBirdsController").GetComponent<lb_BirdController>();
+		//birdControl = GameObject.Find ("_livingBirdsController").GetComponent<lb_BirdController>();
 		SpawnSomeBirds();
 	}
 
@@ -41,20 +41,20 @@ public class livingBirdsDemoScript : MonoBehaviour {
 
 	IEnumerator SpawnSomeBirds(){
 		yield return 2;
-		birdControl.SendMessage ("SpawnAmount",10);
+		//birdControl.SendMessage ("SpawnAmount",10);
 	}
 
 	void ChangeCamera(){
 		if(camera2.gameObject.activeSelf){
 			camera1.gameObject.SetActive(true);
 			camera2.gameObject.SetActive(false);
-			birdControl.SendMessage("ChangeCamera",camera1);
+			//birdControl.SendMessage("ChangeCamera",camera1);
 			cameraDirections = true;
 			currentCamera = camera1;
 		}else{
 			camera1.gameObject.SetActive(false);
 			camera2.gameObject.SetActive(true);
-			birdControl.SendMessage("ChangeCamera",camera2);
+			//birdControl.SendMessage("ChangeCamera",camera2);
 			cameraDirections = false;
 			currentCamera = camera2;
 		}

@@ -1035,6 +1035,7 @@ GameObject:
   - component: {fileID: 4041609855465090}
   - component: {fileID: 20686321095508622}
   - component: {fileID: 81305029606704140}
+  - component: {fileID: 114298095191635264}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1128,7 +1129,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796393146327812}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3831,6 +3832,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32
   _trackedController: {fileID: 114392314530948360}
+--- !u!114 &114298095191635264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939890696952988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 5d59ee20b9b9f364eb0ce46d59c3d664, type: 2}
 --- !u!114 &114337306619734722
 MonoBehaviour:
   m_ObjectHideFlags: 1

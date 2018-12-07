@@ -639,7 +639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 39921903}
   - component: {fileID: 39921905}
-  - component: {fileID: 39921904}
   m_Layer: 0
   m_Name: Robin
   m_TagString: Untagged
@@ -661,21 +660,6 @@ Transform:
   m_Father: {fileID: 1406350862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &39921904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114979855289535862, guid: e9d0257a1848c4f4bb3a9291f45b6679,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39921902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f299546ffcfa2b148af3b1da2fa20a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  birdControl: {fileID: 0}
-  camera1: {fileID: 0}
-  camera2: {fileID: 0}
 --- !u!137 &39921905
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -3695,7 +3679,6 @@ GameObject:
   m_Component:
   - component: {fileID: 255248263}
   - component: {fileID: 255248265}
-  - component: {fileID: 255248264}
   m_Layer: 0
   m_Name: bird@flyStraight
   m_TagString: Untagged
@@ -3718,21 +3701,6 @@ Transform:
   m_Father: {fileID: 1006866009}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255248264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114140974425747448, guid: e9d0257a1848c4f4bb3a9291f45b6679,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255248262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f299546ffcfa2b148af3b1da2fa20a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  birdControl: {fileID: 0}
-  camera1: {fileID: 0}
-  camera2: {fileID: 0}
 --- !u!95 &255248265
 Animator:
   serializedVersion: 3
@@ -20546,7 +20514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1095444876710436, guid: 036a4435eee79c8489253655940da8fc, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108767065359512108, guid: 036a4435eee79c8489253655940da8fc,
         type: 2}
